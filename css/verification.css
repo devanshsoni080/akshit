@@ -1,0 +1,39 @@
+.verification-page{min-height:calc(100vh - 126px);padding:42px 0}
+.verification-wrap{max-width:620px;margin:0 auto}
+.verification-heading{margin-bottom:16px;padding-left:2px}
+.verification-heading h1{margin:0;color:#14275f;font-family:"Plus Jakarta Sans",sans-serif;font-size:22px;line-height:1.2;font-weight:800}
+.verification-heading p{margin:6px 0 0;color:#56627b;font-size:12px;line-height:1.45}
+.profile-card{background:#fff;border:1px solid #e0e5ee;border-radius:14px;padding:26px 28px 20px;text-align:center;box-shadow:0 10px 30px rgba(16,36,95,.08)}
+.profile-logo{position:relative;width:104px;height:104px;margin:0 auto 18px;display:grid;place-items:center;border:2px solid #d7dfee;border-radius:50%;background:linear-gradient(145deg,#fff,#f0f4fb);box-shadow:inset 0 0 0 8px #f7f9fc}
+.profile-logo span{color:#172d6b;font-family:"Plus Jakarta Sans",sans-serif;font-size:31px;font-weight:800}
+.profile-logo i{position:absolute;right:-3px;top:4px;color:#2772f2;background:#fff;border-radius:50%;font-size:27px}
+.profile-card h2{margin:0;color:#18284e;font-size:17px;font-weight:800}
+.profile-card .location{margin:6px 0 5px;color:#73809a;font-size:11px}
+.profile-rating{display:flex;justify-content:center;gap:6px;font-size:10px;color:#8791a5}
+.profile-rating span:first-child{color:#e99a16;font-weight:700}
+.profile-rating i{font-size:9px}
+.stats{margin:22px 0 20px;border-top:1px solid #edf0f5}
+.stat-row{display:flex;justify-content:space-between;align-items:center;padding:12px 2px;border-bottom:1px solid #edf0f5;color:#5f6b83;font-size:11px;text-align:left}
+.stat-row span{display:flex;align-items:center;gap:8px}
+.stat-row i{width:17px;color:#687896;text-align:center}
+.stat-row strong{color:#263250;font-size:11px}
+.profile-btn{width:100%;height:43px;border:0;border-radius:7px;background:linear-gradient(135deg,#2947e8,#2037ce);color:#fff;font-size:11px;font-weight:700;box-shadow:0 7px 16px rgba(41,71,232,.18);cursor:pointer}
+.profile-btn i{margin-left:7px}
+.mobile-break{display:none}
+@media(max-width:575px){
+    .verification-page{padding:20px 0}
+    .verification-wrap{max-width:100%}
+    .verification-heading h1{font-size:18px}
+    .verification-heading p{font-size:10px}
+    .profile-card{padding:24px 18px 18px;border-radius:12px}
+    .profile-logo{width:96px;height:96px}
+    .profile-logo span{font-size:28px}
+    .profile-logo i{font-size:25px}
+    .profile-card h2{font-size:15px}
+    .profile-card .location{font-size:10px}
+    .profile-rating{font-size:9px}
+    .stat-row{font-size:10px;padding:11px 0}
+    .stat-row strong{font-size:10px}
+    .profile-btn{height:42px;font-size:10px}
+    .mobile-break{display:block}
+}

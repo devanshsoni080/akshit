@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharma Property Hub - Dealer Profile</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+
+<nav class="navbar site-nav">
+    <div class="container-fluid px-3 px-lg-4">
+        <a class="brand" href="index.html">
+            <span class="brand-mark"><i class="bi bi-house-heart-fill"></i></span>
+            <span>
+                <strong>Apka Apna Ghar</strong>
+                <small>Properties</small>
+            </span>
+        </a>
+
+        <div class="profile-nav-actions">
+            <a href="dealer-selection.html"><i class="bi bi-arrow-left"></i> Back to Dealers</a>
+            <a href="#" class="login-link">Login</a>
+        </div>
+    </div>
+</nav>
+
+<main class="profile-page">
+    <div class="container-fluid px-2 px-lg-4">
+
+        <div class="profile-grid">
+
+            <!-- LEFT / MAIN PROFILE -->
+            <section class="profile-main">
+
+                <div class="hero-card">
+                    <div class="hero-cover"></div>
+                    <div class="hero-overlay"></div>
+
+                    <div class="hero-content">
+                        <div class="dealer-avatar">
+                            <div class="avatar-house"><i class="bi bi-house-fill"></i></div>
+                            <span class="avatar-name">SHARMA<br>PROPERTY</span>
+                            <span class="avatar-tick"><i class="bi bi-patch-check-fill"></i></span>
+                        </div>
+
+                        <div class="hero-details">
+                            <h1>Sharma Property Hub <i class="bi bi-patch-check-fill"></i></h1>
+                            <p>Real Estate Dealer</p>
+
+                            <div class="hero-badges">
+                                <span><i class="bi bi-patch-check-fill"></i> Blue Tick Verified</span>
+                                <span><i class="bi bi-star-fill"></i> 4.8 (128 Reviews)</span>
+                                <span><i class="bi bi-clock-history"></i> 10+ Years Experience</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KPI -->
+                <div class="kpi-card">
+                    <div class="kpi-item">
+                        <span class="kpi-icon blue"><i class="bi bi-buildings"></i></span>
+                        <div><strong>320+</strong><small>Projects Completed</small></div>
+                    </div>
+                    <div class="kpi-item">
+                        <span class="kpi-icon purple"><i class="bi bi-people"></i></span>
+                        <div><strong>1500+</strong><small>Happy Customers</small></div>
+                    </div>
+                    <div class="kpi-item">
+                        <span class="kpi-icon green"><i class="bi bi-graph-up-arrow"></i></span>
+                        <div><strong>98%</strong><small>Positive Reviews</small></div>
+                    </div>
+                    <div class="kpi-item">
+                        <span class="kpi-icon orange"><i class="bi bi-currency-rupee"></i></span>
+                        <div><strong>₹25Cr+</strong><small>Total Sales Value</small></div>
+                    </div>
+                </div>
+
+                <!-- NAV TABS -->
+                <div class="profile-tabs">
+                    <button class="profile-tab active" data-tab="overview">Overview</button>
+                    <button class="profile-tab" data-tab="projects">Projects <i class="bi bi-chevron-down"></i></button>
+                    <button class="profile-tab" data-tab="current">Current Properties <i class="bi bi-chevron-down"></i></button>
+                    <button class="profile-tab" data-tab="reviews">Reviews (128)</button>
+                    <button class="profile-tab" data-tab="about">About</button>
+                    <button class="profile-tab" data-tab="contact">Contact</button>
+                </div>
+
+                <div id="overviewTab">
+
+                    <!-- PAST PROJECTS -->
+                    <section class="section-block">
+                        <div class="section-head">
+                            <div>
+                                <h2>Past Projects Completed</h2>
+                                <p>Dealer ke completed projects aur previous work.</p>
+                            </div>
+                            <button class="view-all" data-action="past">View All Projects <i class="bi bi-arrow-right"></i></button>
+                        </div>
+
+                        <div class="property-grid">
+
+                            <article class="property-card">
+                                <div class="property-image image-1">
+                                    <span class="status completed">Completed</span>
+                                    <button class="heart"><i class="bi bi-heart"></i></button>
+                                </div>
+                                <div class="property-body">
+                                    <h3>Sharma Heights</h3>
+                                    <p>Malviya Nagar, Jaipur</p>
+                                    <div class="property-meta"><span>Residential</span><span>2021</span></div>
+                                    <div class="property-bottom"><span>120 Units</span><b>₹18 Cr Value</b></div>
+                                </div>
+                            </article>
+
+                            <article class="property-card">
+                                <div class="property-image image-2">
+                                    <span class="status completed">Completed</span>
+                                    <button class="heart"><i class="bi bi-heart"></i></button>
+                                </div>
+                                <div class="property-body">
+                                    <h3>Royal Enclave</h3>
+                                    <p>Vaishali Nagar, Jaipur</p>
+                                    <div class="property-meta"><span>Residential</span><span>2020</span></div>
+                                    <div class="property-bottom"><span>80 Units</span><b>₹12 Cr Value</b></div>
+                                </div>
+                            </article>
+
+                            <article class="property-card">
+                                <div class="property-image image-3">
+                                    <span class="status completed">Completed</span>
+                                    <button class="heart"><i class="bi bi-heart"></i></button>
+                                </div>
+                                <div class="property-body">
+                                    <h3>Green Residency</h3>
+                                    <p>Jagatpura, Jaipur</p>
+                                    <div class="property-meta"><span>Residential</span><span>2019</span></div>
+                                    <div class="property-bottom"><span>60 Units</span><b>₹8 Cr Value</b></div>
+                                </div>
+                            </article>
+
+                            <article class="property-card">
+                                <div class="property-image image-4">
+                                    <span class="status completed">Completed</span>
+                                    <button class="heart"><i class="bi bi-heart"></i></button>
+                                </div>
+                                <div class="property-body">
+                                    <h3>Sharma City</h3>
+                                    <p>Sanganer, Jaipur</p>
+                                    <div class="property-meta"><span>Residential</span><span>2018</span></div>
+                                    <div class="property-bottom"><span>150 Units</span><b>₹15 Cr Value</b></div>
+                                </div>
+                            </article>
+
+                        </div>
+                    </section>
+
+                    <!-- CURRENT PROPERTIES -->
+                    <section class="section-block">
+                        <div class="section-head">
+                            <div>
+                                <h2>Current Properties for Sale</h2>
+                                <p>Abhi available properties jo customer dekh sakta hai.</p>
+                            </div>
+                            <button class="view-all" data-action="current">View All Properties <i class="bi bi-arrow-right"></i></button>
+                        </div>
+
+                        <div class="property-grid">
+
+                            <article class="property-card current-card">
+                                <div class="property-image image-5">
+                                    <span class="status new">New</span>
+                                    <button class="heart"><i class="bi bi-heart"></i></button>
+                                </div>
+                                <div class="property-body">
+                                    <h3>4 BHK Luxury Villa</h3>
+                                    <p>Vaishali Nagar, Jaipur</p>
+                                    <strong class="price">₹2,15,00,000</strong>
+                                    <div class="property-bottom"><span>4 Bed</span><span>4 Bath</span><span>2700 Sq.Ft</span></div>
+                                </div>
+                            </article>
+
+                            <article class="property-card current-card">
+                                <div class="property-image image-6">
+                                    <span class="status new">New</span>
+                                    <button class="heart"><i class="bi bi-heart"></i></button>
+                                </div>
+                                <div class="property-body">
+                                    <h3>3 BHK Flat</h3>
+                                    <p>Mansarovar, Jaipur</p>
+                                    <strong class="price">₹75,00,000</strong>
+                                    <div class="property-bottom"><span>3 Bed</span><span>2 Bath</span><span>1450 Sq.Ft</span></div>
+                                </div>
+                            </article>
+
+                            <article class="property-card current-card">
+                                <div class="property-image image-7">
+                                    <span class="status new">New</span>
+                                    <button class="heart"><i class="bi bi-heart"></i></button>
+                                </div>
+                                <div class="property-body">
+                                    <h3>5 BHK Villa</h3>
+                                    <p>Jagatpura, Jaipur</p>
+                                    <strong class="price">₹3,25,00,000</strong>
+                                    <div class="property-bottom"><span>5 Bed</span><span>5 Bath</span><span>3200 Sq.Ft</span></div>
+                                </div>
+                            </article>
+
+                            <article class="property-card current-card">
+                                <div class="property-image image-8">
+                                    <span class="status new">New</span>
+                                    <button class="heart"><i class="bi bi-heart"></i></button>
+                                </div>
+                                <div class="property-body">
+                                    <h3>2 BHK Flat</h3>
+                                    <p>Sanganer, Jaipur</p>
+                                    <strong class="price">₹42,00,000</strong>
+                                    <div class="property-bottom"><span>2 Bed</span><span>2 Bath</span><span>950 Sq.Ft</span></div>
+                                </div>
+                            </article>
+
+                        </div>
+                    </section>
+
+                </div>
+
+                <div class="hidden-tab" id="projectsTab">
+                    <div class="empty-tab"><i class="bi bi-buildings"></i><h3>All Projects</h3><p>Dealer ke past projects yahan show honge.</p></div>
+                </div>
+
+                <div class="hidden-tab" id="currentTab">
+                    <div class="empty-tab"><i class="bi bi-house-check"></i><h3>Current Properties</h3><p>Available properties yahan show hongi.</p></div>
+                </div>
+
+                <div class="hidden-tab" id="reviewsTab">
+                    <div class="empty-tab"><i class="bi bi-star"></i><h3>128 Reviews</h3><p>Customer reviews aur ratings yahan show hongi.</p></div>
+                </div>
+
+                <div class="hidden-tab" id="aboutTab">
+                    <div class="about-box"><h3>About Sharma Property Hub</h3><p>Sharma Property Hub is a verified real estate dealer serving Jaipur with residential and commercial property services.</p></div>
+                </div>
+
+                <div class="hidden-tab" id="contactTab">
+                    <div class="empty-tab"><i class="bi bi-chat"></i><h3>Contact Dealer</h3><p>Dealer se enquiry karne ke liye right side ke contact options use karein.</p></div>
+                </div>
+
+            </section>
+
+
+            <!-- RIGHT SIDEBAR -->
+            <aside class="profile-sidebar">
+
+                <div class="side-card contact-card">
+                    <h3>Contact Dealer</h3>
+
+                    <div class="contact-line"><i class="bi bi-telephone"></i><span>+91 98765 43210</span></div>
+                    <div class="contact-line"><i class="bi bi-whatsapp"></i><span>WhatsApp Chat</span></div>
+                    <div class="contact-line"><i class="bi bi-envelope"></i><span>info@sharmapropertyhub.com</span></div>
+                    <div class="contact-line"><i class="bi bi-globe"></i><span>www.sharmapropertyhub.com</span></div>
+
+                    <button class="side-btn primary" data-contact="call"><i class="bi bi-telephone-fill"></i> Call Now</button>
+                    <button class="side-btn whatsapp" data-contact="whatsapp"><i class="bi bi-whatsapp"></i> WhatsApp</button>
+                    <button class="side-btn outline" data-contact="enquiry"><i class="bi bi-send"></i> Send Enquiry</button>
+                </div>
+
+
+                <div class="side-card">
+                    <h3>Dealer Info</h3>
+
+                    <div class="info-list">
+                        <div><span>Dealer Type</span><b>Individual</b></div>
+                        <div><span>Experience</span><b>10+ Years</b></div>
+                        <div><span>Team Size</span><b>25+ Members</b></div>
+                        <div><span>Office Location</span><b>Vaishali Nagar, Jaipur</b></div>
+                        <div><span>RERA Registered</span><b>Yes</b></div>
+                        <div><span>Operating Since</span><b>2014</b></div>
+                        <div><span>Languages Known</span><b>Hindi, English</b></div>
+                        <div><span>Working Areas</span><b>Jaipur, Sanganer, Mansarovar, Vaishali Nagar, Jagatpura</b></div>
+                    </div>
+                </div>
+
+
+                <div class="side-card why-card">
+                    <h3>Why Choose This Dealer?</h3>
+
+                    <ul>
+                        <li><i class="bi bi-check-circle-fill"></i> Blue Tick Verified Dealer</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 10+ Years of Market Experience</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 320+ Projects Completed</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 1500+ Happy Customers</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 98% Positive Reviews</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Transparent Deals</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Best Price Guarantee</li>
+                    </ul>
+                </div>
+
+            </aside>
+        </div>
+    </div>
+</main>
+
+<div class="toast-message" id="profileToast">
+    <i class="bi bi-check-circle-fill"></i>
+    <span>Request submitted successfully.</span>
+</div>
+
+<script src="js/profile.js"></script>
+</body>
+</html>
