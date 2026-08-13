@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Property | Apka Apna Ghar Properties</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css2/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container-fluid topbar-inner">
+    <a href="#" class="brand">
+      <span class="brand-icon"><i class="bi bi-house-heart-fill"></i></span>
+      <span>
+        <strong>Apka Apna Ghar</strong>
+        <small>Properties</small>
+      </span>
+    </a>
+
+    <div class="dealer-badge">
+      <span class="dealer-avatar">SH</span>
+      <span class="d-none d-sm-inline">
+        <small>Dealer</small>
+        <strong>Sharma Property Hub</strong>
+      </span>
+      <i class="bi bi-chevron-down"></i>
+    </div>
+  </div>
+</header>
+
+<main class="page-wrap">
+  <div class="container-fluid form-container">
+
+    <div class="page-heading">
+      <div>
+        <div class="eyebrow"><i class="bi bi-buildings"></i> PROPERTY LISTING</div>
+        <h1>Submit Property</h1>
+        <p>Add any property — Flat, House, Villa, Plot, Rent, Commercial, Shop, Office or more.</p>
+      </div>
+      <a href="#" class="back-link"><i class="bi bi-arrow-left"></i> Back</a>
+    </div>
+
+    <div class="progress-card">
+      <div class="progress-top">
+        <span>Form Progress</span>
+        <strong id="progressText">0%</strong>
+      </div>
+      <div class="progress-track"><div id="progressBar"></div></div>
+    </div>
+
+    <form id="propertyForm" novalidate>
+
+      <!-- 1 -->
+      <section class="form-section" data-section>
+        <div class="section-title">
+          <span class="section-number">01</span>
+          <div>
+            <h2>Property Basic Details</h2>
+            <p>Property ki basic information add karein.</p>
+          </div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-12">
+            <label>Property Title <span>*</span></label>
+            <input class="form-control required-field" name="property_title" placeholder="e.g. 3 BHK Luxury Flat in Vaishali Nagar" required>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <label>Property Type <span>*</span></label>
+            <select class="form-select required-field" id="propertyType" name="property_type" required>
+              <option value="">Select Property Type</option>
+              <option>Flat / Apartment</option>
+              <option>House / Villa</option>
+              <option>Independent House</option>
+              <option>Plot / Land</option>
+              <option>Farm House</option>
+              <option>Commercial</option>
+              <option>Shop / Showroom</option>
+              <option>Office</option>
+              <option>Industrial Property</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <label>Property Category <span>*</span></label>
+            <select class="form-select required-field" name="property_category" required>
+              <option value="">Select Category</option>
+              <option>Residential</option>
+              <option>Commercial</option>
+              <option>Industrial</option>
+              <option>Agricultural</option>
+              <option>Mixed Use</option>
+            </select>
+          </div>
+
+          <div class="col-12">
+            <label>Listing For <span>*</span></label>
+            <div class="choice-grid three">
+              <label class="choice-card"><input type="radio" name="listing_for" value="Sale" required><span><i class="bi bi-tag"></i><b>Sale</b><small>Sell property</small></span></label>
+              <label class="choice-card"><input type="radio" name="listing_for" value="Rent"><span><i class="bi bi-key"></i><b>Rent</b><small>Monthly rental</small></span></label>
+              <label class="choice-card"><input type="radio" name="listing_for" value="Lease"><span><i class="bi bi-file-earmark-text"></i><b>Lease</b><small>Long-term lease</small></span></label>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <label>Property Description <span>*</span></label>
+            <textarea class="form-control required-field" name="description" rows="5" placeholder="Property ke features, condition, location advantage aur important details likhein..." required></textarea>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2 -->
+      <section class="form-section" data-section>
+        <div class="section-title">
+          <span class="section-number">02</span>
+          <div><h2>Property Location</h2><p>Property ki exact location details.</p></div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-12 col-md-4"><label>State <span>*</span></label><select class="form-select required-field" required><option value="">Select State</option><option>Rajasthan</option><option>Delhi</option><option>Maharashtra</option><option>Gujarat</option><option>Uttar Pradesh</option><option>Haryana</option><option>Madhya Pradesh</option><option>Other</option></select></div>
+          <div class="col-12 col-md-4"><label>City <span>*</span></label><input class="form-control required-field" placeholder="e.g. Jaipur" required></div>
+          <div class="col-12 col-md-4"><label>Area / Locality <span>*</span></label><input class="form-control required-field" placeholder="e.g. Vaishali Nagar" required></div>
+          <div class="col-12 col-md-4"><label>Pincode <span>*</span></label><input class="form-control required-field" inputmode="numeric" maxlength="6" placeholder="302021" required></div>
+          <div class="col-12 col-md-8"><label>Full Address <span>*</span></label><input class="form-control required-field" placeholder="House no., street, colony..." required></div>
+          <div class="col-12 col-md-6"><label>Landmark</label><input class="form-control" placeholder="Near school / mall / main road"></div>
+          <div class="col-12 col-md-6">
+            <label>Google Map Location</label>
+            <div class="map-input">
+              <input class="form-control" id="mapLink" placeholder="Paste Google Maps link">
+              <button type="button" class="map-btn" id="mapBtn"><i class="bi bi-geo-alt"></i> Open</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3 -->
+      <section class="form-section" data-section>
+        <div class="section-title">
+          <span class="section-number">03</span>
+          <div><h2>Property Details</h2><p>Size, rooms, floor aur construction details.</p></div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-12 col-sm-6 col-lg-3"><label>BHK / RK</label><select class="form-select"><option value="">Select</option><option>1 BHK</option><option>2 BHK</option><option>3 BHK</option><option>4 BHK</option><option>5+ BHK</option><option>Studio</option><option>RK</option><option>Not Applicable</option></select></div>
+          <div class="col-12 col-sm-6 col-lg-3"><label>Built-up Area</label><input class="form-control" placeholder="e.g. 1500 Sq.Ft"></div>
+          <div class="col-12 col-sm-6 col-lg-3"><label>Carpet Area</label><input class="form-control" placeholder="e.g. 1200 Sq.Ft"></div>
+          <div class="col-12 col-sm-6 col-lg-3"><label>Plot Area</label><input class="form-control" placeholder="e.g. 1800 Sq.Ft"></div>
+          <div class="col-12 col-sm-6 col-lg-3"><label>Floor</label><input class="form-control" placeholder="e.g. 4"></div>
+          <div class="col-12 col-sm-6 col-lg-3"><label>Total Floors</label><input class="form-control" placeholder="e.g. 10"></div>
+          <div class="col-12 col-sm-6 col-lg-3"><label>Bathrooms</label><select class="form-select"><option value="">Select</option><option>1</option><option>2</option><option>3</option><option>4+</option></select></div>
+          <div class="col-12 col-sm-6 col-lg-3"><label>Balcony</label><select class="form-select"><option value="">Select</option><option>0</option><option>1</option><option>2</option><option>3+</option></select></div>
+          <div class="col-12 col-md-4"><label>Property Age</label><select class="form-select"><option value="">Select Age</option><option>New</option><option>0–1 Year</option><option>1–5 Years</option><option>5–10 Years</option><option>10+ Years</option></select></div>
+          <div class="col-12 col-md-4"><label>Furnishing</label><select class="form-select"><option value="">Select</option><option>Unfurnished</option><option>Semi-Furnished</option><option>Fully Furnished</option></select></div>
+          <div class="col-12 col-md-4"><label>Construction Status</label><select class="form-select"><option value="">Select</option><option>Ready to Move</option><option>Under Construction</option><option>New Construction</option></select></div>
+        </div>
+      </section>
+
+      <!-- 4 -->
+      <section class="form-section" data-section>
+        <div class="section-title">
+          <span class="section-number">04</span>
+          <div><h2>Price Details</h2><p>Sale, rent aur extra charges ki details.</p></div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-12 col-md-6"><label id="priceLabel">Sale Price / Monthly Rent <span>*</span></label><div class="input-group"><span class="input-group-text">₹</span><input class="form-control required-field" name="price" placeholder="Enter amount" inputmode="decimal" required></div></div>
+          <div class="col-12 col-md-6"><label>Price Negotiable</label><div class="choice-grid two compact"><label class="choice-card"><input type="radio" name="negotiable" value="Yes"><span><b>Yes</b><small>Negotiable</small></span></label><label class="choice-card"><input type="radio" name="negotiable" value="No"><span><b>No</b><small>Fixed price</small></span></label></div></div>
+          <div class="col-12 col-md-4"><label>Maintenance Charges</label><input class="form-control" placeholder="₹ Amount / Month"></div>
+          <div class="col-12 col-md-4"><label>Security Deposit / Advance</label><input class="form-control" placeholder="₹ Amount"></div>
+          <div class="col-12 col-md-4"><label>Other Charges</label><input class="form-control" placeholder="₹ Amount"></div>
+        </div>
+      </section>
+
+      <!-- 5 -->
+      <section class="form-section" data-section>
+        <div class="section-title">
+          <span class="section-number">05</span>
+          <div><h2>Property Photos & Media</h2><p>High-quality photos se listing better dikhegi.</p></div>
+        </div>
+
+        <div class="upload-box required-upload" id="photoDrop">
+          <input type="file" id="photos" accept="image/*" multiple hidden>
+          <i class="bi bi-cloud-arrow-up"></i>
+          <h3>Upload Property Photos <span>*</span></h3>
+          <p>Multiple photos select karein • JPG, PNG, WEBP</p>
+          <button type="button" class="upload-btn" data-target="photos">Choose Photos</button>
+          <div class="preview-grid" id="photoPreview"></div>
+        </div>
+
+        <div class="row g-3 mt-1">
+          <div class="col-12 col-md-6">
+            <div class="mini-upload">
+              <i class="bi bi-camera-video"></i><div><b>Upload Property Video</b><small>MP4 / MOV</small></div>
+              <input type="file" id="video" accept="video/*" hidden><button type="button" class="small-upload" data-target="video">Upload</button>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <label>360° / Virtual Tour Link</label><input class="form-control" placeholder="Paste virtual tour URL">
+          </div>
+          <div class="col-12">
+            <div class="mini-upload">
+              <i class="bi bi-map"></i><div><b>Floor Plan Upload</b><small>PDF / JPG / PNG</small></div>
+              <input type="file" id="floorPlan" accept=".pdf,image/*" hidden><button type="button" class="small-upload" data-target="floorPlan">Upload</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6 -->
+      <section class="form-section" data-section>
+        <div class="section-title"><span class="section-number">06</span><div><h2>Amenities</h2><p>Available facilities select karein.</p></div></div>
+        <div class="check-grid">
+          <label><input type="checkbox"> <i class="bi bi-car-front"></i> Parking</label>
+          <label><input type="checkbox"> <i class="bi bi-arrow-up-square"></i> Lift</label>
+          <label><input type="checkbox"> <i class="bi bi-lightning-charge"></i> Power Backup</label>
+          <label><input type="checkbox"> <i class="bi bi-droplet"></i> 24×7 Water</label>
+          <label><input type="checkbox"> <i class="bi bi-shield-check"></i> 24×7 Security</label>
+          <label><input type="checkbox"> <i class="bi bi-camera-video"></i> CCTV</label>
+          <label><input type="checkbox"> <i class="bi bi-tree"></i> Garden</label>
+          <label><input type="checkbox"> <i class="bi bi-water"></i> Swimming Pool</label>
+          <label><input type="checkbox"> <i class="bi bi-heart-pulse"></i> Gym</label>
+          <label><input type="checkbox"> <i class="bi bi-buildings"></i> Club House</label>
+          <label><input type="checkbox"> <i class="bi bi-fire"></i> Fire Safety</label>
+          <label><input type="checkbox"> <i class="bi bi-emoji-smile"></i> Children Play Area</label>
+        </div>
+        <div class="mt-3"><label>Other Amenities</label><input class="form-control" placeholder="e.g. EV Charging, Rooftop, Servant Room..."></div>
+      </section>
+
+      <!-- 7 -->
+      <section class="form-section" data-section>
+        <div class="section-title"><span class="section-number">07</span><div><h2>Nearby Places</h2><p>Customer ko nearby locations ka idea milega.</p></div></div>
+        <div class="row g-3">
+          <div class="col-12 col-sm-6 col-lg-4"><label>School</label><input class="form-control" placeholder="Name / Distance"></div>
+          <div class="col-12 col-sm-6 col-lg-4"><label>Hospital</label><input class="form-control" placeholder="Name / Distance"></div>
+          <div class="col-12 col-sm-6 col-lg-4"><label>Market / Mall</label><input class="form-control" placeholder="Name / Distance"></div>
+          <div class="col-12 col-sm-6 col-lg-4"><label>Metro Station</label><input class="form-control" placeholder="Name / Distance"></div>
+          <div class="col-12 col-sm-6 col-lg-4"><label>Bus Stop</label><input class="form-control" placeholder="Name / Distance"></div>
+          <div class="col-12 col-sm-6 col-lg-4"><label>Railway Station</label><input class="form-control" placeholder="Name / Distance"></div>
+          <div class="col-12 col-sm-6 col-lg-4"><label>Airport</label><input class="form-control" placeholder="Name / Distance"></div>
+          <div class="col-12 col-sm-6 col-lg-4"><label>Park</label><input class="form-control" placeholder="Name / Distance"></div>
+          <div class="col-12 col-sm-6 col-lg-4"><label>Bank / ATM</label><input class="form-control" placeholder="Name / Distance"></div>
+          <div class="col-12"><label>Other</label><input class="form-control" placeholder="Other nearby place"></div>
+        </div>
+      </section>
+
+      <!-- 8 -->
+      <section class="form-section" data-section>
+        <div class="section-title"><span class="section-number">08</span><div><h2>Documents / Verification</h2><p>Property verification documents upload karein.</p></div></div>
+        <div class="document-grid">
+          <div class="doc-upload"><i class="bi bi-file-earmark-text"></i><b>Property Documents</b><small>PDF / Image</small><input type="file" hidden id="docProperty" accept=".pdf,image/*"><button type="button" data-target="docProperty">Upload</button></div>
+          <div class="doc-upload"><i class="bi bi-person-vcard"></i><b>Ownership Proof</b><small>PDF / Image</small><input type="file" hidden id="docOwner" accept=".pdf,image/*"><button type="button" data-target="docOwner">Upload</button></div>
+          <div class="doc-upload"><i class="bi bi-file-check"></i><b>Approved Plan</b><small>PDF / Image</small><input type="file" hidden id="docPlan" accept=".pdf,image/*"><button type="button" data-target="docPlan">Upload</button></div>
+          <div class="doc-upload"><i class="bi bi-patch-check"></i><b>RERA Registration</b><small>PDF / Image</small><input type="file" hidden id="docRera" accept=".pdf,image/*"><button type="button" data-target="docRera">Upload</button></div>
+          <div class="doc-upload"><i class="bi bi-receipt"></i><b>Tax Receipt</b><small>PDF / Image</small><input type="file" hidden id="docTax" accept=".pdf,image/*"><button type="button" data-target="docTax">Upload</button></div>
+          <div class="doc-upload"><i class="bi bi-house-check"></i><b>Possession Certificate</b><small>PDF / Image</small><input type="file" hidden id="docPossession" accept=".pdf,image/*"><button type="button" data-target="docPossession">Upload</button></div>
+        </div>
+        <div class="mt-3"><label>Other Documents</label><input class="form-control" placeholder="Document name / note"></div>
+      </section>
+
+      <!-- 9 -->
+      <section class="form-section" data-section>
+        <div class="section-title"><span class="section-number">09</span><div><h2>Additional Features</h2><p>Property ke special features select karein.</p></div></div>
+        <div class="check-grid">
+          <label><input type="checkbox"> Corner Property</label>
+          <label><input type="checkbox"> East Facing</label>
+          <label><input type="checkbox"> West Facing</label>
+          <label><input type="checkbox"> North Facing</label>
+          <label><input type="checkbox"> South Facing</label>
+          <label><input type="checkbox"> Main Road Facing</label>
+          <label><input type="checkbox"> Gated Society</label>
+          <label><input type="checkbox"> Water View</label>
+        </div>
+        <div class="mt-3"><label>Other Features</label><input class="form-control" placeholder="e.g. Vastu Compliant, Corner Plot..."></div>
+      </section>
+
+      <!-- 10 -->
+      <section class="form-section" data-section>
+        <div class="section-title"><span class="section-number">10</span><div><h2>Customer Contact Preference</h2><p>Customer ke saath contact kaise share karna hai.</p></div></div>
+        <div class="row g-3">
+          <div class="col-12">
+            <label>Show Contact Number to Customer</label>
+            <div class="switch-row">
+              <span>Customer ko dealer ka contact number dikhega</span>
+              <label class="switch"><input type="checkbox" id="showContact" checked><span></span></label>
+            </div>
+          </div>
+          <div class="col-12">
+            <label>Preferred Contact</label>
+            <div class="choice-grid three">
+              <label class="choice-card"><input type="radio" name="preferred_contact" value="Call"><span><i class="bi bi-telephone"></i><b>Call</b><small>Phone call</small></span></label>
+              <label class="choice-card"><input type="radio" name="preferred_contact" value="WhatsApp"><span><i class="bi bi-whatsapp"></i><b>WhatsApp</b><small>Chat</small></span></label>
+              <label class="choice-card"><input type="radio" name="preferred_contact" value="Email"><span><i class="bi bi-envelope"></i><b>Email</b><small>Email enquiry</small></span></label>
+            </div>
+          </div>
+          <div class="col-12 col-md-6"><label>Best Time to Contact</label><select class="form-select"><option value="">Select Time</option><option>Morning (9 AM – 12 PM)</option><option>Afternoon (12 PM – 4 PM)</option><option>Evening (4 PM – 8 PM)</option><option>Any Time</option></select></div>
+        </div>
+      </section>
+
+      <!-- 11 -->
+      <section class="final-section">
+        <div class="final-note"><i class="bi bi-shield-check"></i><div><strong>Before submitting</strong><span>Property information aur documents check kar lein. Verified information se listing par customer trust better hota hai.</span></div></div>
+        <div class="action-bar">
+          <button type="button" class="btn-draft" id="draftBtn"><i class="bi bi-file-earmark"></i> Save as Draft</button>
+          <button type="submit" class="btn-submit"><i class="bi bi-check2-circle"></i> Submit Property</button>
+        </div>
+      </section>
+
+    </form>
+  </div>
+</main>
+
+<div class="toast-box" id="toastBox"><i class="bi bi-check-circle-fill"></i><span></span></div>
+
+<script src="js2/app.js"></script>
+</body>
+</html>
