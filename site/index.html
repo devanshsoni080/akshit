@@ -1,457 +1,436 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Apka Apna Ghar | Sell Your Property</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-
-<!-- ================= HEADER ================= -->
-<header class="site-header">
-    <nav class="navbar navbar-expand-lg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg">
         <div class="container header-container">
+          <a class="navbar-brand brand" href="#">
+            <span class="brand-icon"><i class="bi bi-house-fill"></i></span>
+            <span>
+              <strong>Apka Apna Ghar</strong>
+              <small>Properties</small>
+            </span>
+          </a>
 
-            <a class="navbar-brand brand" href="#">
-                <span class="brand-icon"><i class="bi bi-house-fill"></i></span>
-                <span>
-                    <strong>Apka Apna Ghar</strong>
-                    <small>Properties</small>
-                </span>
-            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-            <button class="navbar-toggler" type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#mainNav"
-                    aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mx-auto main-nav">
+              <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#how-it-works">How It Works</a></li>
+              <li class="nav-item"><a class="nav-link" href="#dealers">Dealers</a></li>
+              <li class="nav-item"><a class="nav-link" href="#property-types">Property Types</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
 
-            <div class="collapse navbar-collapse" id="mainNav">
-
-                <ul class="navbar-nav mx-auto main-nav">
-                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#how-it-works">How It Works</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#dealers">Dealers</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#property-types">Property Types</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-
-                <div class="header-actions">
-                    <a href="#" class="login-link">Login</a>
-                    <a href="#sell-property" class="btn btn-primary header-btn">Sell Property</a>
-                </div>
-
+            <div class="header-actions">
+              <a href="#" class="login-link">Login</a>
+              <a href="#sell-property" class="btn btn-primary header-btn">Sell Property</a>
             </div>
+          </div>
         </div>
-    </nav>
-</header>
+      </nav>
+    </header>
 
-<!-- ================= HERO ================= -->
-<section class="hero-section" id="home">
-    <div class="container">
+    <!-- ================= HERO ================= -->
+    <section class="hero-section" id="home">
+      <div class="container">
         <div class="row align-items-center g-5">
-
-            <div class="col-lg-6">
-                <div class="hero-badge">
-                    <i class="bi bi-patch-check-fill"></i>
-                    Verified Property Dealer Network
-                </div>
-
-                <h1>
-                    Sell Your Property
-                    <span>With Trusted Dealers</span>
-                </h1>
-
-                <p class="hero-text">
-                    Submit your property once and connect with verified property
-                    dealers in your preferred location. Simple, transparent and
-                    completely trackable.
-                </p>
-
-                <div class="hero-actions">
-                    <a href="#sell-property" class="btn btn-primary btn-lg">
-                        <i class="bi bi-house-add"></i>
-                        Sell My Property
-                    </a>
-                    <a href="#how-it-works" class="btn btn-outline-primary btn-lg">
-                        How It Works
-                    </a>
-                </div>
-
-                <div class="hero-trust">
-                    <div>
-                        <i class="bi bi-shield-check"></i>
-                        Verified Dealers
-                    </div>
-                    <div>
-                        <i class="bi bi-graph-up-arrow"></i>
-                        Track Your Request
-                    </div>
-                    <div>
-                        <i class="bi bi-headset"></i>
-                        Dealer Support
-                    </div>
-                </div>
+          <div class="col-lg-6">
+            <div class="hero-badge">
+              <i class="bi bi-patch-check-fill"></i>
+              Verified Property Dealer Network
             </div>
 
-            <div class="col-lg-6">
-                <div class="hero-visual">
+            <h1>
+              Sell Your Property
+              <span>With Trusted Dealers</span>
+            </h1>
 
-                    <div class="hero-image-card">
-                        <div class="hero-image-top">
-                            <span class="verified-label">
-                                <i class="bi bi-patch-check-fill"></i> Verified
-                            </span>
-                            <span class="image-label">For Sale</span>
-                        </div>
+            <p class="hero-text">
+              Submit your property once and connect with verified property dealers in your preferred location. Simple, transparent and completely
+              trackable.
+            </p>
 
-                        <div class="property-illustration">
-                            <div class="building-sky"></div>
-                            <div class="building">
-                                <div class="building-window"></div>
-                                <div class="building-window"></div>
-                                <div class="building-window"></div>
-                                <div class="building-window"></div>
-                                <div class="building-window"></div>
-                                <div class="building-window"></div>
-                            </div>
-                            <div class="ground"></div>
-                        </div>
-
-                        <div class="hero-property-info">
-                            <div>
-                                <small>Featured Property</small>
-                                <h5>Premium 3 BHK Apartment</h5>
-                                <p><i class="bi bi-geo-alt"></i> Jaipur, Rajasthan</p>
-                            </div>
-                            <strong>₹75 Lakh</strong>
-                        </div>
-                    </div>
-
-                    <div class="floating-card dealer-card">
-                        <div class="floating-icon"><i class="bi bi-person-check-fill"></i></div>
-                        <div>
-                            <strong>Verified Dealer</strong>
-                            <small>Ready to help you</small>
-                        </div>
-                        <i class="bi bi-patch-check-fill verified-icon"></i>
-                    </div>
-
-                    <div class="floating-card network-card">
-                        <div class="mini-avatars">
-                            <span><i class="bi bi-person"></i></span>
-                            <span><i class="bi bi-person"></i></span>
-                            <span><i class="bi bi-person"></i></span>
-                        </div>
-                        <div>
-                            <strong>320+ Dealers</strong>
-                            <small>Across Jaipur</small>
-                        </div>
-                    </div>
-
-                </div>
+            <div class="hero-actions">
+              <a href="#sell-property" class="btn btn-primary btn-lg">
+                <i class="bi bi-house-add"></i>
+                Sell My Property
+              </a>
+              <a href="#how-it-works" class="btn btn-outline-primary btn-lg"> How It Works </a>
             </div>
 
+            <div class="hero-trust">
+              <div>
+                <i class="bi bi-shield-check"></i>
+                Verified Dealers
+              </div>
+              <div>
+                <i class="bi bi-graph-up-arrow"></i>
+                Track Your Request
+              </div>
+              <div>
+                <i class="bi bi-headset"></i>
+                Dealer Support
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="hero-visual">
+              <div class="hero-image-card">
+                <div class="hero-image-top">
+                  <span class="verified-label"> <i class="bi bi-patch-check-fill"></i> Verified </span>
+                  <span class="image-label">For Sale</span>
+                </div>
+
+                <div class="property-illustration">
+                  <div class="building-sky"></div>
+                  <div class="building">
+                    <div class="building-window"></div>
+                    <div class="building-window"></div>
+                    <div class="building-window"></div>
+                    <div class="building-window"></div>
+                    <div class="building-window"></div>
+                    <div class="building-window"></div>
+                  </div>
+                  <div class="ground"></div>
+                </div>
+
+                <div class="hero-property-info">
+                  <div>
+                    <small>Featured Property</small>
+                    <h5>Premium 3 BHK Apartment</h5>
+                    <p><i class="bi bi-geo-alt"></i> Jaipur, Rajasthan</p>
+                  </div>
+                  <strong>₹75 Lakh</strong>
+                </div>
+              </div>
+
+              <div class="floating-card dealer-card">
+                <div class="floating-icon"><i class="bi bi-person-check-fill"></i></div>
+                <div>
+                  <strong>Verified Dealer</strong>
+                  <small>Ready to help you</small>
+                </div>
+                <i class="bi bi-patch-check-fill verified-icon"></i>
+              </div>
+
+              <div class="floating-card network-card">
+                <div class="mini-avatars">
+                  <span><i class="bi bi-person"></i></span>
+                  <span><i class="bi bi-person"></i></span>
+                  <span><i class="bi bi-person"></i></span>
+                </div>
+                <div>
+                  <strong>320+ Dealers</strong>
+                  <small>Across Jaipur</small>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- ================= STATS ================= -->
-<section class="stats-section">
-    <div class="container">
+    <!-- ================= STATS ================= -->
+    <section class="stats-section">
+      <div class="container">
         <div class="stats-card">
-            <div class="stat-item">
-                <i class="bi bi-buildings"></i>
-                <div><strong>1,200+</strong><span>Properties Listed</span></div>
-            </div>
-            <div class="stat-item">
-                <i class="bi bi-person-check"></i>
-                <div><strong>320+</strong><span>Verified Dealers</span></div>
-            </div>
-            <div class="stat-item">
-                <i class="bi bi-people"></i>
-                <div><strong>5,000+</strong><span>Happy Customers</span></div>
-            </div>
-            <div class="stat-item">
-                <i class="bi bi-handshake"></i>
-                <div><strong>850+</strong><span>Deals Completed</span></div>
-            </div>
+          <div class="stat-item">
+            <i class="bi bi-buildings"></i>
+            <div><strong>1,200+</strong><span>Properties Listed</span></div>
+          </div>
+          <div class="stat-item">
+            <i class="bi bi-person-check"></i>
+            <div><strong>320+</strong><span>Verified Dealers</span></div>
+          </div>
+          <div class="stat-item">
+            <i class="bi bi-people"></i>
+            <div><strong>5,000+</strong><span>Happy Customers</span></div>
+          </div>
+          <div class="stat-item">
+            <i class="bi bi-handshake"></i>
+            <div><strong>850+</strong><span>Deals Completed</span></div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- ================= WHY ================= -->
-<section class="section-padding why-section">
-    <div class="container">
+    <!-- ================= WHY ================= -->
+    <section class="section-padding why-section">
+      <div class="container">
         <div class="section-heading text-center">
-            <span>WHY APKA APNA GHAR</span>
-            <h2>A Better Way To Sell Your Property</h2>
-            <p>We connect property owners with verified local dealers through one trusted platform.</p>
+          <span>WHY APKA APNA GHAR</span>
+          <h2>A Better Way To Sell Your Property</h2>
+          <p>We connect property owners with verified local dealers through one trusted platform.</p>
         </div>
 
         <div class="row g-4 mt-2">
-            <div class="col-md-6 col-lg-3">
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="bi bi-shield-check"></i></div>
-                    <h5>Verified Dealers</h5>
-                    <p>Connect with verified and trusted property professionals.</p>
-                </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-card">
+              <div class="feature-icon"><i class="bi bi-shield-check"></i></div>
+              <h5>Verified Dealers</h5>
+              <p>Connect with verified and trusted property professionals.</p>
             </div>
+          </div>
 
-            <div class="col-md-6 col-lg-3">
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="bi bi-ui-checks-grid"></i></div>
-                    <h5>One Property Form</h5>
-                    <p>Submit your property details once and manage everything easily.</p>
-                </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-card">
+              <div class="feature-icon"><i class="bi bi-ui-checks-grid"></i></div>
+              <h5>One Property Form</h5>
+              <p>Submit your property details once and manage everything easily.</p>
             </div>
+          </div>
 
-            <div class="col-md-6 col-lg-3">
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="bi bi-geo-alt"></i></div>
-                    <h5>Local Dealers</h5>
-                    <p>Find suitable dealers according to your property location.</p>
-                </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-card">
+              <div class="feature-icon"><i class="bi bi-geo-alt"></i></div>
+              <h5>Local Dealers</h5>
+              <p>Find suitable dealers according to your property location.</p>
             </div>
+          </div>
 
-            <div class="col-md-6 col-lg-3">
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="bi bi-clock-history"></i></div>
-                    <h5>Track Everything</h5>
-                    <p>Track dealer requests, visits, follow-ups and deal progress.</p>
-                </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-card">
+              <div class="feature-icon"><i class="bi bi-clock-history"></i></div>
+              <h5>Track Everything</h5>
+              <p>Track dealer requests, visits, follow-ups and deal progress.</p>
             </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- ================= HOW IT WORKS ================= -->
-<section class="section-padding process-section" id="how-it-works">
-    <div class="container">
+    <!-- ================= HOW IT WORKS ================= -->
+    <section class="section-padding process-section" id="how-it-works">
+      <div class="container">
         <div class="section-heading text-center">
-            <span>SELL IN SIMPLE STEPS</span>
-            <h2>How It Works</h2>
-            <p>From submitting your property to connecting with the right dealer.</p>
+          <span>SELL IN SIMPLE STEPS</span>
+          <h2>How It Works</h2>
+          <p>From submitting your property to connecting with the right dealer.</p>
         </div>
 
         <div class="process-line"></div>
 
         <div class="row g-4 process-row">
-            <div class="col-6 col-lg-3">
-                <div class="process-card">
-                    <div class="step-number">01</div>
-                    <div class="process-icon"><i class="bi bi-person-plus"></i></div>
-                    <h5>Create Account</h5>
-                    <p>Sign up as a property seller.</p>
-                </div>
+          <div class="col-6 col-lg-3">
+            <div class="process-card">
+              <div class="step-number">01</div>
+              <div class="process-icon"><i class="bi bi-person-plus"></i></div>
+              <h5>Create Account</h5>
+              <p>Sign up as a property seller.</p>
             </div>
+          </div>
 
-            <div class="col-6 col-lg-3">
-                <div class="process-card">
-                    <div class="step-number">02</div>
-                    <div class="process-icon"><i class="bi bi-house-add"></i></div>
-                    <h5>Submit Property</h5>
-                    <p>Add property details, photos and price.</p>
-                </div>
+          <div class="col-6 col-lg-3">
+            <div class="process-card">
+              <div class="step-number">02</div>
+              <div class="process-icon"><i class="bi bi-house-add"></i></div>
+              <h5>Submit Property</h5>
+              <p>Add property details, photos and price.</p>
             </div>
+          </div>
 
-            <div class="col-6 col-lg-3">
-                <div class="process-card">
-                    <div class="step-number">03</div>
-                    <div class="process-icon"><i class="bi bi-person-vcard"></i></div>
-                    <h5>Select Dealer</h5>
-                    <p>Choose a verified dealer near you.</p>
-                </div>
+          <div class="col-6 col-lg-3">
+            <div class="process-card">
+              <div class="step-number">03</div>
+              <div class="process-icon"><i class="bi bi-person-vcard"></i></div>
+              <h5>Select Dealer</h5>
+              <p>Choose a verified dealer near you.</p>
             </div>
+          </div>
 
-            <div class="col-6 col-lg-3">
-                <div class="process-card">
-                    <div class="step-number">04</div>
-                    <div class="process-icon"><i class="bi bi-check2-circle"></i></div>
-                    <h5>Connect & Sell</h5>
-                    <p>Dealer contacts you and handles the process.</p>
-                </div>
+          <div class="col-6 col-lg-3">
+            <div class="process-card">
+              <div class="step-number">04</div>
+              <div class="process-icon"><i class="bi bi-check2-circle"></i></div>
+              <h5>Connect & Sell</h5>
+              <p>Dealer contacts you and handles the process.</p>
             </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- ================= PROPERTY TYPES ================= -->
-<section class="section-padding property-types" id="property-types">
-    <div class="container">
+    <!-- ================= PROPERTY TYPES ================= -->
+    <section class="section-padding property-types" id="property-types">
+      <div class="container">
         <div class="section-heading">
-            <span>PROPERTY TYPES</span>
-            <h2>Sell Any Type of Property</h2>
-            <p>Residential, commercial, land or any other property — submit it on one platform.</p>
+          <span>PROPERTY TYPES</span>
+          <h2>Sell Any Type of Property</h2>
+          <p>Residential, commercial, land or any other property — submit it on one platform.</p>
         </div>
 
         <div class="row g-3 mt-3">
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="type-card"><i class="bi bi-building"></i><strong>Flat / Apartment</strong><small>Residential</small></div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="type-card"><i class="bi bi-house"></i><strong>House / Villa</strong><small>Residential</small></div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="type-card"><i class="bi bi-tree"></i><strong>Plot / Land</strong><small>Land</small></div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="type-card"><i class="bi bi-shop"></i><strong>Shop / Showroom</strong><small>Commercial</small></div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="type-card"><i class="bi bi-briefcase"></i><strong>Office</strong><small>Commercial</small></div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="type-card"><i class="bi bi-buildings"></i><strong>Industrial</strong><small>Commercial</small></div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="type-card"><i class="bi bi-flower1"></i><strong>Farm House</strong><small>Residential</small></div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="type-card"><i class="bi bi-grid"></i><strong>Other Property</strong><small>Any Category</small></div>
-            </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="type-card"><i class="bi bi-building"></i><strong>Flat / Apartment</strong><small>Residential</small></div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="type-card"><i class="bi bi-house"></i><strong>House / Villa</strong><small>Residential</small></div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="type-card"><i class="bi bi-tree"></i><strong>Plot / Land</strong><small>Land</small></div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="type-card"><i class="bi bi-shop"></i><strong>Shop / Showroom</strong><small>Commercial</small></div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="type-card"><i class="bi bi-briefcase"></i><strong>Office</strong><small>Commercial</small></div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="type-card"><i class="bi bi-buildings"></i><strong>Industrial</strong><small>Commercial</small></div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="type-card"><i class="bi bi-flower1"></i><strong>Farm House</strong><small>Residential</small></div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="type-card"><i class="bi bi-grid"></i><strong>Other Property</strong><small>Any Category</small></div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- ================= DEALERS ================= -->
-<section class="section-padding dealers-section" id="dealers">
-    <div class="container">
+    <!-- ================= DEALERS ================= -->
+    <section class="section-padding dealers-section" id="dealers">
+      <div class="container">
         <div class="section-heading text-center">
-            <span>TRUSTED NETWORK</span>
-            <h2>Meet Verified Property Dealers</h2>
-            <p>Choose a dealer based on location, experience and customer reviews.</p>
+          <span>TRUSTED NETWORK</span>
+          <h2>Meet Verified Property Dealers</h2>
+          <p>Choose a dealer based on location, experience and customer reviews.</p>
         </div>
 
         <div class="row g-4 mt-2">
-
-            <div class="col-md-4">
-                <div class="dealer-preview">
-                    <div class="dealer-avatar">SH</div>
-                    <div class="dealer-main">
-                        <div class="dealer-title">
-                            <h5>Sharma Property Hub</h5>
-                            <i class="bi bi-patch-check-fill"></i>
-                        </div>
-                        <p><i class="bi bi-geo-alt"></i> Vaishali Nagar, Jaipur</p>
-                        <div class="rating"><i class="bi bi-star-fill"></i> 4.8 <span>(120 Reviews)</span></div>
-                    </div>
-                    <a href="#" class="btn btn-sm btn-outline-primary">View</a>
+          <div class="col-md-4">
+            <div class="dealer-preview">
+              <div class="dealer-avatar">SH</div>
+              <div class="dealer-main">
+                <div class="dealer-title">
+                  <h5>Sharma Property Hub</h5>
+                  <i class="bi bi-patch-check-fill"></i>
                 </div>
+                <p><i class="bi bi-geo-alt"></i> Vaishali Nagar, Jaipur</p>
+                <div class="rating"><i class="bi bi-star-fill"></i> 4.8 <span>(120 Reviews)</span></div>
+              </div>
+              <a href="#" class="btn btn-sm btn-outline-primary">View</a>
             </div>
+          </div>
 
-            <div class="col-md-4">
-                <div class="dealer-preview">
-                    <div class="dealer-avatar avatar-two">JH</div>
-                    <div class="dealer-main">
-                        <div class="dealer-title">
-                            <h5>Jagat Homes</h5>
-                            <i class="bi bi-patch-check-fill"></i>
-                        </div>
-                        <p><i class="bi bi-geo-alt"></i> Mansarovar, Jaipur</p>
-                        <div class="rating"><i class="bi bi-star-fill"></i> 4.6 <span>(85 Reviews)</span></div>
-                    </div>
-                    <a href="#" class="btn btn-sm btn-outline-primary">View</a>
+          <div class="col-md-4">
+            <div class="dealer-preview">
+              <div class="dealer-avatar avatar-two">JH</div>
+              <div class="dealer-main">
+                <div class="dealer-title">
+                  <h5>Jagat Homes</h5>
+                  <i class="bi bi-patch-check-fill"></i>
                 </div>
+                <p><i class="bi bi-geo-alt"></i> Mansarovar, Jaipur</p>
+                <div class="rating"><i class="bi bi-star-fill"></i> 4.6 <span>(85 Reviews)</span></div>
+              </div>
+              <a href="#" class="btn btn-sm btn-outline-primary">View</a>
             </div>
+          </div>
 
-            <div class="col-md-4">
-                <div class="dealer-preview">
-                    <div class="dealer-avatar avatar-three">DP</div>
-                    <div class="dealer-main">
-                        <div class="dealer-title">
-                            <h5>Dream Properties</h5>
-                            <i class="bi bi-patch-check-fill"></i>
-                        </div>
-                        <p><i class="bi bi-geo-alt"></i> Jagatpura, Jaipur</p>
-                        <div class="rating"><i class="bi bi-star-fill"></i> 4.7 <span>(90 Reviews)</span></div>
-                    </div>
-                    <a href="#" class="btn btn-sm btn-outline-primary">View</a>
+          <div class="col-md-4">
+            <div class="dealer-preview">
+              <div class="dealer-avatar avatar-three">DP</div>
+              <div class="dealer-main">
+                <div class="dealer-title">
+                  <h5>Dream Properties</h5>
+                  <i class="bi bi-patch-check-fill"></i>
                 </div>
+                <p><i class="bi bi-geo-alt"></i> Jagatpura, Jaipur</p>
+                <div class="rating"><i class="bi bi-star-fill"></i> 4.7 <span>(90 Reviews)</span></div>
+              </div>
+              <a href="#" class="btn btn-sm btn-outline-primary">View</a>
             </div>
-
+          </div>
         </div>
 
         <div class="text-center mt-4">
-            <a href="#" class="view-all">View All Dealers <i class="bi bi-arrow-right"></i></a>
+          <a href="#" class="view-all">View All Dealers <i class="bi bi-arrow-right"></i></a>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- ================= CTA ================= -->
-<section class="cta-section" id="sell-property">
-    <div class="container">
+    <!-- ================= CTA ================= -->
+    <section class="cta-section" id="sell-property">
+      <div class="container">
         <div class="cta-card">
-            <div>
-                <span>READY TO SELL?</span>
-                <h2>Let’s Get Your Property in Front of the Right Dealer.</h2>
-                <p>Submit your property details and start connecting with verified dealers today.</p>
-            </div>
-            <a href="#" class="btn btn-light btn-lg">
-                <i class="bi bi-house-add"></i>
-                Submit My Property
-            </a>
+          <div>
+            <span>READY TO SELL?</span>
+            <h2>Let’s Get Your Property in Front of the Right Dealer.</h2>
+            <p>Submit your property details and start connecting with verified dealers today.</p>
+          </div>
+          <a href="#" class="btn btn-light btn-lg">
+            <i class="bi bi-house-add"></i>
+            Submit My Property
+          </a>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- ================= FOOTER ================= -->
-<footer class="footer" id="contact">
-    <div class="container">
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer" id="contact">
+      <div class="container">
         <div class="row g-4">
-
-            <div class="col-lg-5">
-                <div class="footer-brand">
-                    <span class="brand-icon"><i class="bi bi-house-fill"></i></span>
-                    <div>
-                        <strong>Apka Apna Ghar</strong>
-                        <small>Properties</small>
-                    </div>
-                </div>
-                <p class="footer-description">
-                    A trusted property network connecting property owners with
-                    verified dealers for transparent and easier property selling.
-                </p>
+          <div class="col-lg-5">
+            <div class="footer-brand">
+              <span class="brand-icon"><i class="bi bi-house-fill"></i></span>
+              <div>
+                <strong>Apka Apna Ghar</strong>
+                <small>Properties</small>
+              </div>
             </div>
+            <p class="footer-description">
+              A trusted property network connecting property owners with verified dealers for transparent and easier property selling.
+            </p>
+          </div>
 
-            <div class="col-6 col-lg-2">
-                <h6>Company</h6>
-                <a href="#home">Home</a>
-                <a href="#">About</a>
-                <a href="#dealers">Dealers</a>
-                <a href="#contact">Contact</a>
-            </div>
+          <div class="col-6 col-lg-2">
+            <h6>Company</h6>
+            <a href="#home">Home</a>
+            <a href="#">About</a>
+            <a href="#dealers">Dealers</a>
+            <a href="#contact">Contact</a>
+          </div>
 
-            <div class="col-6 col-lg-2">
-                <h6>For Sellers</h6>
-                <a href="#sell-property">Sell Property</a>
-                <a href="#how-it-works">How It Works</a>
-                <a href="#property-types">Property Types</a>
-                <a href="#">My Property</a>
-            </div>
+          <div class="col-6 col-lg-2">
+            <h6>For Sellers</h6>
+            <a href="#sell-property">Sell Property</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#property-types">Property Types</a>
+            <a href="#">My Property</a>
+          </div>
 
-            <div class="col-lg-3">
-                <h6>Contact</h6>
-                <p><i class="bi bi-telephone"></i> +91 98765 43210</p>
-                <p><i class="bi bi-envelope"></i> info@apkaapnaghar.com</p>
-                <p><i class="bi bi-geo-alt"></i> Jaipur, Rajasthan</p>
-            </div>
-
+          <div class="col-lg-3">
+            <h6>Contact</h6>
+            <p><i class="bi bi-telephone"></i> +91 98765 43210</p>
+            <p><i class="bi bi-envelope"></i> info@apkaapnaghar.com</p>
+            <p><i class="bi bi-geo-alt"></i> Jaipur, Rajasthan</p>
+          </div>
         </div>
 
         <div class="footer-bottom">
-            <span>© 2026 Apka Apna Ghar Properties. All rights reserved.</span>
-            <span>Verified Property Network</span>
+          <span>© 2026 Apka Apna Ghar Properties. All rights reserved.</span>
+          <span>Verified Property Network</span>
         </div>
-    </div>
-</footer>
+      </div>
+    </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="./js/script.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
