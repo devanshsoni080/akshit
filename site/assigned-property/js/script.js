@@ -1,0 +1,6 @@
+document.addEventListener("DOMContentLoaded",()=>{
+const cards=[...document.querySelectorAll(".assignment")],tabs=[...document.querySelectorAll(".tab")],search=document.getElementById("search"),select=document.getElementById("filter"),empty=document.getElementById("empty");let active="all";
+function run(){let q=search.value.toLowerCase().trim(),s=select.value,n=0;cards.forEach(c=>{let ok=(active==="all"||c.dataset.status===active)&&(!s||c.dataset.status===s)&&(!q||c.dataset.search.toLowerCase().includes(q));c.classList.toggle("d-none",!ok);if(ok)n++});empty.classList.toggle("d-none",n>0)}
+tabs.forEach(t=>t.onclick=()=>{tabs.forEach(x=>x.classList.remove("active"));t.classList.add("active");active=t.dataset.filter;select.value="";run()});search.oninput=run;select.onchange=()=>{active="all";tabs.forEach(x=>x.classList.toggle("active",x.dataset.filter==="all"));run()};
+document.querySelectorAll(".photo button").forEach(b=>b.onclick=()=>{let i=b.querySelector("i");i.classList.toggle("bi-heart");i.classList.toggle("bi-heart-fill")});
+});

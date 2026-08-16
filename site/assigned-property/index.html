@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Assigned Properties | Apka Apna Ghar</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+<nav class="navbar navbar-expand-lg">
+<div class="container">
+<a class="navbar-brand brand" href="#"><span class="brand-icon"><i class="bi bi-house-fill"></i></span><span><strong>Apka Apna Ghar</strong><small>Properties</small></span></a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav mx-auto">
+<li><a class="nav-link" href="#">Home</a></li><li><a class="nav-link" href="#">Dealers</a></li><li><a class="nav-link" href="#">My Property</a></li><li><a class="nav-link active" href="#">Assigned Property</a></li><li><a class="nav-link" href="#">Contact</a></li>
+</ul>
+<div class="header-right"><span class="verified"><i class="bi bi-shield-check"></i> Verified Property Network</span><a class="account-btn"><i class="bi bi-person"></i></a></div>
+</div></div></nav></header>
+
+<section class="page-head"><div class="container">
+<div class="crumb"><a href="#">Home</a><i class="bi bi-chevron-right"></i><span>Assigned Property</span></div>
+<div class="head-row"><div><span class="eyebrow">PROPERTY ASSIGNMENT</span><h1>Assigned Properties</h1><p>Track the properties you have assigned to dealers, their progress, visits, enquiries and commission details.</p></div>
+<a class="assign-btn" href="#"><i class="bi bi-person-plus"></i> Assign Property to Dealer</a></div>
+</div></section>
+
+<main class="content"><div class="container">
+<div class="stats">
+<div class="stat"><div class="icon blue"><i class="bi bi-send"></i></div><div><strong>05</strong><small>Assigned Properties</small></div></div>
+<div class="stat"><div class="icon green"><i class="bi bi-graph-up-arrow"></i></div><div><strong>03</strong><small>In Progress</small></div></div>
+<div class="stat"><div class="icon orange"><i class="bi bi-eye"></i></div><div><strong>164</strong><small>Property Views</small></div></div>
+<div class="stat"><div class="icon purple"><i class="bi bi-cash-coin"></i></div><div><strong>₹ 2.10L</strong><small>Expected Commission</small></div></div>
+</div>
+
+<div class="toolbar">
+<div class="tabs">
+<button class="tab active" data-filter="all">All <b>5</b></button>
+<button class="tab" data-filter="progress">In Progress <b>3</b></button>
+<button class="tab" data-filter="visit">Property Visit <b>1</b></button>
+<button class="tab" data-filter="closed">Deal Closed <b>1</b></button>
+</div>
+<div class="filters"><div class="search"><i class="bi bi-search"></i><input id="search" placeholder="Search property or dealer..."></div>
+<select id="filter"><option value="">All Status</option><option value="progress">In Progress</option><option value="visit">Property Visit</option><option value="closed">Deal Closed</option></select></div>
+</div>
+
+<div class="assignment-list" id="list">
+
+<article class="assignment" data-status="progress" data-search="3 BHK Premium Apartment Sharma Property Hub">
+<div class="photo photo1"><span class="badge-status green">In Progress</span><button><i class="bi bi-heart"></i></button></div>
+<div class="details"><div class="top"><span class="tag">FLAT / APARTMENT</span><span class="date">Assigned 24 May 2026</span></div>
+<h2>3 BHK Premium Apartment</h2><p class="loc"><i class="bi bi-geo-alt"></i> Vaishali Nagar, Jaipur</p>
+<div class="grid-meta"><span><i class="bi bi-rulers"></i> 1,650 sq.ft.</span><span><i class="bi bi-door-open"></i> 3 BHK</span><span><i class="bi bi-currency-rupee"></i> 85 Lakh</span></div>
+<div class="dealer"><div class="avatar">SH</div><div><small>Assigned To Dealer</small><strong>Sharma Property Hub <i class="bi bi-patch-check-fill"></i></strong><span>Vaishali Nagar, Jaipur · 4.8 ★</span></div><div class="commission"><small>Commission</small><b>1.5%</b></div></div>
+<div class="progress-wrap"><div class="progress-label"><span>Dealer Progress</span><b>65%</b></div><div class="progress"><span style="width:65%"></span></div></div>
+<div class="activity"><span><i class="bi bi-eye"></i> 48 Views</span><span><i class="bi bi-person"></i> 7 Leads</span><span><i class="bi bi-calendar-check"></i> 2 Visits</span><span><i class="bi bi-clock"></i> Updated today</span></div>
+<div class="actions"><button class="primary">View Property</button><button>View Activity</button><button class="more"><i class="bi bi-three-dots-vertical"></i></button></div></div>
+</article>
+
+<article class="assignment" data-status="progress" data-search="4 BHK Independent House Jagat Homes">
+<div class="photo photo2"><span class="badge-status green">In Progress</span><button><i class="bi bi-heart"></i></button></div>
+<div class="details"><div class="top"><span class="tag">INDEPENDENT HOUSE</span><span class="date">Assigned 20 May 2026</span></div>
+<h2>4 BHK Independent House</h2><p class="loc"><i class="bi bi-geo-alt"></i> Mansarovar, Jaipur</p>
+<div class="grid-meta"><span><i class="bi bi-rulers"></i> 2,200 sq.ft.</span><span><i class="bi bi-door-open"></i> 4 BHK</span><span><i class="bi bi-currency-rupee"></i> 1.25 Cr</span></div>
+<div class="dealer"><div class="avatar">JH</div><div><small>Assigned To Dealer</small><strong>Jagat Homes <i class="bi bi-patch-check-fill"></i></strong><span>Mansarovar, Jaipur · 4.6 ★</span></div><div class="commission"><small>Commission</small><b>1.0%</b></div></div>
+<div class="progress-wrap"><div class="progress-label"><span>Dealer Progress</span><b>42%</b></div><div class="progress"><span style="width:42%"></span></div></div>
+<div class="activity"><span><i class="bi bi-eye"></i> 32 Views</span><span><i class="bi bi-person"></i> 4 Leads</span><span><i class="bi bi-calendar-check"></i> 1 Visit</span><span><i class="bi bi-clock"></i> Updated yesterday</span></div>
+<div class="actions"><button class="primary">View Property</button><button>View Activity</button><button class="more"><i class="bi bi-three-dots-vertical"></i></button></div></div>
+</article>
+
+<article class="assignment" data-status="visit" data-search="Residential Plot Dream Properties">
+<div class="photo photo3"><span class="badge-status orange">Property Visit</span><button><i class="bi bi-heart"></i></button></div>
+<div class="details"><div class="top"><span class="tag">PLOT / LAND</span><span class="date">Assigned 18 May 2026</span></div>
+<h2>Residential Plot — 2,400 sq.ft.</h2><p class="loc"><i class="bi bi-geo-alt"></i> Jagatpura, Jaipur</p>
+<div class="grid-meta"><span><i class="bi bi-rulers"></i> 2,400 sq.ft.</span><span><i class="bi bi-signpost"></i> Main Road</span><span><i class="bi bi-currency-rupee"></i> 72 Lakh</span></div>
+<div class="dealer"><div class="avatar">DP</div><div><small>Assigned To Dealer</small><strong>Dream Properties <i class="bi bi-patch-check-fill"></i></strong><span>Jagatpura, Jaipur · 4.7 ★</span></div><div class="commission"><small>Commission</small><b>1.5%</b></div></div>
+<div class="visit-box"><i class="bi bi-calendar-check"></i><div><b>Next Property Visit</b><span>28 May 2026 · 11:30 AM · Customer: Amit Kumar</span></div></div>
+<div class="activity"><span><i class="bi bi-eye"></i> 56 Views</span><span><i class="bi bi-person"></i> 5 Leads</span><span><i class="bi bi-calendar-check"></i> 3 Visits</span><span><i class="bi bi-clock"></i> Updated 2 hrs ago</span></div>
+<div class="actions"><button class="primary">View Property</button><button>View Activity</button><button class="more"><i class="bi bi-three-dots-vertical"></i></button></div></div>
+</article>
+
+<article class="assignment" data-status="closed" data-search="Luxury Villa Perfect Homes">
+<div class="photo photo4"><span class="badge-status blue">Deal Closed</span><button><i class="bi bi-heart-fill"></i></button></div>
+<div class="details"><div class="top"><span class="tag">VILLA</span><span class="date">Closed 16 May 2026</span></div>
+<h2>Luxury 4 BHK Villa</h2><p class="loc"><i class="bi bi-geo-alt"></i> Sanganer, Jaipur</p>
+<div class="grid-meta"><span><i class="bi bi-rulers"></i> 3,100 sq.ft.</span><span><i class="bi bi-door-open"></i> 4 BHK</span><span><i class="bi bi-currency-rupee"></i> ₹1.85 Cr</span></div>
+<div class="dealer"><div class="avatar">PH</div><div><small>Deal Closed With</small><strong>Perfect Homes <i class="bi bi-patch-check-fill"></i></strong><span>Sanganer, Jaipur · 4.5 ★</span></div><div class="commission paid"><small>Commission Paid</small><b>₹1,85,000</b></div></div>
+<div class="closed-box"><i class="bi bi-check-circle-fill"></i><div><b>Deal closed successfully</b><span>Sale Price ₹1.85 Cr · Commission 1.0% · Paid</span></div></div>
+<div class="activity"><span><i class="bi bi-people"></i> 12 Leads</span><span><i class="bi bi-calendar-check"></i> 5 Visits</span><span><i class="bi bi-calendar3"></i> 16 May 2026</span></div>
+<div class="actions"><button class="primary">View Deal</button><button>Commission Details</button><button class="more"><i class="bi bi-three-dots-vertical"></i></button></div></div>
+</article>
+</div>
+<div id="empty" class="empty d-none"><i class="bi bi-send"></i><h3>No assigned properties found</h3><p>Try another filter or assign a property to a dealer.</p></div>
+</div></main>
+
+<footer class="footer"><div class="container"><div class="foot"><div><b>Apka Apna Ghar</b><p>Verified property network with transparent dealer collaboration.</p></div><span>© 2026 Apka Apna Ghar Properties</span></div></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><script src="js/script.js"></script>
+</body></html>

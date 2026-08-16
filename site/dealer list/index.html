@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Property Dealers | Apka Apna Ghar</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+<nav class="navbar navbar-expand-lg">
+<div class="container">
+<a class="navbar-brand brand" href="#">
+<span class="brand-icon"><i class="bi bi-house-fill"></i></span>
+<span><strong>Apka Apna Ghar</strong><small>Properties</small></span>
+</a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="mainNav">
+<ul class="navbar-nav mx-auto">
+<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+<li class="nav-item"><a class="nav-link active" href="#">Dealers</a></li>
+<li class="nav-item"><a class="nav-link" href="#">My Property</a></li>
+<li class="nav-item"><a class="nav-link" href="#">Assigned Property</a></li>
+<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+</ul>
+<div class="header-right">
+<span class="verified"><i class="bi bi-shield-check"></i> Verified Property Network</span>
+<a class="account-btn" href="#"><i class="bi bi-person"></i></a>
+</div>
+</div>
+</div>
+</nav>
+</header>
+
+<main>
+<section class="page-head">
+<div class="container">
+<div class="breadcrumb-line"><a href="#">Home</a><i class="bi bi-chevron-right"></i><span>Property Dealers</span></div>
+<div class="row align-items-end g-3">
+<div class="col-lg-7">
+<span class="eyebrow">VERIFIED PROPERTY NETWORK</span>
+<h1>Choose a Trusted Property Dealer</h1>
+<p>Find verified dealers near your property location, compare their experience, reviews and completed projects, then choose the right dealer to sell your property.</p>
+</div>
+<div class="col-lg-5">
+<div class="network-summary">
+<div><strong>320+</strong><span>Verified Dealers</span></div>
+<div><strong>25+</strong><span>Areas Covered</span></div>
+<div><strong>4.7/5</strong><span>Average Rating</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="listing-section">
+<div class="container">
+
+<div class="filter-box">
+<div class="search-wrap">
+<i class="bi bi-search"></i>
+<input id="dealerSearch" type="text" placeholder="Search dealer by name, area or location...">
+</div>
+<select id="locationFilter" class="filter-select">
+<option value="">All Locations</option>
+<option>Vaishali Nagar</option>
+<option>Mansarovar</option>
+<option>Jagatpura</option>
+<option>Sanganer</option>
+<option>Malviya Nagar</option>
+<option>Jhotwara</option>
+</select>
+<select id="ratingFilter" class="filter-select">
+<option value="">All Ratings</option>
+<option value="4.8">4.8+ Rating</option>
+<option value="4.7">4.7+ Rating</option>
+<option value="4.5">4.5+ Rating</option>
+</select>
+<select id="sortFilter" class="filter-select">
+<option value="recommended">Recommended</option>
+<option value="rating">Highest Rating</option>
+<option value="experience">Most Experience</option>
+<option value="projects">Most Projects</option>
+</select>
+</div>
+
+<div class="results-row">
+<div><strong id="resultCount">8</strong> verified dealers found</div>
+<button class="mobile-filter-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileFilters"><i class="bi bi-sliders"></i> Filters</button>
+</div>
+
+<div class="row g-4" id="dealerGrid">
+
+<!-- Dealer 1 -->
+<div class="col-md-6 col-xl-4 dealer-item" data-name="Sharma Property Hub" data-location="Vaishali Nagar" data-rating="4.8" data-experience="10" data-projects="320">
+<div class="dealer-card">
+<div class="dealer-cover cover-one">
+<span class="verified-pill"><i class="bi bi-patch-check-fill"></i> Verified</span>
+<button class="heart"><i class="bi bi-heart"></i></button>
+</div>
+<div class="dealer-body">
+<div class="profile-row">
+<div class="dealer-avatar">SH</div>
+<div class="dealer-name">
+<h3>Sharma Property Hub <i class="bi bi-patch-check-fill"></i></h3>
+<p><i class="bi bi-geo-alt"></i> Vaishali Nagar, Jaipur</p>
+</div>
+</div>
+<div class="rating-row"><strong><i class="bi bi-star-fill"></i> 4.8</strong><span>(120 Reviews)</span><b>10+ Years</b></div>
+<div class="mini-stats"><span><strong>320+</strong> Projects</span><span><strong>150+</strong> Deals</span><span><strong>25+</strong> Team</span></div>
+<div class="tags"><span>Residential</span><span>Commercial</span><span>Land</span></div>
+<div class="card-actions"><a href="#" class="btn btn-primary">View Profile</a><a href="#" class="btn btn-outline-primary"><i class="bi bi-send"></i> Send Property</a></div>
+</div>
+</div>
+</div>
+
+<!-- Dealer 2 -->
+<div class="col-md-6 col-xl-4 dealer-item" data-name="Jagat Homes" data-location="Mansarovar" data-rating="4.6" data-experience="8" data-projects="210">
+<div class="dealer-card">
+<div class="dealer-cover cover-two">
+<span class="verified-pill"><i class="bi bi-patch-check-fill"></i> Verified</span>
+<button class="heart"><i class="bi bi-heart"></i></button>
+</div>
+<div class="dealer-body">
+<div class="profile-row">
+<div class="dealer-avatar avatar-blue">JH</div>
+<div class="dealer-name">
+<h3>Jagat Homes <i class="bi bi-patch-check-fill"></i></h3>
+<p><i class="bi bi-geo-alt"></i> Mansarovar, Jaipur</p>
+</div>
+</div>
+<div class="rating-row"><strong><i class="bi bi-star-fill"></i> 4.6</strong><span>(85 Reviews)</span><b>8+ Years</b></div>
+<div class="mini-stats"><span><strong>210+</strong> Projects</span><span><strong>105+</strong> Deals</span><span><strong>18+</strong> Team</span></div>
+<div class="tags"><span>Residential</span><span>Flats</span><span>Villas</span></div>
+<div class="card-actions"><a href="#" class="btn btn-primary">View Profile</a><a href="#" class="btn btn-outline-primary"><i class="bi bi-send"></i> Send Property</a></div>
+</div>
+</div>
+</div>
+
+<!-- Dealer 3 -->
+<div class="col-md-6 col-xl-4 dealer-item" data-name="Dream Properties" data-location="Jagatpura" data-rating="4.7" data-experience="9" data-projects="245">
+<div class="dealer-card">
+<div class="dealer-cover cover-three">
+<span class="verified-pill"><i class="bi bi-patch-check-fill"></i> Verified</span>
+<button class="heart"><i class="bi bi-heart"></i></button>
+</div>
+<div class="dealer-body">
+<div class="profile-row">
+<div class="dealer-avatar avatar-light">DP</div>
+<div class="dealer-name">
+<h3>Dream Properties <i class="bi bi-patch-check-fill"></i></h3>
+<p><i class="bi bi-geo-alt"></i> Jagatpura, Jaipur</p>
+</div>
+</div>
+<div class="rating-row"><strong><i class="bi bi-star-fill"></i> 4.7</strong><span>(90 Reviews)</span><b>9+ Years</b></div>
+<div class="mini-stats"><span><strong>245+</strong> Projects</span><span><strong>120+</strong> Deals</span><span><strong>20+</strong> Team</span></div>
+<div class="tags"><span>Residential</span><span>Plots</span><span>Commercial</span></div>
+<div class="card-actions"><a href="#" class="btn btn-primary">View Profile</a><a href="#" class="btn btn-outline-primary"><i class="bi bi-send"></i> Send Property</a></div>
+</div>
+</div>
+</div>
+
+<!-- Dealer 4 -->
+<div class="col-md-6 col-xl-4 dealer-item" data-name="Perfect Homes" data-location="Malviya Nagar" data-rating="4.5" data-experience="7" data-projects="180">
+<div class="dealer-card">
+<div class="dealer-cover cover-four">
+<span class="verified-pill"><i class="bi bi-patch-check-fill"></i> Verified</span>
+<button class="heart"><i class="bi bi-heart"></i></button>
+</div>
+<div class="dealer-body">
+<div class="profile-row">
+<div class="dealer-avatar avatar-green">PH</div>
+<div class="dealer-name">
+<h3>Perfect Homes <i class="bi bi-patch-check-fill"></i></h3>
+<p><i class="bi bi-geo-alt"></i> Malviya Nagar, Jaipur</p>
+</div>
+</div>
+<div class="rating-row"><strong><i class="bi bi-star-fill"></i> 4.5</strong><span>(60 Reviews)</span><b>7+ Years</b></div>
+<div class="mini-stats"><span><strong>180+</strong> Projects</span><span><strong>90+</strong> Deals</span><span><strong>15+</strong> Team</span></div>
+<div class="tags"><span>Residential</span><span>Rent</span><span>Flats</span></div>
+<div class="card-actions"><a href="#" class="btn btn-primary">View Profile</a><a href="#" class="btn btn-outline-primary"><i class="bi bi-send"></i> Send Property</a></div>
+</div>
+</div>
+</div>
+
+<!-- Dealer 5 -->
+<div class="col-md-6 col-xl-4 dealer-item" data-name="Royal Estate" data-location="Sanganer" data-rating="4.8" data-experience="12" data-projects="390">
+<div class="dealer-card">
+<div class="dealer-cover cover-five">
+<span class="verified-pill"><i class="bi bi-patch-check-fill"></i> Verified</span>
+<button class="heart"><i class="bi bi-heart"></i></button>
+</div>
+<div class="dealer-body">
+<div class="profile-row">
+<div class="dealer-avatar avatar-purple">RE</div>
+<div class="dealer-name">
+<h3>Royal Estate <i class="bi bi-patch-check-fill"></i></h3>
+<p><i class="bi bi-geo-alt"></i> Sanganer, Jaipur</p>
+</div>
+</div>
+<div class="rating-row"><strong><i class="bi bi-star-fill"></i> 4.8</strong><span>(145 Reviews)</span><b>12+ Years</b></div>
+<div class="mini-stats"><span><strong>390+</strong> Projects</span><span><strong>190+</strong> Deals</span><span><strong>30+</strong> Team</span></div>
+<div class="tags"><span>Commercial</span><span>Land</span><span>Industrial</span></div>
+<div class="card-actions"><a href="#" class="btn btn-primary">View Profile</a><a href="#" class="btn btn-outline-primary"><i class="bi bi-send"></i> Send Property</a></div>
+</div>
+</div>
+</div>
+
+<!-- Dealer 6 -->
+<div class="col-md-6 col-xl-4 dealer-item" data-name="City Square Properties" data-location="Jhotwara" data-rating="4.7" data-experience="11" data-projects="275">
+<div class="dealer-card">
+<div class="dealer-cover cover-six">
+<span class="verified-pill"><i class="bi bi-patch-check-fill"></i> Verified</span>
+<button class="heart"><i class="bi bi-heart"></i></button>
+</div>
+<div class="dealer-body">
+<div class="profile-row">
+<div class="dealer-avatar avatar-orange">CS</div>
+<div class="dealer-name">
+<h3>City Square Properties <i class="bi bi-patch-check-fill"></i></h3>
+<p><i class="bi bi-geo-alt"></i> Jhotwara, Jaipur</p>
+</div>
+</div>
+<div class="rating-row"><strong><i class="bi bi-star-fill"></i> 4.7</strong><span>(102 Reviews)</span><b>11+ Years</b></div>
+<div class="mini-stats"><span><strong>275+</strong> Projects</span><span><strong>130+</strong> Deals</span><span><strong>22+</strong> Team</span></div>
+<div class="tags"><span>Residential</span><span>Villas</span><span>Plots</span></div>
+<div class="card-actions"><a href="#" class="btn btn-primary">View Profile</a><a href="#" class="btn btn-outline-primary"><i class="bi bi-send"></i> Send Property</a></div>
+</div>
+</div>
+</div>
+
+<!-- Dealer 7 -->
+<div class="col-md-6 col-xl-4 dealer-item" data-name="Urban Nest Realty" data-location="Vaishali Nagar" data-rating="4.6" data-experience="6" data-projects="145">
+<div class="dealer-card">
+<div class="dealer-cover cover-seven">
+<span class="verified-pill"><i class="bi bi-patch-check-fill"></i> Verified</span>
+<button class="heart"><i class="bi bi-heart"></i></button>
+</div>
+<div class="dealer-body">
+<div class="profile-row">
+<div class="dealer-avatar avatar-pink">UN</div>
+<div class="dealer-name">
+<h3>Urban Nest Realty <i class="bi bi-patch-check-fill"></i></h3>
+<p><i class="bi bi-geo-alt"></i> Vaishali Nagar, Jaipur</p>
+</div>
+</div>
+<div class="rating-row"><strong><i class="bi bi-star-fill"></i> 4.6</strong><span>(72 Reviews)</span><b>6+ Years</b></div>
+<div class="mini-stats"><span><strong>145+</strong> Projects</span><span><strong>70+</strong> Deals</span><span><strong>12+</strong> Team</span></div>
+<div class="tags"><span>Flats</span><span>Rent</span><span>Commercial</span></div>
+<div class="card-actions"><a href="#" class="btn btn-primary">View Profile</a><a href="#" class="btn btn-outline-primary"><i class="bi bi-send"></i> Send Property</a></div>
+</div>
+</div>
+</div>
+
+<!-- Dealer 8 -->
+<div class="col-md-6 col-xl-4 dealer-item" data-name="Green City Properties" data-location="Mansarovar" data-rating="4.9" data-experience="14" data-projects="430">
+<div class="dealer-card">
+<div class="dealer-cover cover-eight">
+<span class="verified-pill"><i class="bi bi-patch-check-fill"></i> Verified</span>
+<button class="heart"><i class="bi bi-heart"></i></button>
+</div>
+<div class="dealer-body">
+<div class="profile-row">
+<div class="dealer-avatar avatar-dark">GC</div>
+<div class="dealer-name">
+<h3>Green City Properties <i class="bi bi-patch-check-fill"></i></h3>
+<p><i class="bi bi-geo-alt"></i> Mansarovar, Jaipur</p>
+</div>
+</div>
+<div class="rating-row"><strong><i class="bi bi-star-fill"></i> 4.9</strong><span>(175 Reviews)</span><b>14+ Years</b></div>
+<div class="mini-stats"><span><strong>430+</strong> Projects</span><span><strong>220+</strong> Deals</span><span><strong>35+</strong> Team</span></div>
+<div class="tags"><span>Residential</span><span>Commercial</span><span>Land</span></div>
+<div class="card-actions"><a href="#" class="btn btn-primary">View Profile</a><a href="#" class="btn btn-outline-primary"><i class="bi bi-send"></i> Send Property</a></div>
+</div>
+</div>
+</div>
+
+</div>
+
+<div id="noResults" class="no-results d-none">
+<i class="bi bi-search"></i>
+<h4>No dealers found</h4>
+<p>Try changing your search or filters.</p>
+</div>
+
+<div class="pagination-wrap">
+<button class="page-btn active">1</button>
+<button class="page-btn">2</button>
+<button class="page-btn">3</button>
+<button class="page-btn"><i class="bi bi-chevron-right"></i></button>
+</div>
+
+</div>
+</section>
+</main>
+
+<!-- Mobile filter offcanvas -->
+<div class="offcanvas offcanvas-bottom mobile-filter" tabindex="-1" id="mobileFilters">
+<div class="offcanvas-header">
+<h5>Filter Dealers</h5>
+<button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+</div>
+<div class="offcanvas-body">
+<label>Location</label>
+<select class="filter-select w-100 mb-3" id="mobileLocation">
+<option value="">All Locations</option><option>Vaishali Nagar</option><option>Mansarovar</option><option>Jagatpura</option><option>Sanganer</option><option>Malviya Nagar</option><option>Jhotwara</option>
+</select>
+<label>Rating</label>
+<select class="filter-select w-100 mb-3" id="mobileRating">
+<option value="">All Ratings</option><option value="4.8">4.8+ Rating</option><option value="4.7">4.7+ Rating</option><option value="4.5">4.5+ Rating</option>
+</select>
+<button class="btn btn-primary w-100" data-bs-dismiss="offcanvas" id="applyMobile">Apply Filters</button>
+</div>
+</div>
+
+<footer class="footer">
+<div class="container">
+<div class="footer-row">
+<div>
+<strong>Apka Apna Ghar</strong>
+<p>Verified property dealer network for easier and transparent property selling.</p>
+</div>
+<div class="footer-copy">© 2026 Apka Apna Ghar Properties</div>
+</div>
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
