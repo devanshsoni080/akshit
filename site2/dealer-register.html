@@ -1,0 +1,2181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Become a Verified Dealer | Apka Apna Ghar Properties</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --green: #173f35;
+        --green-dark: #0d2c24;
+        --green-light: #20594b;
+        --gold: #d6a85f;
+        --gold-dark: #c4954c;
+        --cream: #f7f6f2;
+        --white: #ffffff;
+        --text: #18231f;
+        --muted: #71807a;
+        --border: #e2e7e3;
+        --shadow: 0 20px 60px rgba(13, 44, 36, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "DM Sans", sans-serif;
+        background: #f6f7f5;
+        color: var(--text);
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Manrope", sans-serif;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      /* =========================
+       HEADER
+    ========================= */
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(13, 44, 36, 0.96);
+        backdrop-filter: blur(18px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .navbar {
+        min-height: 76px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #fff;
+      }
+
+      .brand:hover {
+        color: #fff;
+      }
+
+      .brand-icon {
+        width: 43px;
+        height: 43px;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--gold);
+        color: var(--green-dark);
+        font-size: 21px;
+        box-shadow: 0 8px 25px rgba(214, 168, 95, 0.22);
+      }
+
+      .brand-name {
+        font-family: "Manrope", sans-serif;
+        font-size: 17px;
+        font-weight: 800;
+        line-height: 1.1;
+      }
+
+      .brand-sub {
+        display: block;
+        color: #b9c9c3;
+        font-size: 11px;
+        margin-top: 3px;
+        letter-spacing: 0.5px;
+      }
+
+      .nav-link {
+        color: #d8e1de !important;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 10px 15px !important;
+        position: relative;
+        transition: 0.3s;
+      }
+
+      .nav-link:hover {
+        color: #fff !important;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: 3px;
+        left: 15px;
+        width: 0;
+        height: 2px;
+        background: var(--gold);
+        transition: 0.3s;
+      }
+
+      .nav-link:hover::after {
+        width: calc(100% - 30px);
+      }
+
+      .dealer-login {
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        color: #fff;
+        padding: 10px 17px;
+        border-radius: 11px;
+        font-size: 13px;
+        font-weight: 700;
+        transition: 0.3s;
+      }
+
+      .dealer-login:hover {
+        background: rgba(255, 255, 255, 0.08);
+        color: #fff;
+      }
+
+      .navbar-toggler {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .navbar-toggler-icon {
+        filter: invert(1);
+      }
+
+      /* =========================
+       HERO
+    ========================= */
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 90% 20%, rgba(214, 168, 95, 0.12), transparent 28%), linear-gradient(135deg, var(--green-dark), var(--green));
+        color: #fff;
+        padding: 75px 0 90px;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        width: 420px;
+        height: 420px;
+        border: 1px solid rgba(214, 168, 95, 0.18);
+        border-radius: 50%;
+        right: -170px;
+        top: -210px;
+        animation: rotateCircle 18s linear infinite;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        width: 220px;
+        height: 220px;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 50%;
+        left: -100px;
+        bottom: -120px;
+      }
+
+      @keyframes rotateCircle {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #e5bd78;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        margin-bottom: 18px;
+      }
+
+      .hero h1 {
+        font-size: clamp(34px, 5vw, 58px);
+        font-weight: 800;
+        line-height: 1.08;
+        max-width: 750px;
+        margin-bottom: 20px;
+      }
+
+      .hero h1 span {
+        color: var(--gold);
+      }
+
+      .hero p {
+        max-width: 650px;
+        color: #c7d3cf;
+        font-size: 17px;
+        line-height: 1.8;
+        margin-bottom: 30px;
+      }
+
+      .hero-points {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .hero-point {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 14px;
+        border-radius: 30px;
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 13px;
+        color: #e2ebe8;
+      }
+
+      .hero-point i {
+        color: var(--gold);
+      }
+
+      /* =========================
+       MAIN
+    ========================= */
+
+      .page-wrap {
+        padding: 55px 0 80px;
+      }
+
+      .form-container {
+        max-width: 1120px;
+        margin: auto;
+      }
+
+      /* =========================
+       PROGRESS
+    ========================= */
+
+      .progress-card {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 20px 24px;
+        box-shadow: var(--shadow);
+        margin-bottom: 24px;
+        animation: fadeUp 0.7s ease both;
+      }
+
+      .progress-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 12px;
+      }
+
+      .progress-top span {
+        font-weight: 700;
+        font-size: 14px;
+      }
+
+      #progressText {
+        color: var(--green);
+      }
+
+      .progress-track {
+        height: 8px;
+        background: #edf0ed;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+
+      #progressBar {
+        width: 0;
+        height: 100%;
+        background: linear-gradient(90deg, var(--green), var(--gold));
+        border-radius: 20px;
+        transition: 0.4s ease;
+      }
+
+      /* =========================
+       FORM SECTION
+    ========================= */
+
+      .form-section {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 34px;
+        margin-bottom: 22px;
+        box-shadow: 0 15px 45px rgba(13, 44, 36, 0.05);
+        animation: fadeUp 0.7s ease both;
+      }
+
+      .section-title {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 27px;
+      }
+
+      .section-number {
+        min-width: 45px;
+        height: 45px;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--green);
+        color: var(--gold);
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .section-title h2 {
+        font-size: 21px;
+        font-weight: 800;
+        margin: 0 0 5px;
+      }
+
+      .section-title p {
+        color: var(--muted);
+        font-size: 13px;
+        margin: 0;
+      }
+
+      label.form-label,
+      .field-label {
+        display: block;
+        font-size: 13px;
+        font-weight: 700;
+        margin-bottom: 8px;
+        color: #25322e;
+      }
+
+      .required {
+        color: #c94d4d;
+      }
+
+      .form-control,
+      .form-select {
+        min-height: 50px;
+        border: 1px solid #dce3df;
+        border-radius: 12px;
+        padding: 12px 15px;
+        font-size: 14px;
+        color: #24302c;
+        background: #fff;
+        transition: 0.25s;
+      }
+
+      textarea.form-control {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      .form-control:focus,
+      .form-select:focus {
+        border-color: var(--gold);
+        box-shadow: 0 0 0 4px rgba(214, 168, 95, 0.12);
+      }
+
+      /* =========================
+       CHOICE CARDS
+    ========================= */
+
+      .choice-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+
+      .choice-grid.two {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .choice-card {
+        position: relative;
+        cursor: pointer;
+      }
+
+      .choice-card input {
+        position: absolute;
+        opacity: 0;
+      }
+
+      .choice-card span {
+        min-height: 78px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        transition: 0.25s;
+        background: #fff;
+      }
+
+      .choice-card i {
+        color: var(--green);
+        font-size: 20px;
+        margin-bottom: 5px;
+      }
+
+      .choice-card b {
+        font-size: 14px;
+      }
+
+      .choice-card small {
+        color: var(--muted);
+        font-size: 11px;
+        margin-top: 3px;
+      }
+
+      .choice-card input:checked + span {
+        border-color: var(--gold);
+        background: #fffaf1;
+        box-shadow: 0 7px 20px rgba(214, 168, 95, 0.13);
+        transform: translateY(-2px);
+      }
+
+      /* =========================
+       PROFILE UPLOAD
+    ========================= */
+
+      .profile-upload {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        padding: 22px;
+        background: #fafbf9;
+        border: 1px dashed #ccd7d2;
+        border-radius: 18px;
+      }
+
+      .profile-preview {
+        width: 95px;
+        height: 95px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        background: var(--green);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        color: var(--gold);
+        font-size: 30px;
+        border: 4px solid #fff;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .profile-preview img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .upload-btn {
+        border: 0;
+        background: var(--green);
+        color: #fff;
+        padding: 10px 17px;
+        border-radius: 10px;
+        font-size: 12px;
+        font-weight: 700;
+        cursor: pointer;
+        margin-top: 8px;
+        transition: 0.3s;
+      }
+
+      .upload-btn:hover {
+        background: var(--green-light);
+        transform: translateY(-2px);
+      }
+
+      /* =========================
+       SERVICES
+    ========================= */
+
+      .check-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 11px;
+      }
+
+      .check-grid label {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        padding: 13px 14px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.25s;
+      }
+
+      .check-grid label:hover {
+        border-color: #cdb27f;
+        background: #fffdf8;
+      }
+
+      .check-grid input {
+        accent-color: var(--green);
+      }
+
+      .check-grid i {
+        color: var(--green);
+      }
+
+      /* =========================
+       DOCUMENTS
+    ========================= */
+
+      .document-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
+
+      .doc-card {
+        padding: 20px;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: #fbfcfb;
+        transition: 0.3s;
+      }
+
+      .doc-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(13, 44, 36, 0.07);
+      }
+
+      .doc-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        background: #edf4f1;
+        color: var(--green);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        margin-bottom: 12px;
+      }
+
+      .doc-card b {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+
+      .doc-card small {
+        display: block;
+        color: var(--muted);
+        font-size: 11px;
+        margin-bottom: 13px;
+      }
+
+      .doc-upload-btn {
+        border: 1px solid #d6dfdb;
+        background: #fff;
+        color: var(--green);
+        border-radius: 9px;
+        padding: 8px 12px;
+        font-size: 11px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      /* =========================
+       SWITCH
+    ========================= */
+
+      .switch-row {
+        min-height: 58px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        border: 1px solid var(--border);
+        border-radius: 13px;
+        padding: 10px 15px;
+      }
+
+      .switch-row span {
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      .switch {
+        position: relative;
+        width: 50px;
+        height: 27px;
+        flex-shrink: 0;
+      }
+
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .slider {
+        position: absolute;
+        inset: 0;
+        background: #d7dfdb;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .slider::before {
+        content: "";
+        position: absolute;
+        width: 21px;
+        height: 21px;
+        left: 3px;
+        top: 3px;
+        background: #fff;
+        border-radius: 50%;
+        transition: 0.3s;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+      }
+
+      .switch input:checked + .slider {
+        background: var(--green);
+      }
+
+      .switch input:checked + .slider::before {
+        transform: translateX(23px);
+      }
+
+      /* =========================
+       FINAL
+    ========================= */
+
+      .final-section {
+        background: var(--green-dark);
+        color: #fff;
+        border-radius: 24px;
+        padding: 28px;
+        margin-bottom: 30px;
+        box-shadow: 0 20px 50px rgba(13, 44, 36, 0.16);
+      }
+
+      .final-note {
+        display: flex;
+        gap: 15px;
+        align-items: flex-start;
+        padding-bottom: 22px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .final-note > i {
+        color: var(--gold);
+        font-size: 25px;
+      }
+
+      .final-note strong {
+        display: block;
+        font-family: "Manrope", sans-serif;
+        margin-bottom: 4px;
+      }
+
+      .final-note span {
+        color: #b9c9c3;
+        font-size: 12px;
+        line-height: 1.6;
+      }
+
+      .action-bar {
+        display: flex;
+        justify-content: flex-end;
+        gap: 12px;
+        padding-top: 22px;
+      }
+
+      .btn-draft,
+      .btn-submit {
+        min-height: 48px;
+        padding: 0 21px;
+        border-radius: 11px;
+        font-size: 13px;
+        font-weight: 800;
+        border: 0;
+        transition: 0.3s;
+      }
+
+      .btn-draft {
+        background: rgba(255, 255, 255, 0.08);
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+      }
+
+      .btn-draft:hover {
+        background: rgba(255, 255, 255, 0.13);
+      }
+
+      .btn-submit {
+        background: var(--gold);
+        color: var(--green-dark);
+      }
+
+      .btn-submit:hover {
+        background: #e2b76c;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(214, 168, 95, 0.2);
+      }
+
+      /* =========================
+       FOOTER
+    ========================= */
+
+      .site-footer {
+        background: #0a211b;
+        color: #fff;
+        padding: 65px 0 25px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .site-footer::before {
+        content: "";
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        border: 1px solid rgba(214, 168, 95, 0.08);
+        border-radius: 50%;
+        right: -200px;
+        top: -220px;
+      }
+
+      .footer-brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 11px;
+        color: #fff;
+        margin-bottom: 18px;
+      }
+
+      .footer-brand:hover {
+        color: #fff;
+      }
+
+      .footer-description {
+        max-width: 360px;
+        color: #9db0a9;
+        font-size: 13px;
+        line-height: 1.8;
+      }
+
+      .footer-title {
+        font-size: 14px;
+        font-weight: 800;
+        margin-bottom: 18px;
+      }
+
+      .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer-links li {
+        margin-bottom: 11px;
+      }
+
+      .footer-links a {
+        color: #9db0a9;
+        font-size: 13px;
+        transition: 0.25s;
+      }
+
+      .footer-links a:hover {
+        color: var(--gold);
+        padding-left: 4px;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        margin-top: 45px;
+        padding-top: 20px;
+        color: #81958e;
+        font-size: 12px;
+      }
+
+      /* =========================
+       TOAST
+    ========================= */
+
+      .toast-box {
+        position: fixed;
+        right: 25px;
+        bottom: 25px;
+        z-index: 2000;
+        background: var(--green-dark);
+        color: #fff;
+        padding: 15px 20px;
+        border-radius: 13px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transform: translateY(120px);
+        opacity: 0;
+        transition: 0.4s;
+      }
+
+      .toast-box.show {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      .toast-box i {
+        color: #74c69d;
+        font-size: 20px;
+      }
+
+      /* =========================
+       ANIMATION
+    ========================= */
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(25px);
+        transition: 0.7s ease;
+      }
+
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* =========================
+       RESPONSIVE
+    ========================= */
+
+      @media (max-width: 991px) {
+        .navbar-nav {
+          padding-top: 15px;
+        }
+
+        .dealer-login {
+          display: inline-block;
+          margin-top: 10px;
+        }
+
+        .document-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .check-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 767px) {
+        .hero {
+          padding: 55px 0 65px;
+        }
+
+        .hero h1 {
+          font-size: 36px;
+        }
+
+        .hero p {
+          font-size: 15px;
+        }
+
+        .page-wrap {
+          padding: 35px 0 55px;
+        }
+
+        .form-section {
+          padding: 23px 18px;
+          border-radius: 19px;
+        }
+
+        .section-title h2 {
+          font-size: 18px;
+        }
+
+        .choice-grid,
+        .choice-grid.two {
+          grid-template-columns: 1fr;
+        }
+
+        .check-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .document-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .profile-upload {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .action-bar {
+          flex-direction: column;
+        }
+
+        .btn-draft,
+        .btn-submit {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .brand-name {
+          font-size: 14px;
+        }
+
+        .brand-icon {
+          width: 38px;
+          height: 38px;
+        }
+
+        .hero h1 {
+          font-size: 31px;
+        }
+
+        .hero-points {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .form-section {
+          padding: 20px 15px;
+        }
+
+        .progress-card {
+          padding: 17px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =====================================================
+     HEADER
+===================================================== -->
+
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a href="index.html" class="brand">
+            <span class="brand-icon">
+              <i class="bi bi-house-heart-fill"></i>
+            </span>
+
+            <span>
+              <span class="brand-name">Apka Apna Ghar</span>
+              <span class="brand-sub">Properties</span>
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="properties.html">Properties</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="dealers.html">Dealers</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#howItWorks">How It Works</a>
+              </li>
+
+              <li class="nav-item ms-lg-2">
+                <a href="dealer-login.html" class="dealer-login"> Dealer Login </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- =====================================================
+     HERO
+===================================================== -->
+
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="eyebrow">
+          <i class="bi bi-patch-check-fill"></i>
+          DEALER PARTNER PROGRAM
+        </div>
+
+        <h1>
+          Become a <span>Verified</span><br />
+          Property Dealer
+        </h1>
+
+        <p>
+          Join Apka Apna Ghar's trusted dealer network. List properties, connect with genuine customers, collaborate with other dealers and grow your
+          property business.
+        </p>
+
+        <div class="hero-points">
+          <div class="hero-point">
+            <i class="bi bi-patch-check-fill"></i>
+            Verified Dealer Badge
+          </div>
+
+          <div class="hero-point">
+            <i class="bi bi-buildings-fill"></i>
+            List Unlimited Properties
+          </div>
+
+          <div class="hero-point">
+            <i class="bi bi-people-fill"></i>
+            Get Customer Leads
+          </div>
+
+          <div class="hero-point">
+            <i class="bi bi-arrow-repeat"></i>
+            Dealer Collaboration
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     MAIN FORM
+===================================================== -->
+
+    <main class="page-wrap">
+      <div class="container form-container">
+        <!-- PROGRESS -->
+
+        <div class="progress-card">
+          <div class="progress-top">
+            <span> Registration Progress </span>
+
+            <strong id="progressText"> 0% </strong>
+          </div>
+
+          <div class="progress-track">
+            <div id="progressBar"></div>
+          </div>
+        </div>
+
+        <form id="dealerForm" novalidate>
+          <!-- =================================================
+           01 PERSONAL DETAILS
+      ================================================= -->
+
+          <section class="form-section reveal">
+            <div class="section-title">
+              <span class="section-number"> 01 </span>
+
+              <div>
+                <h2>Dealer Basic Details</h2>
+
+                <p>Tell us about yourself and your property business.</p>
+              </div>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-12">
+                <label class="field-label"> Profile Photo </label>
+
+                <div class="profile-upload">
+                  <div class="profile-preview" id="profilePreview">
+                    <i class="bi bi-person"></i>
+                  </div>
+
+                  <div>
+                    <strong> Upload your professional photo </strong>
+
+                    <div class="text-muted small mt-1">JPG / PNG • Recommended 500×500px</div>
+
+                    <input type="file" id="profilePhoto" accept="image/*" hidden />
+
+                    <button type="button" class="upload-btn" onclick="document.getElementById('profilePhoto').click()">
+                      <i class="bi bi-upload"></i>
+                      Choose Photo
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <label class="field-label"> Full Name <span class="required">*</span> </label>
+
+                <input type="text" class="form-control required-field" placeholder="e.g. Rajesh Sharma" required />
+              </div>
+
+              <div class="col-md-6">
+                <label class="field-label"> Business / Agency Name <span class="required">*</span> </label>
+
+                <input type="text" class="form-control required-field" placeholder="e.g. Sharma Property Hub" required />
+              </div>
+
+              <div class="col-md-6">
+                <label class="field-label"> Mobile Number <span class="required">*</span> </label>
+
+                <input type="tel" class="form-control required-field" maxlength="10" inputmode="numeric" placeholder="9876543210" required />
+              </div>
+
+              <div class="col-md-6">
+                <label class="field-label"> WhatsApp Number </label>
+
+                <input type="tel" class="form-control" maxlength="10" inputmode="numeric" placeholder="9876543210" />
+              </div>
+
+              <div class="col-md-6">
+                <label class="field-label"> Email Address <span class="required">*</span> </label>
+
+                <input type="email" class="form-control required-field" placeholder="dealer@example.com" required />
+              </div>
+
+              <div class="col-md-6">
+                <label class="field-label"> Dealer Type <span class="required">*</span> </label>
+
+                <select class="form-select required-field" required>
+                  <option value="">Select Dealer Type</option>
+
+                  <option>Individual Dealer</option>
+
+                  <option>Property Consultant</option>
+
+                  <option>Real Estate Agency</option>
+
+                  <option>Builder / Developer</option>
+
+                  <option>Broker</option>
+
+                  <option>Investor</option>
+                </select>
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================
+           02 BUSINESS DETAILS
+      ================================================= -->
+
+          <section class="form-section reveal">
+            <div class="section-title">
+              <span class="section-number"> 02 </span>
+
+              <div>
+                <h2>Business Details</h2>
+
+                <p>Add information about your real estate experience.</p>
+              </div>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-md-4">
+                <label class="field-label"> Experience <span class="required">*</span> </label>
+
+                <select class="form-select required-field" required>
+                  <option value="">Select Experience</option>
+
+                  <option>Fresher</option>
+
+                  <option>1–2 Years</option>
+
+                  <option>3–5 Years</option>
+
+                  <option>5–10 Years</option>
+
+                  <option>10+ Years</option>
+                </select>
+              </div>
+
+              <div class="col-md-4">
+                <label class="field-label"> Team Size </label>
+
+                <select class="form-select">
+                  <option value="">Select Team Size</option>
+
+                  <option>Individual</option>
+
+                  <option>2–5 Members</option>
+
+                  <option>6–10 Members</option>
+
+                  <option>11–25 Members</option>
+
+                  <option>25+ Members</option>
+                </select>
+              </div>
+
+              <div class="col-md-4">
+                <label class="field-label"> Year Started </label>
+
+                <input type="number" class="form-control" placeholder="e.g. 2014" min="1950" max="2026" />
+              </div>
+
+              <div class="col-12">
+                <label class="field-label"> Business Description </label>
+
+                <textarea class="form-control" placeholder="Tell customers about your business, experience and speciality..."></textarea>
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================
+           03 LOCATION
+      ================================================= -->
+
+          <section class="form-section reveal">
+            <div class="section-title">
+              <span class="section-number"> 03 </span>
+
+              <div>
+                <h2>Office & Location</h2>
+
+                <p>Where do you operate your property business?</p>
+              </div>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-md-4">
+                <label class="field-label"> State <span class="required">*</span> </label>
+
+                <select class="form-select required-field" required>
+                  <option value="">Select State</option>
+
+                  <option>Rajasthan</option>
+
+                  <option>Delhi</option>
+
+                  <option>Maharashtra</option>
+
+                  <option>Gujarat</option>
+
+                  <option>Haryana</option>
+
+                  <option>Uttar Pradesh</option>
+
+                  <option>Madhya Pradesh</option>
+
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="col-md-4">
+                <label class="field-label"> City <span class="required">*</span> </label>
+
+                <input type="text" class="form-control required-field" placeholder="e.g. Jaipur" required />
+              </div>
+
+              <div class="col-md-4">
+                <label class="field-label"> Pincode <span class="required">*</span> </label>
+
+                <input type="text" class="form-control required-field" maxlength="6" inputmode="numeric" placeholder="302021" required />
+              </div>
+
+              <div class="col-12">
+                <label class="field-label"> Office Address </label>
+
+                <textarea class="form-control" rows="3" placeholder="Office / agency full address..."></textarea>
+              </div>
+
+              <div class="col-md-6">
+                <label class="field-label"> Google Maps Location </label>
+
+                <input type="url" class="form-control" placeholder="Paste Google Maps link" />
+              </div>
+
+              <div class="col-md-6">
+                <label class="field-label"> Landmark </label>
+
+                <input type="text" class="form-control" placeholder="Near mall / road / landmark" />
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================
+           04 SPECIALIZATION
+      ================================================= -->
+
+          <section class="form-section reveal">
+            <div class="section-title">
+              <span class="section-number"> 04 </span>
+
+              <div>
+                <h2>Property Specialization</h2>
+
+                <p>Select the type of properties you mainly deal in.</p>
+              </div>
+            </div>
+
+            <div class="check-grid">
+              <label>
+                <input type="checkbox" />
+                <i class="bi bi-buildings"></i>
+                Flats / Apartments
+              </label>
+
+              <label>
+                <input type="checkbox" />
+                <i class="bi bi-house"></i>
+                Houses / Villas
+              </label>
+
+              <label>
+                <input type="checkbox" />
+                <i class="bi bi-map"></i>
+                Plots / Land
+              </label>
+
+              <label>
+                <input type="checkbox" />
+                <i class="bi bi-shop"></i>
+                Commercial
+              </label>
+
+              <label>
+                <input type="checkbox" />
+                <i class="bi bi-building"></i>
+                Office
+              </label>
+
+              <label>
+                <input type="checkbox" />
+                <i class="bi bi-shop-window"></i>
+                Shop / Showroom
+              </label>
+
+              <label>
+                <input type="checkbox" />
+                <i class="bi bi-tree"></i>
+                Farm House
+              </label>
+
+              <label>
+                <input type="checkbox" />
+                <i class="bi bi-buildings-fill"></i>
+                Industrial
+              </label>
+
+              <label>
+                <input type="checkbox" />
+                <i class="bi bi-key"></i>
+                Rental Properties
+              </label>
+            </div>
+
+            <div class="mt-3">
+              <label class="field-label"> Other Specialization </label>
+
+              <input type="text" class="form-control" placeholder="e.g. Luxury properties, NRI properties..." />
+            </div>
+          </section>
+
+          <!-- =================================================
+           05 WORKING AREAS
+      ================================================= -->
+
+          <section class="form-section reveal">
+            <div class="section-title">
+              <span class="section-number"> 05 </span>
+
+              <div>
+                <h2>Working Areas</h2>
+
+                <p>Select locations where you actively deal in properties.</p>
+              </div>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="field-label"> Primary Area <span class="required">*</span> </label>
+
+                <input type="text" class="form-control required-field" placeholder="e.g. Vaishali Nagar" required />
+              </div>
+
+              <div class="col-md-6">
+                <label class="field-label"> Secondary Area </label>
+
+                <input type="text" class="form-control" placeholder="e.g. C-Scheme" />
+              </div>
+
+              <div class="col-md-6">
+                <label class="field-label"> City / Region </label>
+
+                <input type="text" class="form-control" placeholder="e.g. Jaipur West" />
+              </div>
+
+              <div class="col-md-6">
+                <label class="field-label"> Other Working Areas </label>
+
+                <input type="text" class="form-control" placeholder="e.g. Ajmer, Sikar, Delhi..." />
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================
+           06 CONTACT PREFERENCE
+      ================================================= -->
+
+          <section class="form-section reveal">
+            <div class="section-title">
+              <span class="section-number"> 06 </span>
+
+              <div>
+                <h2>Customer Contact Preference</h2>
+
+                <p>Decide how customers can contact you.</p>
+              </div>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-12">
+                <label class="field-label"> Preferred Contact </label>
+
+                <div class="choice-grid">
+                  <label class="choice-card">
+                    <input type="radio" name="contact" value="Call" />
+
+                    <span>
+                      <i class="bi bi-telephone"></i>
+
+                      <b>Call</b>
+
+                      <small> Phone call </small>
+                    </span>
+                  </label>
+
+                  <label class="choice-card">
+                    <input type="radio" name="contact" value="WhatsApp" />
+
+                    <span>
+                      <i class="bi bi-whatsapp"></i>
+
+                      <b>WhatsApp</b>
+
+                      <small> WhatsApp chat </small>
+                    </span>
+                  </label>
+
+                  <label class="choice-card">
+                    <input type="radio" name="contact" value="Email" />
+
+                    <span>
+                      <i class="bi bi-envelope"></i>
+
+                      <b>Email</b>
+
+                      <small> Email enquiry </small>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label class="field-label"> Show Contact Number </label>
+
+                <div class="switch-row">
+                  <span> Customer ko dealer ka contact number dikhega </span>
+
+                  <label class="switch">
+                    <input type="checkbox" checked />
+
+                    <span class="slider"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================
+           07 DOCUMENTS
+      ================================================= -->
+
+          <section class="form-section reveal">
+            <div class="section-title">
+              <span class="section-number"> 07 </span>
+
+              <div>
+                <h2>Verification Documents</h2>
+
+                <p>Documents help us verify your dealer profile.</p>
+              </div>
+            </div>
+
+            <div class="document-grid">
+              <!-- PAN -->
+
+              <div class="doc-card">
+                <div class="doc-icon">
+                  <i class="bi bi-person-vcard"></i>
+                </div>
+
+                <b>PAN Card</b>
+
+                <small> PDF / JPG / PNG </small>
+
+                <input type="file" id="panFile" hidden accept=".pdf,image/*" />
+
+                <button type="button" class="doc-upload-btn" onclick="document.getElementById('panFile').click()">
+                  <i class="bi bi-upload"></i>
+                  Upload
+                </button>
+              </div>
+
+              <!-- AADHAAR -->
+
+              <div class="doc-card">
+                <div class="doc-icon">
+                  <i class="bi bi-person-badge"></i>
+                </div>
+
+                <b>Identity Proof</b>
+
+                <small> PDF / JPG / PNG </small>
+
+                <input type="file" id="idFile" hidden accept=".pdf,image/*" />
+
+                <button type="button" class="doc-upload-btn" onclick="document.getElementById('idFile').click()">
+                  <i class="bi bi-upload"></i>
+                  Upload
+                </button>
+              </div>
+
+              <!-- RERA -->
+
+              <div class="doc-card">
+                <div class="doc-icon">
+                  <i class="bi bi-patch-check"></i>
+                </div>
+
+                <b>RERA Registration</b>
+
+                <small> Optional • PDF / Image </small>
+
+                <input type="file" id="reraFile" hidden accept=".pdf,image/*" />
+
+                <button type="button" class="doc-upload-btn" onclick="document.getElementById('reraFile').click()">
+                  <i class="bi bi-upload"></i>
+                  Upload
+                </button>
+              </div>
+
+              <!-- BUSINESS -->
+
+              <div class="doc-card">
+                <div class="doc-icon">
+                  <i class="bi bi-file-earmark-text"></i>
+                </div>
+
+                <b>Business Proof</b>
+
+                <small> PDF / Image </small>
+
+                <input type="file" id="businessFile" hidden accept=".pdf,image/*" />
+
+                <button type="button" class="doc-upload-btn" onclick="document.getElementById('businessFile').click()">
+                  <i class="bi bi-upload"></i>
+                  Upload
+                </button>
+              </div>
+
+              <!-- ADDRESS -->
+
+              <div class="doc-card">
+                <div class="doc-icon">
+                  <i class="bi bi-house-check"></i>
+                </div>
+
+                <b>Address Proof</b>
+
+                <small> PDF / JPG / PNG </small>
+
+                <input type="file" id="addressFile" hidden accept=".pdf,image/*" />
+
+                <button type="button" class="doc-upload-btn" onclick="document.getElementById('addressFile').click()">
+                  <i class="bi bi-upload"></i>
+                  Upload
+                </button>
+              </div>
+
+              <!-- OTHER -->
+
+              <div class="doc-card">
+                <div class="doc-icon">
+                  <i class="bi bi-folder-check"></i>
+                </div>
+
+                <b>Other Document</b>
+
+                <small> Optional </small>
+
+                <input type="file" id="otherFile" hidden accept=".pdf,image/*" />
+
+                <button type="button" class="doc-upload-btn" onclick="document.getElementById('otherFile').click()">
+                  <i class="bi bi-upload"></i>
+                  Upload
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================
+           08 ONLINE PROFILE
+      ================================================= -->
+
+          <section class="form-section reveal">
+            <div class="section-title">
+              <span class="section-number"> 08 </span>
+
+              <div>
+                <h2>Online Business Profile</h2>
+
+                <p>Add your online presence so customers can know more about you.</p>
+              </div>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="field-label"> Website </label>
+
+                <input type="url" class="form-control" placeholder="https://yourwebsite.com" />
+              </div>
+
+              <div class="col-md-6">
+                <label class="field-label"> Instagram </label>
+
+                <input type="text" class="form-control" placeholder="@yourusername" />
+              </div>
+
+              <div class="col-md-6">
+                <label class="field-label"> Facebook </label>
+
+                <input type="text" class="form-control" placeholder="Facebook profile/page URL" />
+              </div>
+
+              <div class="col-md-6">
+                <label class="field-label"> YouTube </label>
+
+                <input type="text" class="form-control" placeholder="YouTube channel URL" />
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================
+           09 ABOUT
+      ================================================= -->
+
+          <section class="form-section reveal">
+            <div class="section-title">
+              <span class="section-number"> 09 </span>
+
+              <div>
+                <h2>About You</h2>
+
+                <p>This information can be displayed on your public dealer profile.</p>
+              </div>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-12">
+                <label class="field-label"> Dealer Introduction </label>
+
+                <textarea class="form-control" rows="5" placeholder="Write a professional introduction about yourself..."></textarea>
+              </div>
+
+              <div class="col-md-6">
+                <label class="field-label"> Languages </label>
+
+                <input type="text" class="form-control" placeholder="Hindi, English, Rajasthani" />
+              </div>
+
+              <div class="col-md-6">
+                <label class="field-label"> Service Promise </label>
+
+                <input type="text" class="form-control" placeholder="e.g. Transparent deals & verified properties" />
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================
+           10 SUBSCRIPTION
+      ================================================= -->
+
+          <section class="form-section reveal">
+            <div class="section-title">
+              <span class="section-number"> 10 </span>
+
+              <div>
+                <h2>Dealer Subscription</h2>
+
+                <p>Choose your dealer membership plan.</p>
+              </div>
+            </div>
+
+            <div class="choice-grid">
+              <label class="choice-card">
+                <input type="radio" name="plan" value="monthly" checked />
+
+                <span>
+                  <i class="bi bi-calendar-check"></i>
+
+                  <b>Monthly Plan</b>
+
+                  <small> ₹500 / Month </small>
+                </span>
+              </label>
+
+              <label class="choice-card">
+                <input type="radio" name="plan" value="quarterly" />
+
+                <span>
+                  <i class="bi bi-calendar3"></i>
+
+                  <b>Quarterly</b>
+
+                  <small> Coming Soon </small>
+                </span>
+              </label>
+
+              <label class="choice-card">
+                <input type="radio" name="plan" value="yearly" />
+
+                <span>
+                  <i class="bi bi-stars"></i>
+
+                  <b>Annual Plan</b>
+
+                  <small> Coming Soon </small>
+                </span>
+              </label>
+            </div>
+
+            <div class="alert mt-3 mb-0" style="background: #f7f1e5; border: 1px solid #ead7b2; color: #654f2d; border-radius: 13px; font-size: 12px">
+              <i class="bi bi-info-circle me-2"></i>
+
+              Verified dealer profile activate hone ke liye ₹500/month subscription applicable hai.
+            </div>
+          </section>
+
+          <!-- =================================================
+           FINAL
+      ================================================= -->
+
+          <section class="final-section">
+            <div class="final-note">
+              <i class="bi bi-shield-check"></i>
+
+              <div>
+                <strong> Before submitting your dealer application </strong>
+
+                <span>
+                  Please check your information and documents. Our team will review your profile and verify the submitted details before activating
+                  your verified dealer profile.
+                </span>
+              </div>
+            </div>
+
+            <div class="form-check mt-4">
+              <input class="form-check-input" type="checkbox" id="terms" required />
+
+              <label class="form-check-label" for="terms" style="font-size: 12px; color: #c4d0cc">
+                I confirm that the information provided by me is correct and I agree to the dealer terms & verification process.
+              </label>
+            </div>
+
+            <div class="action-bar">
+              <button type="button" class="btn-draft" id="draftBtn">
+                <i class="bi bi-file-earmark me-1"></i>
+                Save as Draft
+              </button>
+
+              <button type="submit" class="btn-submit">
+                <i class="bi bi-patch-check me-1"></i>
+                Submit Dealer Application
+              </button>
+            </div>
+          </section>
+        </form>
+      </div>
+    </main>
+
+    <!-- =====================================================
+     FOOTER
+===================================================== -->
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-5">
+            <a href="index.html" class="footer-brand">
+              <span class="brand-icon">
+                <i class="bi bi-house-heart-fill"></i>
+              </span>
+
+              <span>
+                <span class="brand-name"> Apka Apna Ghar </span>
+
+                <span class="brand-sub"> Properties </span>
+              </span>
+            </a>
+
+            <p class="footer-description">A trusted property platform connecting customers with verified dealers and genuine properties.</p>
+          </div>
+
+          <div class="col-6 col-lg-2">
+            <div class="footer-title">Explore</div>
+
+            <ul class="footer-links">
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+
+              <li>
+                <a href="properties.html">Properties</a>
+              </li>
+
+              <li>
+                <a href="dealers.html">Dealers</a>
+              </li>
+
+              <li>
+                <a href="#">About Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-lg-2">
+            <div class="footer-title">Dealer</div>
+
+            <ul class="footer-links">
+              <li>
+                <a href="dealer-register.html"> Become Dealer </a>
+              </li>
+
+              <li>
+                <a href="dealer-login.html"> Dealer Login </a>
+              </li>
+
+              <li>
+                <a href="#"> Dealer Benefits </a>
+              </li>
+
+              <li>
+                <a href="#"> How It Works </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="footer-title">Contact</div>
+
+            <ul class="footer-links">
+              <li>
+                <a href="#">
+                  <i class="bi bi-telephone me-2"></i>
+                  +91 98765 43210
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <i class="bi bi-envelope me-2"></i>
+                  info@apkaapnaghar.com
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <i class="bi bi-geo-alt me-2"></i>
+                  Jaipur, Rajasthan
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="row align-items-center">
+            <div class="col-md-6">© 2026 Apka Apna Ghar Properties. All rights reserved.</div>
+
+            <div class="col-md-6 text-md-end mt-2 mt-md-0">
+              <a href="#" style="color: #81958e; margin-left: 15px"> Privacy Policy </a>
+
+              <a href="#" style="color: #81958e; margin-left: 15px"> Terms </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- TOAST -->
+
+    <div class="toast-box" id="toastBox">
+      <i class="bi bi-check-circle-fill"></i>
+
+      <span id="toastMessage"> Done successfully. </span>
+    </div>
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      /* ==========================================
+     PROFILE IMAGE PREVIEW
+  ========================================== */
+
+      const profilePhoto = document.getElementById("profilePhoto");
+
+      const profilePreview = document.getElementById("profilePreview");
+
+      profilePhoto.addEventListener("change", function () {
+        const file = this.files[0];
+
+        if (!file) return;
+
+        if (!file.type.startsWith("image/")) {
+          showToast("Please select an image.");
+          return;
+        }
+
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+          profilePreview.innerHTML = `<img src="${e.target.result}" alt="Profile">`;
+        };
+
+        reader.readAsDataURL(file);
+      });
+
+      /* ==========================================
+     PROGRESS BAR
+  ========================================== */
+
+      const form = document.getElementById("dealerForm");
+
+      const progressBar = document.getElementById("progressBar");
+
+      const progressText = document.getElementById("progressText");
+
+      function updateProgress() {
+        const fields = form.querySelectorAll("input:not([type='file']), select, textarea");
+
+        let filled = 0;
+
+        fields.forEach((field) => {
+          if (field.type === "checkbox") {
+            if (field.checked) {
+              filled++;
+            }
+          } else if (field.type === "radio") {
+            if (field.checked) {
+              filled++;
+            }
+          } else if (field.value.trim() !== "") {
+            filled++;
+          }
+        });
+
+        const percent = Math.min(100, Math.round((filled / fields.length) * 100));
+
+        progressBar.style.width = percent + "%";
+
+        progressText.innerText = percent + "%";
+      }
+
+      form.addEventListener("input", updateProgress);
+
+      form.addEventListener("change", updateProgress);
+
+      updateProgress();
+
+      /* ==========================================
+     FORM SUBMIT
+  ========================================== */
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const requiredFields = form.querySelectorAll(".required-field");
+
+        let valid = true;
+
+        requiredFields.forEach((field) => {
+          if (field.value.trim() === "") {
+            field.style.borderColor = "#dc6b6b";
+
+            valid = false;
+          } else {
+            field.style.borderColor = "#dce3df";
+          }
+        });
+
+        const terms = document.getElementById("terms");
+
+        if (!terms.checked) {
+          valid = false;
+
+          showToast("Please accept the dealer terms.");
+
+          terms.focus();
+
+          return;
+        }
+
+        if (!valid) {
+          showToast("Please fill all required fields.");
+
+          return;
+        }
+
+        showToast("Dealer application submitted successfully!");
+
+        setTimeout(() => {
+          /*
+        Yahan future me PHP / MySQL / Supabase API
+        connect kar sakte ho.
+      */
+
+          console.log("Dealer application ready for backend submission.");
+        }, 1000);
+      });
+
+      /* ==========================================
+     SAVE DRAFT
+  ========================================== */
+
+      document.getElementById("draftBtn").addEventListener("click", function () {
+        showToast("Dealer application saved as draft.");
+      });
+
+      /* ==========================================
+     TOAST
+  ========================================== */
+
+      function showToast(message) {
+        const toast = document.getElementById("toastBox");
+
+        const text = document.getElementById("toastMessage");
+
+        text.innerText = message;
+
+        toast.classList.add("show");
+
+        setTimeout(() => {
+          toast.classList.remove("show");
+        }, 3000);
+      }
+
+      /* ==========================================
+     SCROLL REVEAL
+  ========================================== */
+
+      const reveals = document.querySelectorAll(".reveal");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+
+        {
+          threshold: 0.12,
+        },
+      );
+
+      reveals.forEach((el) => {
+        observer.observe(el);
+      });
+
+      /* ==========================================
+     MOBILE NUMBER ONLY
+  ========================================== */
+
+      document.querySelectorAll("input[type='tel'], input[inputmode='numeric']").forEach((input) => {
+        input.addEventListener("input", function () {
+          this.value = this.value.replace(/[^0-9]/g, "");
+        });
+      });
+
+      /* ==========================================
+     DOCUMENT UPLOAD FEEDBACK
+  ========================================== */
+
+      document.querySelectorAll(".doc-card input[type='file']").forEach((input) => {
+        input.addEventListener("change", function () {
+          const card = this.closest(".doc-card");
+
+          const button = card.querySelector(".doc-upload-btn");
+
+          if (this.files.length) {
+            button.innerHTML = `<i class="bi bi-check-circle"></i>
+               ${this.files[0].name}`;
+
+            button.style.background = "#edf5f1";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

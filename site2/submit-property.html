@@ -1,0 +1,3032 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Submit Property | Apka Apna Ghar Properties</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --green: #173f35;
+        --green-dark: #0d2c24;
+        --green-light: #23584a;
+        --gold: #d6a85f;
+        --gold-light: #efd29a;
+        --cream: #f7f5ef;
+        --white: #ffffff;
+        --text: #17231f;
+        --muted: #74807b;
+        --border: #e5e7e3;
+        --danger: #dc3545;
+        --success: #198754;
+        --shadow: 0 15px 45px rgba(13, 44, 36, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "DM Sans", sans-serif;
+        background: #f7f8f6;
+        color: var(--text);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Manrope", sans-serif;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      /* =====================================================
+       HEADER
+    ===================================================== */
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+
+        background: rgba(13, 44, 36, 0.96);
+
+        backdrop-filter: blur(18px);
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+
+        animation: headerDown 0.7s ease;
+      }
+
+      @keyframes headerDown {
+        from {
+          opacity: 0;
+          transform: translateY(-100%);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .navbar {
+        padding: 14px 0;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: white !important;
+      }
+
+      .brand-logo {
+        width: 46px;
+        height: 46px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 14px;
+
+        background: linear-gradient(135deg, var(--gold), var(--gold-light));
+
+        color: var(--green-dark);
+
+        font-size: 21px;
+        font-weight: 800;
+
+        box-shadow: 0 8px 25px rgba(214, 168, 95, 0.22);
+      }
+
+      .brand-title {
+        font-family: "Manrope";
+        font-size: 17px;
+        font-weight: 800;
+        line-height: 1;
+      }
+
+      .brand-subtitle {
+        display: block;
+        margin-top: 5px;
+
+        color: rgba(255, 255, 255, 0.55);
+
+        font-size: 10px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+      }
+
+      .navbar-nav {
+        gap: 5px;
+      }
+
+      .nav-link {
+        color: rgba(255, 255, 255, 0.75) !important;
+
+        padding: 10px 14px !important;
+
+        border-radius: 10px;
+
+        font-weight: 500;
+
+        transition: 0.3s;
+      }
+
+      .nav-link:hover,
+      .nav-link.active {
+        color: white !important;
+
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .join-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+
+        padding: 11px 17px;
+
+        border-radius: 11px;
+
+        background: var(--gold);
+
+        color: var(--green-dark) !important;
+
+        font-weight: 800;
+
+        transition: 0.3s;
+      }
+
+      .join-btn:hover {
+        transform: translateY(-2px);
+
+        background: var(--gold-light);
+
+        box-shadow: 0 8px 22px rgba(214, 168, 95, 0.2);
+      }
+
+      .navbar-toggler {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .navbar-toggler-icon {
+        filter: invert(1);
+      }
+
+      /* =====================================================
+       HERO
+    ===================================================== */
+
+      .page-hero {
+        position: relative;
+        overflow: hidden;
+
+        background: linear-gradient(120deg, var(--green-dark), var(--green));
+
+        padding: 70px 0 80px;
+
+        color: white;
+      }
+
+      .page-hero::before {
+        content: "";
+
+        position: absolute;
+
+        width: 420px;
+        height: 420px;
+
+        right: -150px;
+        top: -230px;
+
+        border-radius: 50%;
+
+        border: 80px solid rgba(214, 168, 95, 0.08);
+      }
+
+      .page-hero::after {
+        content: "";
+
+        position: absolute;
+
+        width: 220px;
+        height: 220px;
+
+        left: -100px;
+        bottom: -150px;
+
+        border-radius: 50%;
+
+        background: rgba(255, 255, 255, 0.035);
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+
+        max-width: 800px;
+
+        animation: heroReveal 0.8s ease;
+      }
+
+      @keyframes heroReveal {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+
+        padding: 7px 12px;
+
+        border-radius: 30px;
+
+        background: rgba(255, 255, 255, 0.08);
+
+        border: 1px solid rgba(255, 255, 255, 0.12);
+
+        color: var(--gold-light);
+
+        font-size: 11px;
+
+        font-weight: 800;
+
+        letter-spacing: 1.3px;
+      }
+
+      .page-hero h1 {
+        margin: 18px 0 12px;
+
+        font-size: clamp(35px, 5vw, 58px);
+
+        font-weight: 800;
+
+        letter-spacing: -1.8px;
+      }
+
+      .page-hero p {
+        max-width: 700px;
+
+        margin: 0;
+
+        color: rgba(255, 255, 255, 0.67);
+
+        font-size: 16px;
+
+        line-height: 1.7;
+      }
+
+      .hero-back {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+
+        margin-top: 25px;
+
+        color: white;
+
+        font-size: 14px;
+        font-weight: 700;
+
+        transition: 0.3s;
+      }
+
+      .hero-back:hover {
+        color: var(--gold-light);
+
+        transform: translateX(-4px);
+      }
+
+      /* =====================================================
+       FORM WRAPPER
+    ===================================================== */
+
+      .form-wrapper {
+        margin-top: -35px;
+
+        position: relative;
+        z-index: 5;
+
+        padding-bottom: 80px;
+      }
+
+      /* =====================================================
+       PROGRESS
+    ===================================================== */
+
+      .progress-card {
+        background: white;
+
+        border: 1px solid var(--border);
+
+        border-radius: 20px;
+
+        padding: 20px 24px;
+
+        box-shadow: var(--shadow);
+
+        margin-bottom: 24px;
+
+        animation: fadeUp 0.7s ease;
+      }
+
+      .progress-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin-bottom: 12px;
+
+        font-size: 13px;
+
+        color: var(--muted);
+      }
+
+      .progress-top strong {
+        color: var(--green);
+
+        font-family: "Manrope";
+
+        font-size: 15px;
+      }
+
+      .progress-track {
+        height: 8px;
+
+        background: #edf0ed;
+
+        border-radius: 20px;
+
+        overflow: hidden;
+      }
+
+      #progressBar {
+        width: 0%;
+
+        height: 100%;
+
+        border-radius: 20px;
+
+        background: linear-gradient(90deg, var(--green), var(--gold));
+
+        transition: width 0.5s ease;
+      }
+
+      /* =====================================================
+       FORM SECTION
+    ===================================================== */
+
+      .form-section {
+        position: relative;
+
+        background: white;
+
+        border: 1px solid var(--border);
+
+        border-radius: 24px;
+
+        padding: 30px;
+
+        margin-bottom: 24px;
+
+        box-shadow: 0 10px 35px rgba(13, 44, 36, 0.045);
+
+        overflow: hidden;
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .form-section.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .form-section:hover {
+        box-shadow: 0 18px 45px rgba(13, 44, 36, 0.075);
+      }
+
+      .form-section::before {
+        content: "";
+
+        position: absolute;
+
+        left: 0;
+        top: 0;
+
+        width: 4px;
+        height: 100%;
+
+        background: linear-gradient(var(--green), var(--gold));
+
+        opacity: 0.7;
+      }
+
+      .section-title {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        margin-bottom: 27px;
+      }
+
+      .section-number {
+        width: 45px;
+        height: 45px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-shrink: 0;
+
+        border-radius: 13px;
+
+        background: rgba(23, 63, 53, 0.08);
+
+        color: var(--green);
+
+        font-family: "Manrope";
+
+        font-size: 13px;
+
+        font-weight: 800;
+      }
+
+      .section-title h2 {
+        margin: 0 0 4px;
+
+        font-size: 20px;
+
+        font-weight: 800;
+      }
+
+      .section-title p {
+        margin: 0;
+
+        color: var(--muted);
+
+        font-size: 13px;
+      }
+
+      /* =====================================================
+       LABELS
+    ===================================================== */
+
+      label:not(.choice-card):not(.switch):not(.upload-label):not(.check-item) {
+        display: block;
+
+        margin-bottom: 8px;
+
+        color: #28342f;
+
+        font-size: 13px;
+
+        font-weight: 700;
+      }
+
+      label span {
+        color: var(--danger);
+      }
+
+      /* =====================================================
+       INPUTS
+    ===================================================== */
+
+      .form-control,
+      .form-select {
+        min-height: 48px;
+
+        border: 1px solid #dfe4e0;
+
+        border-radius: 11px;
+
+        padding: 11px 14px;
+
+        color: var(--text);
+
+        font-size: 14px;
+
+        background: white;
+
+        transition: 0.25s;
+      }
+
+      textarea.form-control {
+        min-height: 125px;
+
+        resize: vertical;
+      }
+
+      .form-control::placeholder {
+        color: #a2aaa6;
+      }
+
+      .form-control:focus,
+      .form-select:focus {
+        border-color: var(--gold);
+
+        box-shadow: 0 0 0 4px rgba(214, 168, 95, 0.11);
+
+        outline: none;
+      }
+
+      .input-group-text {
+        border: 1px solid #dfe4e0;
+
+        background: #f7f8f6;
+
+        color: var(--green);
+
+        font-weight: 800;
+      }
+
+      /* =====================================================
+       CHOICE CARDS
+    ===================================================== */
+
+      .choice-grid {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 12px;
+      }
+
+      .choice-grid.two {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .choice-card {
+        position: relative;
+
+        cursor: pointer;
+
+        margin: 0 !important;
+      }
+
+      .choice-card input {
+        position: absolute;
+
+        opacity: 0;
+      }
+
+      .choice-card > span {
+        display: flex;
+
+        flex-direction: column;
+
+        min-height: 95px;
+
+        padding: 18px;
+
+        border: 1px solid var(--border);
+
+        border-radius: 14px;
+
+        background: white;
+
+        transition: 0.3s;
+      }
+
+      .choice-card i {
+        color: var(--green);
+
+        font-size: 21px;
+
+        margin-bottom: 8px;
+      }
+
+      .choice-card b {
+        color: var(--text);
+
+        font-size: 14px;
+      }
+
+      .choice-card small {
+        color: var(--muted);
+
+        margin-top: 4px;
+
+        font-size: 11px;
+      }
+
+      .choice-card input:checked + span {
+        border-color: var(--gold);
+
+        background: linear-gradient(135deg, rgba(214, 168, 95, 0.11), rgba(23, 63, 53, 0.035));
+
+        box-shadow: 0 8px 25px rgba(214, 168, 95, 0.12);
+      }
+
+      .choice-card input:checked + span i {
+        color: var(--gold);
+      }
+
+      /* =====================================================
+       MAP
+    ===================================================== */
+
+      .map-input {
+        display: flex;
+        gap: 8px;
+      }
+
+      .map-btn {
+        flex-shrink: 0;
+
+        border: 0;
+
+        border-radius: 11px;
+
+        padding: 0 16px;
+
+        background: var(--green);
+
+        color: white;
+
+        font-weight: 700;
+
+        transition: 0.3s;
+      }
+
+      .map-btn:hover {
+        background: var(--green-light);
+
+        transform: translateY(-1px);
+      }
+
+      /* =====================================================
+       UPLOAD
+    ===================================================== */
+
+      .upload-box {
+        border: 2px dashed #d7ded9;
+
+        border-radius: 18px;
+
+        padding: 45px 25px;
+
+        text-align: center;
+
+        background: #fafbf9;
+
+        transition: 0.3s;
+      }
+
+      .upload-box.dragging {
+        border-color: var(--gold);
+
+        background: rgba(214, 168, 95, 0.07);
+
+        transform: scale(1.01);
+      }
+
+      .upload-box > i {
+        display: block;
+
+        color: var(--green);
+
+        font-size: 42px;
+
+        margin-bottom: 12px;
+      }
+
+      .upload-box h3 {
+        margin-bottom: 6px;
+
+        font-size: 18px;
+
+        font-weight: 800;
+      }
+
+      .upload-box h3 span {
+        color: var(--danger);
+      }
+
+      .upload-box p {
+        margin-bottom: 18px;
+
+        color: var(--muted);
+
+        font-size: 12px;
+      }
+
+      .upload-btn,
+      .small-upload,
+      .doc-upload button {
+        border: 0;
+
+        border-radius: 10px;
+
+        background: var(--green);
+
+        color: white;
+
+        padding: 10px 16px;
+
+        font-size: 12px;
+
+        font-weight: 700;
+
+        transition: 0.3s;
+      }
+
+      .upload-btn:hover,
+      .small-upload:hover,
+      .doc-upload button:hover {
+        background: var(--green-light);
+
+        transform: translateY(-2px);
+      }
+
+      .preview-grid {
+        display: grid;
+
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+
+        gap: 12px;
+
+        margin-top: 22px;
+
+        text-align: left;
+      }
+
+      .preview-item {
+        height: 100px;
+
+        position: relative;
+
+        border-radius: 12px;
+
+        overflow: hidden;
+
+        background: #eee;
+
+        animation: zoomIn 0.35s ease;
+      }
+
+      @keyframes zoomIn {
+        from {
+          opacity: 0;
+          transform: scale(0.85);
+        }
+
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .preview-item img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+      }
+
+      .remove-preview {
+        position: absolute;
+
+        top: 6px;
+        right: 6px;
+
+        width: 26px;
+        height: 26px;
+
+        border: 0;
+
+        border-radius: 50%;
+
+        background: rgba(0, 0, 0, 0.7);
+
+        color: white;
+
+        cursor: pointer;
+      }
+
+      .mini-upload {
+        min-height: 80px;
+
+        display: flex;
+        align-items: center;
+
+        gap: 14px;
+
+        padding: 15px;
+
+        border: 1px solid var(--border);
+
+        border-radius: 14px;
+
+        background: #fafbf9;
+      }
+
+      .mini-upload > i {
+        color: var(--green);
+
+        font-size: 25px;
+      }
+
+      .mini-upload b {
+        display: block;
+
+        font-size: 13px;
+      }
+
+      .mini-upload small {
+        display: block;
+
+        margin-top: 3px;
+
+        color: var(--muted);
+
+        font-size: 11px;
+      }
+
+      .mini-upload .small-upload {
+        margin-left: auto;
+      }
+
+      /* =====================================================
+       CHECK GRID
+    ===================================================== */
+
+      .check-grid {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 10px;
+      }
+
+      .check-grid label {
+        display: flex !important;
+
+        align-items: center;
+
+        gap: 9px;
+
+        margin: 0 !important;
+
+        min-height: 48px;
+
+        padding: 11px 13px;
+
+        border: 1px solid var(--border);
+
+        border-radius: 11px;
+
+        background: white;
+
+        cursor: pointer;
+
+        font-size: 12px !important;
+
+        font-weight: 600 !important;
+
+        transition: 0.25s;
+      }
+
+      .check-grid label:hover {
+        border-color: var(--gold);
+        transform: translateY(-2px);
+      }
+
+      .check-grid input {
+        width: 17px;
+        height: 17px;
+
+        accent-color: var(--green);
+
+        flex-shrink: 0;
+      }
+
+      .check-grid i {
+        color: var(--green);
+
+        font-size: 16px;
+      }
+
+      /* =====================================================
+       DOCUMENT GRID
+    ===================================================== */
+
+      .document-grid {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 12px;
+      }
+
+      .doc-upload {
+        position: relative;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 5px;
+
+        padding: 18px;
+
+        min-height: 150px;
+
+        border: 1px solid var(--border);
+
+        border-radius: 15px;
+
+        background: #fafbf9;
+
+        transition: 0.3s;
+      }
+
+      .doc-upload:hover {
+        transform: translateY(-3px);
+
+        box-shadow: 0 10px 25px rgba(13, 44, 36, 0.06);
+
+        border-color: rgba(214, 168, 95, 0.55);
+      }
+
+      .doc-upload > i {
+        color: var(--green);
+
+        font-size: 27px;
+
+        margin-bottom: 5px;
+      }
+
+      .doc-upload b {
+        font-size: 13px;
+      }
+
+      .doc-upload small {
+        color: var(--muted);
+
+        font-size: 11px;
+      }
+
+      .doc-upload button {
+        margin-top: auto;
+      }
+
+      /* =====================================================
+       SWITCH
+    ===================================================== */
+
+      .switch-row {
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 20px;
+
+        padding: 15px;
+
+        border: 1px solid var(--border);
+
+        border-radius: 13px;
+
+        background: #fafbf9;
+      }
+
+      .switch-row > span {
+        color: var(--muted);
+
+        font-size: 13px;
+      }
+
+      .switch {
+        position: relative;
+
+        width: 48px;
+        height: 27px;
+
+        flex-shrink: 0;
+
+        cursor: pointer;
+      }
+
+      .switch input {
+        display: none;
+      }
+
+      .switch span {
+        position: absolute;
+
+        inset: 0;
+
+        background: #cdd4d0;
+
+        border-radius: 30px;
+
+        transition: 0.3s;
+      }
+
+      .switch span::before {
+        content: "";
+
+        position: absolute;
+
+        width: 21px;
+        height: 21px;
+
+        left: 3px;
+        top: 3px;
+
+        border-radius: 50%;
+
+        background: white;
+
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+
+        transition: 0.3s;
+      }
+
+      .switch input:checked + span {
+        background: var(--green);
+      }
+
+      .switch input:checked + span::before {
+        transform: translateX(21px);
+      }
+
+      /* =====================================================
+       FINAL
+    ===================================================== */
+
+      .final-section {
+        background: white;
+
+        border: 1px solid var(--border);
+
+        border-radius: 22px;
+
+        padding: 25px;
+
+        box-shadow: var(--shadow);
+      }
+
+      .final-note {
+        display: flex;
+
+        gap: 14px;
+
+        padding: 17px;
+
+        border-radius: 14px;
+
+        background: rgba(23, 63, 53, 0.055);
+
+        margin-bottom: 20px;
+      }
+
+      .final-note > i {
+        color: var(--green);
+
+        font-size: 25px;
+      }
+
+      .final-note strong {
+        display: block;
+
+        margin-bottom: 3px;
+
+        font-size: 13px;
+      }
+
+      .final-note span {
+        display: block;
+
+        color: var(--muted);
+
+        font-size: 12px;
+
+        line-height: 1.6;
+      }
+
+      .action-bar {
+        display: flex;
+
+        justify-content: flex-end;
+
+        gap: 10px;
+      }
+
+      .btn-draft,
+      .btn-submit {
+        border: 0;
+
+        min-height: 50px;
+
+        padding: 0 21px;
+
+        border-radius: 11px;
+
+        font-weight: 800;
+
+        transition: 0.3s;
+      }
+
+      .btn-draft {
+        background: #eef1ef;
+
+        color: var(--green);
+      }
+
+      .btn-draft:hover {
+        background: #e3e8e5;
+
+        transform: translateY(-2px);
+      }
+
+      .btn-submit {
+        background: linear-gradient(135deg, var(--green), var(--green-light));
+
+        color: white;
+
+        box-shadow: 0 10px 25px rgba(23, 63, 53, 0.18);
+      }
+
+      .btn-submit:hover {
+        transform: translateY(-2px);
+
+        box-shadow: 0 14px 30px rgba(23, 63, 53, 0.24);
+      }
+
+      /* =====================================================
+       TOAST
+    ===================================================== */
+
+      .toast-box {
+        position: fixed;
+
+        right: 25px;
+        bottom: 25px;
+
+        z-index: 2000;
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 10px;
+
+        padding: 14px 18px;
+
+        border-radius: 13px;
+
+        background: var(--green);
+
+        color: white;
+
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+
+        transform: translateY(100px);
+
+        opacity: 0;
+
+        pointer-events: none;
+
+        transition: 0.4s;
+      }
+
+      .toast-box.show {
+        transform: translateY(0);
+
+        opacity: 1;
+      }
+
+      .toast-box i {
+        color: var(--gold-light);
+      }
+
+      /* =====================================================
+       FOOTER
+    ===================================================== */
+
+      .site-footer {
+        background: #09261f;
+
+        color: white;
+
+        padding: 65px 0 0;
+      }
+
+      .footer-brand {
+        display: flex;
+
+        align-items: center;
+
+        gap: 12px;
+
+        color: white;
+
+        margin-bottom: 18px;
+      }
+
+      .footer-brand .brand-logo {
+        width: 43px;
+        height: 43px;
+      }
+
+      .footer-description {
+        max-width: 350px;
+
+        color: rgba(255, 255, 255, 0.52);
+
+        font-size: 13px;
+
+        line-height: 1.8;
+      }
+
+      .footer-title {
+        margin-bottom: 18px;
+
+        font-size: 14px;
+
+        font-weight: 800;
+      }
+
+      .footer-links {
+        padding: 0;
+        margin: 0;
+
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 11px;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.52);
+
+        font-size: 13px;
+
+        transition: 0.3s;
+      }
+
+      .footer-links a:hover {
+        color: var(--gold);
+
+        padding-left: 4px;
+      }
+
+      .socials {
+        display: flex;
+
+        gap: 8px;
+
+        margin-top: 18px;
+      }
+
+      .socials a {
+        width: 37px;
+        height: 37px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: 1px solid rgba(255, 255, 255, 0.1);
+
+        border-radius: 10px;
+
+        color: white;
+
+        transition: 0.3s;
+      }
+
+      .socials a:hover {
+        background: var(--gold);
+
+        color: var(--green-dark);
+
+        border-color: var(--gold);
+
+        transform: translateY(-3px);
+      }
+
+      .footer-bottom {
+        margin-top: 45px;
+
+        padding: 20px 0;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+        color: rgba(255, 255, 255, 0.42);
+
+        font-size: 12px;
+      }
+
+      /* =====================================================
+       RESPONSIVE
+    ===================================================== */
+
+      @media (max-width: 991px) {
+        .navbar-nav {
+          padding-top: 15px;
+        }
+
+        .join-btn {
+          display: inline-flex;
+
+          margin-top: 10px;
+        }
+
+        .choice-grid,
+        .document-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .check-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 767px) {
+        .page-hero {
+          padding: 50px 0 65px;
+        }
+
+        .form-wrapper {
+          margin-top: -25px;
+        }
+
+        .form-section {
+          padding: 22px 18px;
+        }
+
+        .progress-card {
+          padding: 17px;
+        }
+
+        .choice-grid,
+        .choice-grid.two,
+        .document-grid,
+        .check-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .map-input {
+          flex-direction: column;
+        }
+
+        .map-btn {
+          min-height: 45px;
+        }
+
+        .action-bar {
+          flex-direction: column;
+        }
+
+        .btn-draft,
+        .btn-submit {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .brand-title {
+          font-size: 15px;
+        }
+
+        .brand-logo {
+          width: 42px;
+          height: 42px;
+        }
+
+        .page-hero h1 {
+          font-size: 34px;
+        }
+
+        .section-title {
+          align-items: flex-start;
+        }
+
+        .section-number {
+          width: 40px;
+          height: 40px;
+        }
+
+        .section-title h2 {
+          font-size: 18px;
+        }
+
+        .upload-box {
+          padding: 35px 15px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =====================================================
+     HEADER
+===================================================== -->
+
+    <header class="site-header">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <a href="index.html" class="brand">
+            <span class="brand-logo">
+              <i class="bi bi-house-heart-fill"></i>
+            </span>
+
+            <span>
+              <span class="brand-title"> Apka Apna Ghar </span>
+
+              <small class="brand-subtitle"> Properties </small>
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html"> Home </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="properties.html"> Properties </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="dealers.html"> Dealers </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="how-it-works.html"> How It Works </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html"> Contact </a>
+              </li>
+
+              <li class="nav-item ms-lg-2">
+                <a href="dealer-register.html" class="join-btn">
+                  <i class="bi bi-plus-lg"></i>
+
+                  Join as Dealer
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- =====================================================
+     HERO
+===================================================== -->
+
+    <section class="page-hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">
+            <i class="bi bi-buildings"></i>
+
+            PROPERTY LISTING
+          </div>
+
+          <h1>Submit Property</h1>
+
+          <p>
+            Add your property to Apka Apna Ghar and reach genuine customers looking for verified homes, plots, villas, commercial spaces and more.
+          </p>
+
+          <a href="dealers.html" class="hero-back">
+            <i class="bi bi-arrow-left"></i>
+
+            Back to Dealers
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     FORM
+===================================================== -->
+
+    <main class="form-wrapper">
+      <div class="container">
+        <!-- PROGRESS -->
+
+        <div class="progress-card">
+          <div class="progress-top">
+            <span> Property Form Progress </span>
+
+            <strong id="progressText"> 0% </strong>
+          </div>
+
+          <div class="progress-track">
+            <div id="progressBar"></div>
+          </div>
+        </div>
+
+        <form id="propertyForm" novalidate>
+          <!-- =================================================
+           01 BASIC DETAILS
+      ================================================== -->
+
+          <section class="form-section" data-section>
+            <div class="section-title">
+              <span class="section-number"> 01 </span>
+
+              <div>
+                <h2>Property Basic Details</h2>
+
+                <p>Add basic property information.</p>
+              </div>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-12">
+                <label>
+                  Property Title
+                  <span>*</span>
+                </label>
+
+                <input class="form-control required-field" name="property_title" placeholder="e.g. 3 BHK Luxury Flat in Vaishali Nagar" required />
+              </div>
+
+              <div class="col-md-6">
+                <label>
+                  Property Type
+                  <span>*</span>
+                </label>
+
+                <select class="form-select required-field" id="propertyType" name="property_type" required>
+                  <option value="">Select Property Type</option>
+
+                  <option>Flat / Apartment</option>
+
+                  <option>House / Villa</option>
+
+                  <option>Independent House</option>
+
+                  <option>Plot / Land</option>
+
+                  <option>Farm House</option>
+
+                  <option>Commercial</option>
+
+                  <option>Shop / Showroom</option>
+
+                  <option>Office</option>
+
+                  <option>Industrial Property</option>
+
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label>
+                  Property Category
+                  <span>*</span>
+                </label>
+
+                <select class="form-select required-field" name="property_category" required>
+                  <option value="">Select Category</option>
+
+                  <option>Residential</option>
+
+                  <option>Commercial</option>
+
+                  <option>Industrial</option>
+
+                  <option>Agricultural</option>
+
+                  <option>Mixed Use</option>
+                </select>
+              </div>
+
+              <div class="col-12">
+                <label>
+                  Listing For
+                  <span>*</span>
+                </label>
+
+                <div class="choice-grid">
+                  <label class="choice-card">
+                    <input type="radio" name="listing_for" value="Sale" required />
+
+                    <span>
+                      <i class="bi bi-tag"></i>
+
+                      <b> Sale </b>
+
+                      <small> Sell property </small>
+                    </span>
+                  </label>
+
+                  <label class="choice-card">
+                    <input type="radio" name="listing_for" value="Rent" />
+
+                    <span>
+                      <i class="bi bi-key"></i>
+
+                      <b> Rent </b>
+
+                      <small> Monthly rental </small>
+                    </span>
+                  </label>
+
+                  <label class="choice-card">
+                    <input type="radio" name="listing_for" value="Lease" />
+
+                    <span>
+                      <i class="bi bi-file-earmark-text"></i>
+
+                      <b> Lease </b>
+
+                      <small> Long-term lease </small>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label>
+                  Property Description
+                  <span>*</span>
+                </label>
+
+                <textarea
+                  class="form-control required-field"
+                  name="description"
+                  placeholder="List the property's features, condition, location advantages, and important details..."
+                  required
+                ></textarea>
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================
+           02 LOCATION
+      ================================================== -->
+
+          <section class="form-section" data-section>
+            <div class="section-title">
+              <span class="section-number"> 02 </span>
+
+              <div>
+                <h2>Property Location</h2>
+
+                <p>Exact location details of the property.</p>
+              </div>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-md-4">
+                <label>
+                  State
+                  <span>*</span>
+                </label>
+
+                <select class="form-select required-field" required>
+                  <option value="">Select State</option>
+
+                  <option>Rajasthan</option>
+
+                  <option>Delhi</option>
+
+                  <option>Maharashtra</option>
+
+                  <option>Gujarat</option>
+
+                  <option>Uttar Pradesh</option>
+
+                  <option>Haryana</option>
+
+                  <option>Madhya Pradesh</option>
+
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="col-md-4">
+                <label>
+                  City
+                  <span>*</span>
+                </label>
+
+                <input class="form-control required-field" placeholder="e.g. Jaipur" required />
+              </div>
+
+              <div class="col-md-4">
+                <label>
+                  Area / Locality
+                  <span>*</span>
+                </label>
+
+                <input class="form-control required-field" placeholder="e.g. Vaishali Nagar" required />
+              </div>
+
+              <div class="col-md-4">
+                <label>
+                  Pincode
+                  <span>*</span>
+                </label>
+
+                <input class="form-control required-field" inputmode="numeric" maxlength="6" placeholder="302021" required />
+              </div>
+
+              <div class="col-md-8">
+                <label>
+                  Full Address
+                  <span>*</span>
+                </label>
+
+                <input class="form-control required-field" placeholder="House no., street, colony..." required />
+              </div>
+
+              <div class="col-md-6">
+                <label> Landmark </label>
+
+                <input class="form-control" placeholder="Near school / mall / main road" />
+              </div>
+
+              <div class="col-md-6">
+                <label> Google Map Location </label>
+
+                <div class="map-input">
+                  <input class="form-control" id="mapLink" placeholder="Paste Google Maps link" />
+
+                  <button type="button" class="map-btn" id="mapBtn">
+                    <i class="bi bi-geo-alt"></i>
+
+                    Open
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================
+           03 PROPERTY DETAILS
+      ================================================== -->
+
+          <section class="form-section" data-section>
+            <div class="section-title">
+              <span class="section-number"> 03 </span>
+
+              <div>
+                <h2>Property Details</h2>
+
+                <p>Size, rooms, floor & construction details.</p>
+              </div>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-sm-6 col-lg-3">
+                <label> BHK / RK </label>
+
+                <select class="form-select">
+                  <option value="">Select</option>
+
+                  <option>1 BHK</option>
+
+                  <option>2 BHK</option>
+
+                  <option>3 BHK</option>
+
+                  <option>4 BHK</option>
+
+                  <option>5+ BHK</option>
+
+                  <option>Studio / Warehouse</option>
+
+                  <option>RK</option>
+
+                  <option>Not Applicable</option>
+                </select>
+              </div>
+
+              <div class="col-sm-6 col-lg-3">
+                <label> Built-up Area </label>
+
+                <input class="form-control" placeholder="e.g. 1500 Sq.Ft" />
+              </div>
+
+              <div class="col-sm-6 col-lg-3">
+                <label> Carpet Area </label>
+
+                <input class="form-control" placeholder="e.g. 1200 Sq.Ft" />
+              </div>
+
+              <div class="col-sm-6 col-lg-3">
+                <label> Plot Area </label>
+
+                <input class="form-control" placeholder="e.g. 1800 Sq.Ft" />
+              </div>
+
+              <div class="col-sm-6 col-lg-3">
+                <label> Floor </label>
+
+                <input class="form-control" placeholder="e.g. 4" />
+              </div>
+
+              <div class="col-sm-6 col-lg-3">
+                <label> Total Floors </label>
+
+                <input class="form-control" placeholder="e.g. 10" />
+              </div>
+
+              <div class="col-sm-6 col-lg-3">
+                <label> Bathrooms </label>
+
+                <select class="form-select">
+                  <option value="">Select</option>
+
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4+</option>
+                </select>
+              </div>
+
+              <div class="col-sm-6 col-lg-3">
+                <label> Balcony </label>
+
+                <select class="form-select">
+                  <option value="">Select</option>
+
+                  <option>0</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3+</option>
+                </select>
+              </div>
+
+              <div class="col-md-4">
+                <label> Property Age </label>
+
+                <select class="form-select">
+                  <option value="">Select Age</option>
+
+                  <option>New</option>
+
+                  <option>0–1 Year</option>
+
+                  <option>1–5 Years</option>
+
+                  <option>5–10 Years</option>
+
+                  <option>10+ Years</option>
+                </select>
+              </div>
+
+              <div class="col-md-4">
+                <label> Furnishing </label>
+
+                <select class="form-select">
+                  <option value="">Select</option>
+
+                  <option>Unfurnished</option>
+
+                  <option>Semi-Furnished</option>
+
+                  <option>Fully Furnished</option>
+                </select>
+              </div>
+
+              <div class="col-md-4">
+                <label> Construction Status </label>
+
+                <select class="form-select">
+                  <option value="">Select</option>
+
+                  <option>Ready to Move</option>
+
+                  <option>Under Construction</option>
+
+                  <option>New Construction</option>
+                </select>
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================
+           04 PRICE
+      ================================================== -->
+
+          <section class="form-section" data-section>
+            <div class="section-title">
+              <span class="section-number"> 04 </span>
+
+              <div>
+                <h2>Price Details</h2>
+
+                <p>Details of sales, rent, and extra charges.</p>
+              </div>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label id="priceLabel">
+                  Sale Price / Monthly Rent
+                  <span>*</span>
+                </label>
+
+                <div class="input-group">
+                  <span class="input-group-text"> ₹ </span>
+
+                  <input class="form-control required-field" name="price" placeholder="Enter amount" inputmode="decimal" required />
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <label> Price Negotiable </label>
+
+                <div class="choice-grid two">
+                  <label class="choice-card">
+                    <input type="radio" name="negotiable" value="Yes" />
+
+                    <span>
+                      <b> Yes </b>
+
+                      <small> Negotiable </small>
+                    </span>
+                  </label>
+
+                  <label class="choice-card">
+                    <input type="radio" name="negotiable" value="No" />
+
+                    <span>
+                      <b> No </b>
+
+                      <small> Fixed price </small>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <label> Maintenance Charges </label>
+
+                <input class="form-control" placeholder="₹ Amount / Month" />
+              </div>
+
+              <div class="col-md-4">
+                <label> Security Deposit / Advance </label>
+
+                <input class="form-control" placeholder="₹ Amount" />
+              </div>
+
+              <div class="col-md-4">
+                <label> Other Charges </label>
+
+                <input class="form-control" placeholder="₹ Amount" />
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================
+           05 MEDIA
+      ================================================== -->
+
+          <section class="form-section" data-section>
+            <div class="section-title">
+              <span class="section-number"> 05 </span>
+
+              <div>
+                <h2>Property Photos & Media</h2>
+
+                <p>High-quality photos make your listing stand out.</p>
+              </div>
+            </div>
+
+            <div class="upload-box" id="photoDrop">
+              <i class="bi bi-cloud-arrow-up"></i>
+
+              <h3>
+                Upload Property Photos
+                <span>*</span>
+              </h3>
+
+              <p>Add multiple photos • JPG, PNG, WEBP</p>
+
+              <input type="file" id="photos" accept="image/*" multiple hidden />
+
+              <button type="button" class="upload-btn" data-target="photos">
+                <i class="bi bi-images me-1"></i>
+                Choose Photos
+              </button>
+
+              <div class="preview-grid" id="photoPreview"></div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-md-6">
+                <div class="mini-upload">
+                  <i class="bi bi-camera-video"></i>
+
+                  <div>
+                    <b> Upload Property Video </b>
+
+                    <small> MP4 / MOV </small>
+                  </div>
+
+                  <input type="file" id="video" accept="video/*" hidden />
+
+                  <button type="button" class="small-upload" data-target="video">Upload</button>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <label> 360° / Virtual Tour Link </label>
+
+                <input class="form-control" placeholder="Paste virtual tour URL" />
+              </div>
+
+              <div class="col-12">
+                <div class="mini-upload">
+                  <i class="bi bi-map"></i>
+
+                  <div>
+                    <b> Floor Plan Upload </b>
+
+                    <small> JPG / PNG / PDF </small>
+                  </div>
+
+                  <input type="file" id="floorPlan" accept=".pdf,image/*" hidden />
+
+                  <button type="button" class="small-upload" data-target="floorPlan">Upload</button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================
+           06 AMENITIES
+      ================================================== -->
+
+          <section class="form-section" data-section>
+            <div class="section-title">
+              <span class="section-number"> 06 </span>
+
+              <div>
+                <h2>Amenities</h2>
+
+                <p>Select available facilities.</p>
+              </div>
+            </div>
+
+            <div class="check-grid">
+              <label>
+                <input type="checkbox" />
+                <i class="bi bi-car-front"></i>
+                Parking
+              </label>
+
+              <label>
+                <input type="checkbox" />
+                <i class="bi bi-arrow-up-square"></i>
+                Lift
+              </label>
+
+              <label>
+                <input type="checkbox" />
+                <i class="bi bi-lightning-charge"></i>
+                Power Backup
+              </label>
+
+              <label>
+                <input type="checkbox" />
+                <i class="bi bi-droplet"></i>
+                24×7 Water
+              </label>
+
+              <label>
+                <input type="checkbox" />
+                <i class="bi bi-shield-check"></i>
+                24×7 Security
+              </label>
+
+              <label>
+                <input type="checkbox" />
+                <i class="bi bi-camera-video"></i>
+                CCTV
+              </label>
+
+              <label>
+                <input type="checkbox" />
+                <i class="bi bi-tree"></i>
+                Garden
+              </label>
+
+              <label>
+                <input type="checkbox" />
+                <i class="bi bi-water"></i>
+                Swimming Pool
+              </label>
+
+              <label>
+                <input type="checkbox" />
+                <i class="bi bi-heart-pulse"></i>
+                Gym
+              </label>
+
+              <label>
+                <input type="checkbox" />
+                <i class="bi bi-buildings"></i>
+                Club House
+              </label>
+
+              <label>
+                <input type="checkbox" />
+                <i class="bi bi-fire"></i>
+                Fire Safety
+              </label>
+
+              <label>
+                <input type="checkbox" />
+                <i class="bi bi-emoji-smile"></i>
+                Children Play Area
+              </label>
+            </div>
+
+            <div class="mt-3">
+              <label> Other Amenities </label>
+
+              <input class="form-control" placeholder="e.g. EV Charging, Rooftop, Servant Room..." />
+            </div>
+          </section>
+
+          <!-- =================================================
+           07 NEARBY
+      ================================================== -->
+
+          <section class="form-section" data-section>
+            <div class="section-title">
+              <span class="section-number"> 07 </span>
+
+              <div>
+                <h2>Nearby Places</h2>
+
+                <p>Customer ko nearby locations ka idea milega.</p>
+              </div>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-sm-6 col-lg-4">
+                <label> School </label>
+
+                <input class="form-control" placeholder="Name / Distance" />
+              </div>
+
+              <div class="col-sm-6 col-lg-4">
+                <label> Hospital </label>
+
+                <input class="form-control" placeholder="Name / Distance" />
+              </div>
+
+              <div class="col-sm-6 col-lg-4">
+                <label> Market / Mall </label>
+
+                <input class="form-control" placeholder="Name / Distance" />
+              </div>
+
+              <div class="col-sm-6 col-lg-4">
+                <label> Metro Station </label>
+
+                <input class="form-control" placeholder="Name / Distance" />
+              </div>
+
+              <div class="col-sm-6 col-lg-4">
+                <label> Bus Stop </label>
+
+                <input class="form-control" placeholder="Name / Distance" />
+              </div>
+
+              <div class="col-sm-6 col-lg-4">
+                <label> Railway Station </label>
+
+                <input class="form-control" placeholder="Name / Distance" />
+              </div>
+
+              <div class="col-sm-6 col-lg-4">
+                <label> Airport </label>
+
+                <input class="form-control" placeholder="Name / Distance" />
+              </div>
+
+              <div class="col-sm-6 col-lg-4">
+                <label> Park </label>
+
+                <input class="form-control" placeholder="Name / Distance" />
+              </div>
+
+              <div class="col-sm-6 col-lg-4">
+                <label> Bank / ATM </label>
+
+                <input class="form-control" placeholder="Name / Distance" />
+              </div>
+
+              <div class="col-12">
+                <label> Other </label>
+
+                <input class="form-control" placeholder="Other nearby place" />
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================
+           08 DOCUMENTS
+      ================================================== -->
+
+          <section class="form-section" data-section>
+            <div class="section-title">
+              <span class="section-number"> 08 </span>
+
+              <div>
+                <h2>Documents / Verification</h2>
+
+                <p>Property verification documents upload karein.</p>
+              </div>
+            </div>
+
+            <div class="document-grid">
+              <div class="doc-upload">
+                <i class="bi bi-file-earmark-text"></i>
+
+                <b> Property Documents </b>
+
+                <small> PDF / Image </small>
+
+                <input type="file" hidden id="docProperty" accept=".pdf,image/*" />
+
+                <button type="button" data-target="docProperty">Upload</button>
+              </div>
+
+              <div class="doc-upload">
+                <i class="bi bi-person-vcard"></i>
+
+                <b> Ownership Proof </b>
+
+                <small> PDF / Image </small>
+
+                <input type="file" hidden id="docOwner" accept=".pdf,image/*" />
+
+                <button type="button" data-target="docOwner">Upload</button>
+              </div>
+
+              <div class="doc-upload">
+                <i class="bi bi-file-check"></i>
+
+                <b> Approved Plan </b>
+
+                <small> PDF / Image </small>
+
+                <input type="file" hidden id="docPlan" accept=".pdf,image/*" />
+
+                <button type="button" data-target="docPlan">Upload</button>
+              </div>
+
+              <div class="doc-upload">
+                <i class="bi bi-patch-check"></i>
+
+                <b> RERA Registration </b>
+
+                <small> PDF / Image </small>
+
+                <input type="file" hidden id="docRera" accept=".pdf,image/*" />
+
+                <button type="button" data-target="docRera">Upload</button>
+              </div>
+
+              <div class="doc-upload">
+                <i class="bi bi-receipt"></i>
+
+                <b> Tax Receipt </b>
+
+                <small> PDF / Image </small>
+
+                <input type="file" hidden id="docTax" accept=".pdf,image/*" />
+
+                <button type="button" data-target="docTax">Upload</button>
+              </div>
+
+              <div class="doc-upload">
+                <i class="bi bi-house-check"></i>
+
+                <b> Possession Certificate </b>
+
+                <small> PDF / Image </small>
+
+                <input type="file" hidden id="docPossession" accept=".pdf,image/*" />
+
+                <button type="button" data-target="docPossession">Upload</button>
+              </div>
+            </div>
+
+            <div class="mt-3">
+              <label> Other Documents </label>
+
+              <input class="form-control" placeholder="Document name / note" />
+            </div>
+          </section>
+
+          <!-- =================================================
+           09 FEATURES
+      ================================================== -->
+
+          <section class="form-section" data-section>
+            <div class="section-title">
+              <span class="section-number"> 09 </span>
+
+              <div>
+                <h2>Additional Features</h2>
+
+                <p>Property ke special features select karein.</p>
+              </div>
+            </div>
+
+            <div class="check-grid">
+              <label>
+                <input type="checkbox" />
+                Corner Property
+              </label>
+
+              <label>
+                <input type="checkbox" />
+                East Facing
+              </label>
+
+              <label>
+                <input type="checkbox" />
+                West Facing
+              </label>
+
+              <label>
+                <input type="checkbox" />
+                North Facing
+              </label>
+
+              <label>
+                <input type="checkbox" />
+                South Facing
+              </label>
+
+              <label>
+                <input type="checkbox" />
+                Main Road Facing
+              </label>
+
+              <label>
+                <input type="checkbox" />
+                Gated Society
+              </label>
+
+              <label>
+                <input type="checkbox" />
+                Water View
+              </label>
+            </div>
+
+            <div class="mt-3">
+              <label> Other Features </label>
+
+              <input class="form-control" placeholder="e.g. Vastu Compliant, Corner Plot..." />
+            </div>
+          </section>
+
+          <!-- =================================================
+           10 CONTACT
+      ================================================== -->
+
+          <section class="form-section" data-section>
+            <div class="section-title">
+              <span class="section-number"> 10 </span>
+
+              <div>
+                <h2>Customer Contact Preference</h2>
+
+                <p>Customer ke saath contact kaise share karna hai.</p>
+              </div>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-12">
+                <label> Show Contact Number to Customer </label>
+
+                <div class="switch-row">
+                  <span> Customer ko dealer ka contact number dikhega </span>
+
+                  <label class="switch">
+                    <input type="checkbox" id="showContact" checked />
+
+                    <span></span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label> Preferred Contact </label>
+
+                <div class="choice-grid">
+                  <label class="choice-card">
+                    <input type="radio" name="preferred_contact" value="Call" />
+
+                    <span>
+                      <i class="bi bi-telephone"></i>
+
+                      <b> Call </b>
+
+                      <small> Phone call </small>
+                    </span>
+                  </label>
+
+                  <label class="choice-card">
+                    <input type="radio" name="preferred_contact" value="WhatsApp" />
+
+                    <span>
+                      <i class="bi bi-whatsapp"></i>
+
+                      <b> WhatsApp </b>
+
+                      <small> Chat </small>
+                    </span>
+                  </label>
+
+                  <label class="choice-card">
+                    <input type="radio" name="preferred_contact" value="Email" />
+
+                    <span>
+                      <i class="bi bi-envelope"></i>
+
+                      <b> Email </b>
+
+                      <small> Email enquiry </small>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <label> Best Time to Contact </label>
+
+                <select class="form-select">
+                  <option value="">Select Time</option>
+
+                  <option>Morning (9 AM – 12 PM)</option>
+
+                  <option>Afternoon (12 PM – 4 PM)</option>
+
+                  <option>Evening (4 PM – 8 PM)</option>
+
+                  <option>Any Time</option>
+                </select>
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================
+           FINAL
+      ================================================== -->
+
+          <section class="final-section">
+            <div class="final-note">
+              <i class="bi bi-shield-check"></i>
+
+              <div>
+                <strong> Before submitting </strong>
+
+                <span> Property information aur documents check kar lein. Verified information se listing par customer trust better hota hai. </span>
+              </div>
+            </div>
+
+            <div class="action-bar">
+              <button type="button" class="btn-draft" id="draftBtn">
+                <i class="bi bi-file-earmark me-1"></i>
+
+                Save as Draft
+              </button>
+
+              <button type="submit" class="btn-submit">
+                <i class="bi bi-check2-circle me-1"></i>
+
+                Submit Property
+              </button>
+            </div>
+          </section>
+        </form>
+      </div>
+    </main>
+
+    <!-- =====================================================
+     FOOTER
+===================================================== -->
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <a href="index.html" class="footer-brand">
+              <span class="brand-logo">
+                <i class="bi bi-house-heart-fill"></i>
+              </span>
+
+              <span>
+                <span class="brand-title"> Apka Apna Ghar </span>
+
+                <small class="brand-subtitle"> Properties </small>
+              </span>
+            </a>
+
+            <p class="footer-description">
+              Discover verified properties and connect with trusted property dealers. Your journey to the perfect property starts here.
+            </p>
+
+            <div class="socials">
+              <a href="#">
+                <i class="bi bi-facebook"></i>
+              </a>
+
+              <a href="#">
+                <i class="bi bi-instagram"></i>
+              </a>
+
+              <a href="#">
+                <i class="bi bi-youtube"></i>
+              </a>
+
+              <a href="#">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-2">
+            <div class="footer-title">Explore</div>
+
+            <ul class="footer-links">
+              <li>
+                <a href="index.html"> Home </a>
+              </li>
+
+              <li>
+                <a href="properties.html"> Properties </a>
+              </li>
+
+              <li>
+                <a href="dealers.html"> Dealers </a>
+              </li>
+
+              <li>
+                <a href="how-it-works.html"> How It Works </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-lg-2">
+            <div class="footer-title">Dealers</div>
+
+            <ul class="footer-links">
+              <li>
+                <a href="dealer-register.html"> Join as Dealer </a>
+              </li>
+
+              <li>
+                <a href="#"> Dealer Login </a>
+              </li>
+
+              <li>
+                <a href="#"> Dealer Benefits </a>
+              </li>
+
+              <li>
+                <a href="#"> Subscription </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="footer-title">Get In Touch</div>
+
+            <ul class="footer-links">
+              <li>
+                <a href="#">
+                  <i class="bi bi-geo-alt me-2"></i>
+                  Jaipur, Rajasthan
+                </a>
+              </li>
+
+              <li>
+                <a href="tel:+919876543210">
+                  <i class="bi bi-telephone me-2"></i>
+                  +91 98765 43210
+                </a>
+              </li>
+
+              <li>
+                <a href="mailto:info@example.com">
+                  <i class="bi bi-envelope me-2"></i>
+                  info@example.com
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="row align-items-center">
+            <div class="col-md-6">© 2026 Apka Apna Ghar Properties. All Rights Reserved.</div>
+
+            <div class="col-md-6 text-md-end mt-2 mt-md-0">
+              <a href="#" style="color: rgba(255, 255, 255, 0.42); margin-right: 15px"> Privacy Policy </a>
+
+              <a href="#" style="color: rgba(255, 255, 255, 0.42)"> Terms & Conditions </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =====================================================
+     TOAST
+===================================================== -->
+
+    <div class="toast-box" id="toastBox">
+      <i class="bi bi-check-circle-fill"></i>
+
+      <span id="toastMessage"> Done </span>
+    </div>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      /* =====================================================
+     SCROLL ANIMATION
+  ===================================================== */
+
+      const sections = document.querySelectorAll("[data-section]");
+
+      const sectionObserver = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+
+              sectionObserver.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.08,
+        },
+      );
+
+      sections.forEach(function (section) {
+        sectionObserver.observe(section);
+      });
+
+      /* =====================================================
+     FORM PROGRESS
+  ===================================================== */
+
+      const form = document.getElementById("propertyForm");
+
+      const progressBar = document.getElementById("progressBar");
+
+      const progressText = document.getElementById("progressText");
+
+      function updateProgress() {
+        const requiredFields = form.querySelectorAll(".required-field");
+
+        let completed = 0;
+
+        requiredFields.forEach(function (field) {
+          if (field.value && field.value.trim() !== "") {
+            completed++;
+          }
+        });
+
+        /* radio */
+
+        const listing = form.querySelector('input[name="listing_for"]:checked');
+
+        if (listing) {
+          completed++;
+        }
+
+        const total = requiredFields.length + 1;
+
+        let percentage = Math.round((completed / total) * 100);
+
+        if (percentage > 100) {
+          percentage = 100;
+        }
+
+        progressBar.style.width = percentage + "%";
+
+        progressText.innerText = percentage + "%";
+      }
+
+      form.addEventListener("input", updateProgress);
+
+      form.addEventListener("change", updateProgress);
+
+      updateProgress();
+
+      /* =====================================================
+     SALE / RENT / LEASE
+  ===================================================== */
+
+      const listingRadios = document.querySelectorAll('input[name="listing_for"]');
+
+      const priceLabel = document.getElementById("priceLabel");
+
+      listingRadios.forEach(function (radio) {
+        radio.addEventListener("change", function () {
+          if (this.value === "Rent") {
+            priceLabel.innerHTML = "Monthly Rent <span>*</span>";
+          } else if (this.value === "Lease") {
+            priceLabel.innerHTML = "Lease Amount <span>*</span>";
+          } else {
+            priceLabel.innerHTML = "Sale Price <span>*</span>";
+          }
+        });
+      });
+
+      /* =====================================================
+     GOOGLE MAP
+  ===================================================== */
+
+      document.getElementById("mapBtn").addEventListener("click", function () {
+        const link = document.getElementById("mapLink").value.trim();
+
+        if (!link) {
+          showToast("Please paste Google Maps link first.");
+
+          return;
+        }
+
+        window.open(link, "_blank");
+      });
+
+      /* =====================================================
+     FILE UPLOAD BUTTONS
+  ===================================================== */
+
+      document.querySelectorAll("[data-target]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          const target = document.getElementById(this.dataset.target);
+
+          if (target) {
+            target.click();
+          }
+        });
+      });
+
+      /* =====================================================
+     PHOTO PREVIEW
+  ===================================================== */
+
+      const photoInput = document.getElementById("photos");
+
+      const photoPreview = document.getElementById("photoPreview");
+
+      photoInput.addEventListener("change", function () {
+        photoPreview.innerHTML = "";
+
+        const files = Array.from(this.files);
+
+        files.forEach(function (file, index) {
+          if (!file.type.startsWith("image/")) {
+            return;
+          }
+
+          const reader = new FileReader();
+
+          reader.onload = function (e) {
+            const item = document.createElement("div");
+
+            item.className = "preview-item";
+
+            item.innerHTML = `
+
+              <img
+                src="${e.target.result}"
+                alt="Property Photo"
+              >
+
+              <button
+                type="button"
+                class="remove-preview"
+                data-index="${index}"
+              >
+                <i class="bi bi-x"></i>
+              </button>
+
+            `;
+
+            photoPreview.appendChild(item);
+
+            item.querySelector(".remove-preview").addEventListener("click", function () {
+              item.remove();
+            });
+          };
+
+          reader.readAsDataURL(file);
+        });
+      });
+
+      /* =====================================================
+     DRAG & DROP
+  ===================================================== */
+
+      const photoDrop = document.getElementById("photoDrop");
+
+      ["dragenter", "dragover"].forEach(function (eventName) {
+        photoDrop.addEventListener(eventName, function (e) {
+          e.preventDefault();
+
+          photoDrop.classList.add("dragging");
+        });
+      });
+
+      ["dragleave", "drop"].forEach(function (eventName) {
+        photoDrop.addEventListener(eventName, function (e) {
+          e.preventDefault();
+
+          photoDrop.classList.remove("dragging");
+        });
+      });
+
+      photoDrop.addEventListener("drop", function (e) {
+        const files = e.dataTransfer.files;
+
+        if (files.length) {
+          photoInput.files = files;
+
+          photoInput.dispatchEvent(new Event("change"));
+        }
+      });
+
+      /* =====================================================
+     FILE NAME DISPLAY
+  ===================================================== */
+
+      document.querySelectorAll('input[type="file"]:not(#photos)').forEach(function (input) {
+        input.addEventListener("change", function () {
+          if (!this.files.length) {
+            return;
+          }
+
+          const button = document.querySelector(`[data-target="${this.id}"]`);
+
+          if (button) {
+            button.innerHTML = `<i class="bi bi-check2"></i> ` + this.files[0].name.substring(0, 20);
+          }
+        });
+      });
+
+      /* =====================================================
+     SAVE DRAFT
+  ===================================================== */
+
+      document.getElementById("draftBtn").addEventListener("click", function () {
+        const formData = new FormData(form);
+
+        localStorage.setItem("propertyDraft", "saved");
+
+        showToast("Property draft saved successfully.");
+      });
+
+      /* =====================================================
+     SUBMIT
+  ===================================================== */
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        let valid = true;
+
+        form.querySelectorAll(".required-field").forEach(function (field) {
+          if (!field.value.trim()) {
+            valid = false;
+
+            field.classList.add("is-invalid");
+          } else {
+            field.classList.remove("is-invalid");
+          }
+        });
+
+        const listing = form.querySelector('input[name="listing_for"]:checked');
+
+        if (!listing) {
+          valid = false;
+        }
+
+        if (!valid) {
+          showToast("Please fill all required fields.");
+
+          const firstInvalid = form.querySelector(".is-invalid");
+
+          if (firstInvalid) {
+            firstInvalid.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+            });
+
+            firstInvalid.focus();
+          }
+
+          return;
+        }
+
+        showToast("Property submitted successfully!");
+
+        setTimeout(function () {
+          console.log("Property ready for backend submission.");
+        }, 1000);
+      });
+
+      /* =====================================================
+     REMOVE INVALID WHEN USER TYPES
+  ===================================================== */
+
+      document.querySelectorAll(".required-field").forEach(function (field) {
+        field.addEventListener("input", function () {
+          if (this.value.trim()) {
+            this.classList.remove("is-invalid");
+          }
+        });
+      });
+
+      /* =====================================================
+     TOAST
+  ===================================================== */
+
+      function showToast(message) {
+        const toast = document.getElementById("toastBox");
+
+        const text = document.getElementById("toastMessage");
+
+        text.innerText = message;
+
+        toast.classList.add("show");
+
+        setTimeout(function () {
+          toast.classList.remove("show");
+        }, 3000);
+      }
+    </script>
+  </body>
+</html>

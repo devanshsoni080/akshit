@@ -1,0 +1,2148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Apna Ghar Properties | Find Your Perfect Property</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        :root {
+            --primary: #173f35;
+            --primary-dark: #0e2d25;
+            --accent: #d6a85f;
+            --accent-light: #f5e8d0;
+            --dark: #10201b;
+            --text: #5c6964;
+            --light: #f7f8f6;
+            --white: #ffffff;
+            --border: #e7ebe8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            color: var(--dark);
+            background: #fff;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Manrope", sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1240px;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 22px 0;
+            transition: .3s;
+        }
+
+        .navbar.scrolled {
+            position: fixed;
+            background: rgba(255,255,255,.96);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 5px 25px rgba(0,0,0,.08);
+            padding: 14px 0;
+        }
+
+        .navbar.scrolled .nav-link {
+            color: var(--dark) !important;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            font-family: "Manrope";
+            font-size: 21px;
+            font-weight: 800;
+        }
+
+        .navbar.scrolled .navbar-brand {
+            color: var(--primary);
+        }
+
+        .logo-box {
+            width: 42px;
+            height: 42px;
+            border-radius: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--accent);
+            color: white;
+            font-weight: 800;
+            font-size: 20px;
+        }
+
+        .nav-link {
+            color: rgba(255,255,255,.9) !important;
+            font-weight: 600;
+            margin-left: 25px;
+            transition: .3s;
+        }
+
+        .nav-link:hover {
+            color: var(--accent) !important;
+        }
+
+        .nav-btn {
+            margin-left: 25px;
+            background: var(--accent);
+            color: white !important;
+            padding: 11px 20px !important;
+            border-radius: 10px;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 780px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(90deg,
+                    rgba(9,35,28,.92) 0%,
+                    rgba(15,48,39,.78) 45%,
+                    rgba(15,48,39,.25) 100%
+                ),
+                url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2000&q=90")
+                center/cover;
+        }
+
+        .hero-content {
+            max-width: 750px;
+            padding-top: 70px;
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,.12);
+            border: 1px solid rgba(255,255,255,.2);
+            color: white;
+            padding: 9px 15px;
+            border-radius: 50px;
+            font-size: 14px;
+            margin-bottom: 22px;
+            backdrop-filter: blur(8px);
+        }
+
+        .hero h1 {
+            color: white;
+            font-size: clamp(44px, 6vw, 78px);
+            line-height: 1.05;
+            font-weight: 800;
+            letter-spacing: -3px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero p {
+            color: rgba(255,255,255,.82);
+            font-size: 18px;
+            line-height: 1.7;
+            max-width: 650px;
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn-main {
+            background: var(--accent);
+            color: white;
+            padding: 14px 24px;
+            border-radius: 11px;
+            font-weight: 700;
+            border: none;
+            transition: .3s;
+        }
+
+        .btn-main:hover {
+            background: #bd8e47;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .btn-outline-light-custom {
+            color: white;
+            border: 1px solid rgba(255,255,255,.5);
+            padding: 13px 24px;
+            border-radius: 11px;
+            font-weight: 700;
+            transition: .3s;
+        }
+
+        .btn-outline-light-custom:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        /* =========================
+           SEARCH
+        ========================= */
+
+        .search-wrapper {
+            position: relative;
+            margin-top: -75px;
+            z-index: 5;
+        }
+
+        .search-box {
+            background: white;
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(20,40,30,.14);
+        }
+
+        .search-item {
+            padding: 10px 18px;
+            border-right: 1px solid var(--border);
+        }
+
+        .search-item label {
+            display: block;
+            font-size: 12px;
+            color: #89918e;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .search-item select,
+        .search-item input {
+            border: none;
+            outline: none;
+            width: 100%;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--dark);
+            background: transparent;
+        }
+
+        .search-button {
+            width: 100%;
+            height: 100%;
+            min-height: 58px;
+            border: none;
+            border-radius: 12px;
+            background: var(--primary);
+            color: white;
+            font-weight: 700;
+            transition: .3s;
+        }
+
+        .search-button:hover {
+            background: var(--primary-dark);
+        }
+
+        /* =========================
+           SECTION
+        ========================= */
+
+        .section {
+            padding: 105px 0;
+        }
+
+        .section-light {
+            background: var(--light);
+        }
+
+        .section-label {
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 800;
+            letter-spacing: -1.5px;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            color: var(--text);
+            font-size: 16px;
+            line-height: 1.7;
+            max-width: 650px;
+        }
+
+        /* =========================
+           PROPERTY CARDS
+        ========================= */
+
+        .property-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: .4s;
+            height: 100%;
+        }
+
+        .property-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 45px rgba(20,40,30,.12);
+        }
+
+        .property-image {
+            height: 245px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .property-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .property-card:hover img {
+            transform: scale(1.07);
+        }
+
+        .property-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: white;
+            padding: 7px 11px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .verified {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #e8f8ed;
+            color: #228b45;
+            padding: 7px 11px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .property-body {
+            padding: 22px;
+        }
+
+        .property-price {
+            color: var(--primary);
+            font-size: 23px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .property-title {
+            font-size: 19px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .property-location {
+            color: #7b8581;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .property-meta {
+            display: flex;
+            gap: 18px;
+            color: #6f7975;
+            font-size: 13px;
+            border-top: 1px solid var(--border);
+            padding-top: 16px;
+        }
+
+        /* =========================
+           STATS
+        ========================= */
+
+        .stats {
+            background: var(--primary);
+            color: white;
+            padding: 70px 0;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 15px;
+        }
+
+        .stat-number {
+            font-size: 42px;
+            font-family: "Manrope";
+            font-weight: 800;
+            color: var(--accent);
+        }
+
+        .stat-label {
+            color: rgba(255,255,255,.7);
+            margin-top: 5px;
+        }
+
+        /* =========================
+           HOW IT WORKS
+        ========================= */
+
+        .step-card {
+            position: relative;
+            padding: 32px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            height: 100%;
+            transition: .3s;
+        }
+
+        .step-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 14px;
+            background: var(--accent-light);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            margin-bottom: 25px;
+        }
+
+        .step-card h4 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .step-card p {
+            color: var(--text);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* =========================
+           DEALER SECTION
+        ========================= */
+
+        .dealer-section {
+            background: var(--primary);
+            border-radius: 28px;
+            overflow: hidden;
+            color: white;
+        }
+
+        .dealer-content {
+            padding: 70px;
+        }
+
+        .dealer-content h2 {
+            font-size: 45px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .dealer-content p {
+            color: rgba(255,255,255,.72);
+            line-height: 1.8;
+            max-width: 560px;
+        }
+
+        .dealer-image {
+            min-height: 500px;
+            background:
+                linear-gradient(rgba(23,63,53,.1), rgba(23,63,53,.1)),
+                url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=85")
+                center/cover;
+        }
+
+        .feature-list {
+            margin: 30px 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .feature-list li {
+            margin-bottom: 15px;
+            color: rgba(255,255,255,.85);
+        }
+
+        .feature-list i {
+            color: var(--accent);
+            margin-right: 10px;
+        }
+
+        /* =========================
+           SUBSCRIPTION
+        ========================= */
+
+        .price-card {
+            max-width: 430px;
+            margin: auto;
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 40px;
+            background: white;
+            box-shadow: 0 20px 50px rgba(0,0,0,.07);
+            position: relative;
+        }
+
+        .popular {
+            position: absolute;
+            right: 25px;
+            top: 25px;
+            background: var(--accent-light);
+            color: #916728;
+            font-size: 11px;
+            padding: 7px 10px;
+            border-radius: 30px;
+            font-weight: 800;
+        }
+
+        .price {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--primary);
+            margin: 15px 0;
+        }
+
+        .price span {
+            font-size: 15px;
+            color: #777;
+            font-weight: 500;
+        }
+
+        .price-list {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+
+        .price-list li {
+            padding: 10px 0;
+            color: var(--text);
+        }
+
+        .price-list i {
+            color: #35a15c;
+            margin-right: 8px;
+        }
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            padding: 100px 0;
+            background:
+                linear-gradient(90deg, rgba(16,32,27,.93), rgba(16,32,27,.75)),
+                url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=85")
+                center/cover;
+            color: white;
+        }
+
+        .cta h2 {
+            font-size: clamp(35px, 5vw, 55px);
+            font-weight: 800;
+        }
+
+        .cta p {
+            color: rgba(255,255,255,.75);
+            max-width: 650px;
+            margin: 15px auto 30px;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #0b211b;
+            color: white;
+            padding: 70px 0 25px;
+        }
+
+        footer .navbar-brand {
+            margin-bottom: 18px;
+            display: inline-flex;
+        }
+
+        footer p {
+            color: rgba(255,255,255,.6);
+            line-height: 1.7;
+        }
+
+        footer h5 {
+            margin-bottom: 20px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer li {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: rgba(255,255,255,.65);
+            transition: .3s;
+        }
+
+        footer a:hover {
+            color: var(--accent);
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,.1);
+            margin-top: 50px;
+            padding-top: 22px;
+            color: rgba(255,255,255,.5);
+            font-size: 13px;
+        }
+
+        /* =========================
+           ANIMATION
+        ========================= */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: .8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 991px) {
+
+            .navbar {
+                background: rgba(16,32,27,.96);
+            }
+
+            .navbar-collapse {
+                padding: 20px 0;
+            }
+
+            .nav-link {
+                margin-left: 0;
+                padding: 10px 0 !important;
+            }
+
+            .nav-btn {
+                margin-left: 0;
+                display: inline-block;
+                margin-top: 10px;
+            }
+
+            .hero {
+                min-height: 720px;
+            }
+
+            .search-wrapper {
+                margin-top: -40px;
+            }
+
+            .search-item {
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+                padding: 15px;
+            }
+
+            .search-button {
+                margin-top: 10px;
+            }
+
+            .dealer-content {
+                padding: 45px 30px;
+            }
+
+            .dealer-image {
+                min-height: 350px;
+            }
+        }
+
+        @media (max-width: 575px) {
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section {
+                padding: 75px 0;
+            }
+
+            .dealer-content h2 {
+                font-size: 34px;
+            }
+
+            .price-card {
+                padding: 30px 22px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav class="navbar navbar-expand-lg" id="navbar">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="#">
+            <div class="logo-box">A</div>
+            Apna Ghar
+        </a>
+
+        <button
+            class="navbar-toggler border-0 shadow-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainMenu"
+        >
+            <i class="bi bi-list text-white fs-2"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainMenu">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#properties">Properties</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#how">How It Works</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#dealers">For Dealers</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#pricing">Pricing</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link nav-btn" href="#contact">
+                        List Property
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content reveal">
+
+            <div class="hero-tag">
+                <i class="bi bi-patch-check-fill"></i>
+                Trusted Property Marketplace
+            </div>
+
+            <h1>
+                Find a place
+                <span>you'll love</span>
+                to call home.
+            </h1>
+
+            <p>
+                Discover verified properties, connect with trusted dealers
+                and find your perfect home, plot or commercial space —
+                all from one simple platform.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#properties" class="btn-main">
+                    Explore Properties
+                    <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+
+                <a href="#dealers" class="btn-outline-light-custom">
+                    Join as Dealer
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SEARCH BOX
+========================= -->
+
+<div class="search-wrapper">
+
+    <div class="container">
+
+        <div class="search-box">
+
+            <div class="row g-0 align-items-center">
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="search-item">
+                        <label>PROPERTY TYPE</label>
+
+                        <select id="propertyType">
+                            <option value="">Any Property</option>
+                            <option>Apartment</option>
+                            <option>Villa</option>
+                            <option>Plot</option>
+                            <option>Commercial</option>
+                            <option>House</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="search-item">
+                        <label>LOCATION</label>
+
+                        <select id="location">
+                            <option value="">Any Location</option>
+                            <option>Jaipur</option>
+                            <option>Vaishali Nagar</option>
+                            <option>Jagatpura</option>
+                            <option>Mansarovar</option>
+                            <option>Ajmer Road</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="search-item">
+                        <label>YOUR BUDGET</label>
+
+                        <select id="budget">
+                            <option value="">Any Budget</option>
+                            <option>Under ₹25 Lakh</option>
+                            <option>₹25–50 Lakh</option>
+                            <option>₹50 Lakh–1 Cr</option>
+                            <option>Above ₹1 Cr</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="p-2">
+
+                        <button
+                            class="search-button"
+                            onclick="searchProperty()"
+                        >
+                            <i class="bi bi-search me-2"></i>
+                            Search Property
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     FEATURED PROPERTIES
+========================= -->
+
+<section class="section" id="properties">
+
+    <div class="container">
+
+        <div class="row align-items-end mb-5">
+
+            <div class="col-lg-8 reveal">
+
+                <div class="section-label">
+                    Featured Properties
+                </div>
+
+                <h2 class="section-title">
+                    Properties worth<br>
+                    looking at.
+                </h2>
+
+                <p class="section-subtitle">
+                    Explore hand-picked properties from verified dealers
+                    and property owners.
+                </p>
+
+            </div>
+
+            <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+
+                <a href="#" class="btn-main">
+                    View All Properties
+                    <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- PROPERTY 1 -->
+
+            <div class="col-lg-4 col-md-6 reveal">
+
+                <div class="property-card">
+
+                    <div class="property-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85"
+                            alt="Luxury Villa"
+                        >
+
+                        <div class="property-badge">
+                            For Sale
+                        </div>
+
+                        <div class="verified">
+                            <i class="bi bi-patch-check-fill"></i>
+                            Verified
+                        </div>
+
+                    </div>
+
+                    <div class="property-body">
+
+                        <div class="property-price">
+                            ₹85 Lakh
+                        </div>
+
+                        <div class="property-title">
+                            Modern 3 BHK Villa
+                        </div>
+
+                        <div class="property-location">
+                            <i class="bi bi-geo-alt"></i>
+                            Vaishali Nagar, Jaipur
+                        </div>
+
+                        <div class="property-meta">
+
+                            <span>
+                                <i class="bi bi-door-open"></i>
+                                3 Beds
+                            </span>
+
+                            <span>
+                                <i class="bi bi-droplet"></i>
+                                3 Baths
+                            </span>
+
+                            <span>
+                                <i class="bi bi-aspect-ratio"></i>
+                                1850 Sq.ft
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROPERTY 2 -->
+
+            <div class="col-lg-4 col-md-6 reveal">
+
+                <div class="property-card">
+
+                    <div class="property-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85"
+                            alt="Apartment"
+                        >
+
+                        <div class="property-badge">
+                            For Sale
+                        </div>
+
+                        <div class="verified">
+                            <i class="bi bi-patch-check-fill"></i>
+                            Verified
+                        </div>
+
+                    </div>
+
+                    <div class="property-body">
+
+                        <div class="property-price">
+                            ₹62 Lakh
+                        </div>
+
+                        <div class="property-title">
+                            Premium 2 BHK Apartment
+                        </div>
+
+                        <div class="property-location">
+                            <i class="bi bi-geo-alt"></i>
+                            Jagatpura, Jaipur
+                        </div>
+
+                        <div class="property-meta">
+
+                            <span>
+                                <i class="bi bi-door-open"></i>
+                                2 Beds
+                            </span>
+
+                            <span>
+                                <i class="bi bi-droplet"></i>
+                                2 Baths
+                            </span>
+
+                            <span>
+                                <i class="bi bi-aspect-ratio"></i>
+                                1250 Sq.ft
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROPERTY 3 -->
+
+            <div class="col-lg-4 col-md-6 reveal">
+
+                <div class="property-card">
+
+                    <div class="property-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85"
+                            alt="House"
+                        >
+
+                        <div class="property-badge">
+                            For Sale
+                        </div>
+
+                        <div class="verified">
+                            <i class="bi bi-patch-check-fill"></i>
+                            Verified
+                        </div>
+
+                    </div>
+
+                    <div class="property-body">
+
+                        <div class="property-price">
+                            ₹1.25 Cr
+                        </div>
+
+                        <div class="property-title">
+                            Luxury Family Home
+                        </div>
+
+                        <div class="property-location">
+                            <i class="bi bi-geo-alt"></i>
+                            Mansarovar, Jaipur
+                        </div>
+
+                        <div class="property-meta">
+
+                            <span>
+                                <i class="bi bi-door-open"></i>
+                                4 Beds
+                            </span>
+
+                            <span>
+                                <i class="bi bi-droplet"></i>
+                                4 Baths
+                            </span>
+
+                            <span>
+                                <i class="bi bi-aspect-ratio"></i>
+                                2600 Sq.ft
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     STATS
+========================= -->
+
+<section class="stats">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-6 col-lg-3 reveal">
+
+                <div class="stat-box">
+
+                    <div class="stat-number" data-count="2500">
+                        0
+                    </div>
+
+                    <div class="stat-label">
+                        Properties Listed
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-lg-3 reveal">
+
+                <div class="stat-box">
+
+                    <div class="stat-number" data-count="850">
+                        0
+                    </div>
+
+                    <div class="stat-label">
+                        Verified Dealers
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-lg-3 reveal">
+
+                <div class="stat-box">
+
+                    <div class="stat-number" data-count="1200">
+                        0
+                    </div>
+
+                    <div class="stat-label">
+                        Happy Customers
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-lg-3 reveal">
+
+                <div class="stat-box">
+
+                    <div class="stat-number" data-count="15">
+                        0
+                    </div>
+
+                    <div class="stat-label">
+                        Cities
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     HOW IT WORKS
+========================= -->
+
+<section class="section section-light" id="how">
+
+    <div class="container">
+
+        <div class="text-center mb-5 reveal">
+
+            <div class="section-label">
+                Simple Process
+            </div>
+
+            <h2 class="section-title">
+                Finding property<br>
+                made simple.
+            </h2>
+
+            <p class="section-subtitle mx-auto">
+                From searching to connecting with a dealer,
+                everything is designed to be quick and transparent.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <div class="col-lg-3 col-md-6 reveal">
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <h4>
+                        Search
+                    </h4>
+
+                    <p>
+                        Choose your property type, location and
+                        budget to find matching properties.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6 reveal">
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <h4>
+                        Explore
+                    </h4>
+
+                    <p>
+                        View property details, photos, pricing,
+                        location and available amenities.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6 reveal">
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <h4>
+                        Connect
+                    </h4>
+
+                    <p>
+                        Connect directly with verified dealers
+                        and property owners.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6 reveal">
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        04
+                    </div>
+
+                    <h4>
+                        Deal
+                    </h4>
+
+                    <p>
+                        Visit the property, discuss the deal and
+                        complete your property journey.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DEALER SECTION
+========================= -->
+
+<section class="section" id="dealers">
+
+    <div class="container">
+
+        <div class="dealer-section">
+
+            <div class="row g-0 align-items-stretch">
+
+                <div class="col-lg-6">
+
+                    <div class="dealer-content reveal">
+
+                        <div class="section-label">
+                            For Property Dealers
+                        </div>
+
+                        <h2>
+                            Grow your property business with us.
+                        </h2>
+
+                        <p>
+                            List your properties, find new customers,
+                            connect with other dealers and manage your
+                            property network from one platform.
+                        </p>
+
+
+                        <ul class="feature-list">
+
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                List unlimited property opportunities
+                            </li>
+
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                Verified dealer profile
+                            </li>
+
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                Assign properties to other dealers
+                            </li>
+
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                Track customer enquiries
+                            </li>
+
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                Build your professional network
+                            </li>
+
+                        </ul>
+
+
+                        <a href="#pricing" class="btn-main">
+                            Become a Dealer
+                            <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-6">
+
+                    <div class="dealer-image"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     B2B PROPERTY NETWORK
+========================= -->
+
+<section class="section section-light">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6 reveal">
+
+                <div class="section-label">
+                    Dealer Network
+                </div>
+
+                <h2 class="section-title">
+                    One property can reach hundreds of dealers.
+                </h2>
+
+                <p class="section-subtitle mb-4">
+                    Our B2B property network allows dealers to assign
+                    property opportunities to other registered dealers.
+                    The complete journey stays trackable.
+                </p>
+
+
+                <div class="d-flex gap-3 mb-3">
+
+                    <div class="step-number mb-0">
+                        <i class="bi bi-building"></i>
+                    </div>
+
+                    <div>
+                        <h5 class="mb-1">
+                            Property Owner / Broker
+                        </h5>
+
+                        <p class="text-muted mb-0">
+                            Add the property to your portfolio.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="d-flex gap-3 mb-3">
+
+                    <div class="step-number mb-0">
+                        <i class="bi bi-arrow-right"></i>
+                    </div>
+
+                    <div>
+                        <h5 class="mb-1">
+                            Assign to Dealer
+                        </h5>
+
+                        <p class="text-muted mb-0">
+                            Share the property opportunity.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="d-flex gap-3">
+
+                    <div class="step-number mb-0">
+                        <i class="bi bi-people"></i>
+                    </div>
+
+                    <div>
+                        <h5 class="mb-1">
+                            Find the Customer
+                        </h5>
+
+                        <p class="text-muted mb-0">
+                            Dealers collaborate and close the deal.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6 reveal">
+
+                <div class="property-card p-4">
+
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+
+                        <div>
+                            <small class="text-muted">
+                                PROPERTY NETWORK
+                            </small>
+
+                            <h4 class="mb-0 mt-1">
+                                Active Property
+                            </h4>
+                        </div>
+
+                        <span class="badge bg-success-subtle text-success">
+                            Active
+                        </span>
+
+                    </div>
+
+
+                    <div class="p-3 rounded-4 bg-light mb-3">
+
+                        <div class="d-flex justify-content-between">
+
+                            <strong>
+                                Premium Villa
+                            </strong>
+
+                            <strong>
+                                ₹85 L
+                            </strong>
+
+                        </div>
+
+                        <small class="text-muted">
+                            Vaishali Nagar, Jaipur
+                        </small>
+
+                    </div>
+
+
+                    <div class="d-flex align-items-center gap-3 p-3">
+
+                        <div class="logo-box">
+                            D
+                        </div>
+
+                        <div class="flex-grow-1">
+
+                            <strong>
+                                Dealer Account
+                            </strong>
+
+                            <div class="small text-muted">
+                                Property Owner
+                            </div>
+
+                        </div>
+
+                        <i class="bi bi-patch-check-fill text-success"></i>
+
+                    </div>
+
+
+                    <div class="text-center py-2">
+                        <i class="bi bi-arrow-down fs-3 text-muted"></i>
+                    </div>
+
+
+                    <div class="d-flex align-items-center gap-3 p-3">
+
+                        <div class="logo-box">
+                            A
+                        </div>
+
+                        <div class="flex-grow-1">
+
+                            <strong>
+                                Assigned Dealer
+                            </strong>
+
+                            <div class="small text-muted">
+                                Registered Partner
+                            </div>
+
+                        </div>
+
+                        <span class="badge bg-warning-subtle text-dark">
+                            Assigned
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PRICING
+========================= -->
+
+<section class="section" id="pricing">
+
+    <div class="container">
+
+        <div class="text-center mb-5 reveal">
+
+            <div class="section-label">
+                Dealer Membership
+            </div>
+
+            <h2 class="section-title">
+                Start building your<br>
+                property network.
+            </h2>
+
+            <p class="section-subtitle mx-auto">
+                One simple membership for dealers who want to
+                grow their property business.
+            </p>
+
+        </div>
+
+
+        <div class="price-card reveal">
+
+            <div class="popular">
+                DEALER PLAN
+            </div>
+
+            <h4>
+                Professional Dealer
+            </h4>
+
+            <p class="text-muted">
+                Everything you need to grow.
+            </p>
+
+            <div class="price">
+                ₹500
+                <span>/ month</span>
+            </div>
+
+
+            <ul class="price-list">
+
+                <li>
+                    <i class="bi bi-check-circle-fill"></i>
+                    Professional Dealer Profile
+                </li>
+
+                <li>
+                    <i class="bi bi-check-circle-fill"></i>
+                    Property Listing
+                </li>
+
+                <li>
+                    <i class="bi bi-check-circle-fill"></i>
+                    Property Assignment
+                </li>
+
+                <li>
+                    <i class="bi bi-check-circle-fill"></i>
+                    Customer Enquiry Tracking
+                </li>
+
+                <li>
+                    <i class="bi bi-check-circle-fill"></i>
+                    Verified Dealer Badge
+                </li>
+
+                <li>
+                    <i class="bi bi-check-circle-fill"></i>
+                    Dealer Network Access
+                </li>
+
+            </ul>
+
+
+            <a
+                href="#contact"
+                class="btn-main w-100 text-center d-block"
+            >
+                Register as Dealer
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta text-center" id="contact">
+
+    <div class="container reveal">
+
+        <div class="section-label">
+            Your Next Property Starts Here
+        </div>
+
+        <h2>
+            Ready to find your<br>
+            perfect property?
+        </h2>
+
+        <p>
+            Search properties, connect with trusted dealers and
+            take the next step toward your dream home.
+        </p>
+
+
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+
+            <a href="#properties" class="btn-main">
+                Explore Properties
+            </a>
+
+            <a href="#" class="btn-outline-light-custom">
+                Contact Us
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="row g-5">
+
+            <div class="col-lg-5">
+
+                <a class="navbar-brand" href="#">
+                    <div class="logo-box">A</div>
+                    Apna Ghar
+                </a>
+
+                <p>
+                    A modern property marketplace connecting
+                    customers, property owners and dealers
+                    through one trusted platform.
+                </p>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h5>
+                    Platform
+                </h5>
+
+                <ul>
+
+                    <li>
+                        <a href="#properties">
+                            Properties
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#how">
+                            How It Works
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#dealers">
+                            Dealers
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#pricing">
+                            Pricing
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h5>
+                    Company
+                </h5>
+
+                <ul>
+
+                    <li>
+                        <a href="#">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Contact
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Privacy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Terms
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-lg-3">
+
+                <h5>
+                    Contact
+                </h5>
+
+                <p class="mb-2">
+                    <i class="bi bi-geo-alt me-2"></i>
+                    Jaipur, Rajasthan
+                </p>
+
+                <p class="mb-2">
+                    <i class="bi bi-envelope me-2"></i>
+                    hello@apnaghar.com
+                </p>
+
+                <p>
+                    <i class="bi bi-telephone me-2"></i>
+                    +91 90000 00000
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright text-center">
+
+            © 2026 Apna Ghar Properties.
+            All rights reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<script>
+
+    /* =========================
+       NAVBAR SCROLL
+    ========================= */
+
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", function () {
+
+        if (window.scrollY > 60) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+
+    });
+
+
+    /* =========================
+       SCROLL REVEAL
+    ========================= */
+
+    const reveals = document.querySelectorAll(".reveal");
+
+    function revealOnScroll() {
+
+        reveals.forEach(function (element) {
+
+            const windowHeight = window.innerHeight;
+            const elementTop = element.getBoundingClientRect().top;
+
+            if (elementTop < windowHeight - 80) {
+                element.classList.add("active");
+            }
+
+        });
+
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+
+    revealOnScroll();
+
+
+    /* =========================
+       SEARCH
+    ========================= */
+
+    function searchProperty() {
+
+        const type =
+            document.getElementById("propertyType").value;
+
+        const location =
+            document.getElementById("location").value;
+
+        const budget =
+            document.getElementById("budget").value;
+
+
+        let message = "Searching properties";
+
+        if (type) {
+            message += " - " + type;
+        }
+
+        if (location) {
+            message += " in " + location;
+        }
+
+        if (budget) {
+            message += " - " + budget;
+        }
+
+
+        alert(message);
+
+    }
+
+
+    /* =========================
+       COUNTER ANIMATION
+    ========================= */
+
+    let counterStarted = false;
+
+    function startCounters() {
+
+        if (counterStarted) return;
+
+        const statsSection =
+            document.querySelector(".stats");
+
+        const sectionTop =
+            statsSection.getBoundingClientRect().top;
+
+        if (sectionTop < window.innerHeight - 100) {
+
+            counterStarted = true;
+
+            const counters =
+                document.querySelectorAll(".stat-number");
+
+
+            counters.forEach(function(counter) {
+
+                const target =
+                    parseInt(counter.dataset.count);
+
+                let current = 0;
+
+                const increment =
+                    Math.max(1, Math.ceil(target / 80));
+
+
+                const timer = setInterval(function() {
+
+                    current += increment;
+
+                    if (current >= target) {
+
+                        current = target;
+
+                        clearInterval(timer);
+
+                    }
+
+                    counter.innerText =
+                        current.toLocaleString() +
+                        (target === 15 ? "+" : "+");
+
+                }, 25);
+
+            });
+
+        }
+
+    }
+
+    window.addEventListener("scroll", startCounters);
+
+    startCounters();
+
+
+    /* =========================
+       CLOSE MOBILE MENU
+    ========================= */
+
+    document.querySelectorAll(".nav-link").forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+            const menu =
+                document.getElementById("mainMenu");
+
+            if (menu.classList.contains("show")) {
+
+                const bsCollapse =
+                    bootstrap.Collapse.getInstance(menu);
+
+                if (bsCollapse) {
+                    bsCollapse.hide();
+                }
+
+            }
+
+        });
+
+    });
+
+</script>
+
+
+</body>
+</html>
