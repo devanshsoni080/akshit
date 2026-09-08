@@ -9,135 +9,188 @@
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/game.css" />
+    <link rel="stylesheet" href="./css/game.css" />
   </head>
 
   <body>
-  <div class="app-shell">
-    <header class="game-header">
-      <div class="container-fluid px-3 px-lg-4">
-        <div class="d-flex align-items-center justify-content-between gap-3">
-          <a class="brand-link" href="index.html">
-            <span class="brand-mark"><i class="bi bi-gem"></i></span>
-            <span><b>COLOR</b> <strong>GAME</strong></span>
-          </a>
-          <div class="header-actions">
-            <a href="index.html" class="header-home"><i class="bi bi-house-door"></i><span>Home</span></a>
-            <div class="balance-box">
-              <small>Virtual Balance</small>
-              <strong id="balance">₹ 10,000.00</strong>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <main class="container-fluid px-3 px-lg-4 py-3 py-lg-4">
-      <div class="game-title-row mb-3">
-        <div>
-          <div class="eyebrow"><i class="bi bi-shield-check"></i> Trusted • Fast • Secure</div>
-          <h1>Color Prediction Game <span><i class="bi bi-circle-fill"></i> Live Game</span></h1>
-          <p>Virtual practice experience • Choose color, number or size.</p>
-        </div>
-        <div class="period-pill"><span>Period</span><b id="period">202609080001</b></div>
-      </div>
-
-      <section class="game-art-card mb-3">
-        <div class="game-art-copy">
-          <span class="art-badge"><i class="bi bi-stars"></i> PLAY SMART</span>
-          <h2>Choose your<br><span>Color &amp; Win!</span></h2>
-          <p>Make your selection and manage your virtual orders from one clean game screen.</p>
-        </div>
-        <div class="game-art-image"><img src="images/game-art.png" alt="Color Game crown and chips"></div>
-      </section>
-
-      <section class="timer-card mb-3">
-        <div class="timer-left">
-          <span class="timer-label">NEXT RESULT IN</span>
-          <div class="timer" id="timer">00:30</div>
-          <div class="period-mini"><span>PERIOD</span><b id="periodMini">202609080001</b></div>
-        </div>
-        <div class="live-chip"><i class="bi bi-broadcast-pin"></i> LIVE ROUND</div>
-      </section>
-
-      <div class="row g-3 g-lg-4 align-items-start">
-        <div class="col-12 col-xl-8">
-          <div class="controls-card">
-            <div class="control-head"><div><h2>Make Your Selection</h2><p>Select one or more options.</p></div><span class="practice-badge">VIRTUAL</span></div>
-
-            <div class="section">
-              <div class="section-title"><span>01</span> Select Color</div>
-              <div class="game-card"><div class="row g-2">
-                <div class="col-4"><button class="choice-btn green w-100" data-color="Green" onclick="selectColor('Green', this)"><i class="bi bi-circle-fill"></i> GREEN</button></div>
-                <div class="col-4"><button class="choice-btn violet w-100" data-color="Violet" onclick="selectColor('Violet', this)"><i class="bi bi-circle-fill"></i> VIOLET</button></div>
-                <div class="col-4"><button class="choice-btn red w-100" data-color="Red" onclick="selectColor('Red', this)"><i class="bi bi-circle-fill"></i> RED</button></div>
-              </div></div>
-            </div>
-
-            <div class="section">
-              <div class="section-title"><span>02</span> Select Number</div>
-              <div class="game-card"><div class="row g-2">
-                <div class="col-2"><button class="number-btn n-violet w-100" onclick="selectNumber(0, this)">0</button></div>
-                <div class="col-2"><button class="number-btn n-green w-100" onclick="selectNumber(1, this)">1</button></div>
-                <div class="col-2"><button class="number-btn n-red w-100" onclick="selectNumber(2, this)">2</button></div>
-                <div class="col-2"><button class="number-btn n-green w-100" onclick="selectNumber(3, this)">3</button></div>
-                <div class="col-2"><button class="number-btn n-red w-100" onclick="selectNumber(4, this)">4</button></div>
-                <div class="col-2"><button class="number-btn n-violet w-100" onclick="selectNumber(5, this)">5</button></div>
-                <div class="col-2"><button class="number-btn n-red w-100" onclick="selectNumber(6, this)">6</button></div>
-                <div class="col-2"><button class="number-btn n-green w-100" onclick="selectNumber(7, this)">7</button></div>
-                <div class="col-2"><button class="number-btn n-red w-100" onclick="selectNumber(8, this)">8</button></div>
-                <div class="col-2"><button class="number-btn n-green w-100" onclick="selectNumber(9, this)">9</button></div>
-              </div></div>
-            </div>
-
-            <div class="section">
-              <div class="section-title"><span>03</span> Big / Small</div>
-              <div class="game-card"><div class="row g-2">
-                <div class="col-6"><button class="choice-btn size-btn w-100" onclick="selectSize('Big', this)">BIG <small>(5–9)</small></button></div>
-                <div class="col-6"><button class="choice-btn size-btn w-100" onclick="selectSize('Small', this)">SMALL <small>(0–4)</small></button></div>
-              </div></div>
-            </div>
-
-            <div class="section">
-              <div class="section-title"><span>04</span> Multiplier</div>
-              <div class="game-card"><div class="row g-2">
-                <div class="col"><button class="multiplier w-100" onclick="selectMultiplier(1, this)">X1</button></div>
-                <div class="col"><button class="multiplier w-100" onclick="selectMultiplier(5, this)">X5</button></div>
-                <div class="col"><button class="multiplier w-100" onclick="selectMultiplier(10, this)">X10</button></div>
-                <div class="col"><button class="multiplier w-100" onclick="selectMultiplier(20, this)">X20</button></div>
-                <div class="col"><button class="multiplier w-100" onclick="selectMultiplier(50, this)">X50</button></div>
-              </div></div>
-            </div>
-
-            <div class="section mb-0">
-              <div class="game-card order-entry">
-                <div class="amount-box"><label>ORDER AMOUNT</label><div class="input-group"><span class="input-group-text">₹</span><input id="amount" class="amount-input form-control" type="number" value="100" min="10" step="10"></div></div>
-                <button class="add-order mt-2" onclick="addOrder()"><i class="bi bi-plus-circle me-2"></i> ADD TO YOUR ORDERS</button>
+    <div class="app-shell">
+      <header class="game-header">
+        <div class="container-fluid px-3 px-lg-4">
+          <div class="d-flex align-items-center justify-content-between gap-3">
+            <a class="brand-link" href="index.html">
+              <span class="brand-mark"><i class="bi bi-gem"></i></span>
+              <span><b>COLOR</b> <strong>GAME</strong></span>
+            </a>
+            <div class="header-actions">
+              <a href="index.html" class="header-home"><i class="bi bi-house-door"></i><span>Home</span></a>
+              <div class="balance-box">
+                <small>Virtual Balance</small>
+                <strong id="balance">₹ 10,000.00</strong>
               </div>
             </div>
           </div>
         </div>
+      </header>
 
-        <div class="col-12 col-xl-4">
-          <div class="side-card mb-3">
-            <div class="side-card-head"><div><h2>Your Orders</h2><p>Review before confirmation</p></div><span class="count-pill" id="orderCount">0</span></div>
-            <div id="orders"></div>
+      <main class="container-fluid px-3 px-lg-4 py-3 py-lg-4">
+        <div class="game-title-row mb-3">
+          <div>
+            <div class="eyebrow"><i class="bi bi-shield-check"></i> Trusted • Fast • Secure</div>
+            <h1>
+              Color Prediction Game <span><i class="bi bi-circle-fill"></i> Live Game</span>
+            </h1>
+            <p>Virtual practice experience • Choose color, number or size.</p>
           </div>
-          <div class="side-card">
-            <div class="side-card-head"><div><h2>My History</h2><p>Recent virtual results</p></div><i class="bi bi-clock-history"></i></div>
-            <div id="history"></div>
+          <div class="period-pill"><span>Period</span><b id="period">202609080001</b></div>
+        </div>
+
+        <section class="game-art-card mb-3">
+          <div class="game-art-copy">
+            <span class="art-badge"><i class="bi bi-stars"></i> PLAY SMART</span>
+            <h2>Choose your<br /><span>Color &amp; Win!</span></h2>
+            <p>Make your selection and manage your virtual orders from one clean game screen.</p>
+          </div>
+          <div class="game-art-image"><img src="./images/game-art.png" alt="Color Game crown and chips" /></div>
+        </section>
+
+        <section class="timer-card mb-3">
+          <div class="timer-left">
+            <span class="timer-label">NEXT RESULT IN</span>
+            <div class="timer" id="timer">00:30</div>
+            <div class="period-mini"><span>PERIOD</span><b id="periodMini">202609080001</b></div>
+          </div>
+          <div class="live-chip"><i class="bi bi-broadcast-pin"></i> LIVE ROUND</div>
+        </section>
+
+        <div class="row g-3 g-lg-4 align-items-start">
+          <div class="col-12 col-xl-8">
+            <div class="controls-card">
+              <div class="control-head">
+                <div>
+                  <h2>Make Your Selection</h2>
+                  <p>Select one or more options.</p>
+                </div>
+                <span class="practice-badge">VIRTUAL</span>
+              </div>
+
+              <div class="section">
+                <div class="section-title"><span>01</span> Select Color</div>
+                <div class="game-card">
+                  <div class="row g-2">
+                    <div class="col-4">
+                      <button class="choice-btn green w-100" data-color="Green" onclick="selectColor('Green', this)">
+                        <i class="bi bi-circle-fill"></i> GREEN
+                      </button>
+                    </div>
+                    <div class="col-4">
+                      <button class="choice-btn violet w-100" data-color="Violet" onclick="selectColor('Violet', this)">
+                        <i class="bi bi-circle-fill"></i> VIOLET
+                      </button>
+                    </div>
+                    <div class="col-4">
+                      <button class="choice-btn red w-100" data-color="Red" onclick="selectColor('Red', this)">
+                        <i class="bi bi-circle-fill"></i> RED
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="section">
+                <div class="section-title"><span>02</span> Select Number</div>
+                <div class="game-card">
+                  <div class="row g-2">
+                    <div class="col-2"><button class="number-btn n-violet w-100" onclick="selectNumber(0, this)">0</button></div>
+                    <div class="col-2"><button class="number-btn n-green w-100" onclick="selectNumber(1, this)">1</button></div>
+                    <div class="col-2"><button class="number-btn n-red w-100" onclick="selectNumber(2, this)">2</button></div>
+                    <div class="col-2"><button class="number-btn n-green w-100" onclick="selectNumber(3, this)">3</button></div>
+                    <div class="col-2"><button class="number-btn n-red w-100" onclick="selectNumber(4, this)">4</button></div>
+                    <div class="col-2"><button class="number-btn n-violet w-100" onclick="selectNumber(5, this)">5</button></div>
+                    <div class="col-2"><button class="number-btn n-red w-100" onclick="selectNumber(6, this)">6</button></div>
+                    <div class="col-2"><button class="number-btn n-green w-100" onclick="selectNumber(7, this)">7</button></div>
+                    <div class="col-2"><button class="number-btn n-red w-100" onclick="selectNumber(8, this)">8</button></div>
+                    <div class="col-2"><button class="number-btn n-green w-100" onclick="selectNumber(9, this)">9</button></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="section">
+                <div class="section-title"><span>03</span> Big / Small</div>
+                <div class="game-card">
+                  <div class="row g-2">
+                    <div class="col-6">
+                      <button class="choice-btn size-btn w-100" onclick="selectSize('Big', this)">BIG <small>(5–9)</small></button>
+                    </div>
+                    <div class="col-6">
+                      <button class="choice-btn size-btn w-100" onclick="selectSize('Small', this)">SMALL <small>(0–4)</small></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="section">
+                <div class="section-title"><span>04</span> Multiplier</div>
+                <div class="game-card">
+                  <div class="row g-2">
+                    <div class="col"><button class="multiplier w-100" onclick="selectMultiplier(1, this)">X1</button></div>
+                    <div class="col"><button class="multiplier w-100" onclick="selectMultiplier(5, this)">X5</button></div>
+                    <div class="col"><button class="multiplier w-100" onclick="selectMultiplier(10, this)">X10</button></div>
+                    <div class="col"><button class="multiplier w-100" onclick="selectMultiplier(20, this)">X20</button></div>
+                    <div class="col"><button class="multiplier w-100" onclick="selectMultiplier(50, this)">X50</button></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="section mb-0">
+                <div class="game-card order-entry">
+                  <div class="amount-box">
+                    <label>ORDER AMOUNT</label>
+                    <div class="input-group">
+                      <span class="input-group-text">₹</span
+                      ><input id="amount" class="amount-input form-control" type="number" value="100" min="10" step="10" />
+                    </div>
+                  </div>
+                  <button class="add-order mt-2" onclick="addOrder()"><i class="bi bi-plus-circle me-2"></i> ADD TO YOUR ORDERS</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-xl-4">
+            <div class="side-card mb-3">
+              <div class="side-card-head">
+                <div>
+                  <h2>Your Orders</h2>
+                  <p>Review before confirmation</p>
+                </div>
+                <span class="count-pill" id="orderCount">0</span>
+              </div>
+              <div id="orders"></div>
+            </div>
+            <div class="side-card">
+              <div class="side-card-head">
+                <div>
+                  <h2>My History</h2>
+                  <p>Recent virtual results</p>
+                </div>
+                <i class="bi bi-clock-history"></i>
+              </div>
+              <div id="history"></div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <footer class="game-footer mt-4"><span><i class="bi bi-shield-check"></i> Secure virtual practice experience</span><span>© Color Game</span></footer>
-    </main>
-  </div>
+        <footer class="game-footer mt-4">
+          <span><i class="bi bi-shield-check"></i> Secure virtual practice experience</span><span>© Color Game</span>
+        </footer>
+      </main>
+    </div>
 
-  <div id="resultPopup" class="result-popup">
-    <div id="resultIcon" class="result-icon">🎉</div>
-    <div id="resultTitle" class="result-title">YOU WIN</div>
-    <div id="resultText" class="result-text"></div>
-  </div>
-</body>
+    <div id="resultPopup" class="result-popup">
+      <div id="resultIcon" class="result-icon">🎉</div>
+      <div id="resultTitle" class="result-title">YOU WIN</div>
+      <div id="resultText" class="result-text"></div>
+      <script src="./js/game.js"></script>
+    </div>
+  </body>
 </html>
